@@ -4,11 +4,20 @@ import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 import Heading from '../components/header'
 import Navbar from '../components/navbar'
-
-
+import animation from '../public/logoAni.json';
+import Lottie from 'lottie-react';
+import { useState } from 'react';
 
 const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
+
+  const [animationFinished, setAnimationFinished] = useState(false);
+  const [hideAnimation, setHideAnimation] = useState(false);
+
+  const handleAnimationComplete = () => {
+    setAnimationFinished(true);
+    setHideAnimation(true);
+  };
 
   return (
     <>
@@ -19,8 +28,22 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+        {/* <Lottie animationData={animation} /> 
         <Navbar />
-        <Heading />
+        <Heading /> */}
+        <Lottie
+          className={styles.lottie}
+          animationData={animation}
+          loop={false}
+          onComplete={handleAnimationComplete}
+          style={{ display: hideAnimation ? 'none' : 'block' }}
+        />
+        {animationFinished ? (
+          <>
+            <Navbar />
+            <Heading />
+          </>
+        ) : null}
       </main>
     </>
   )

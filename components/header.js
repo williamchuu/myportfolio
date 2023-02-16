@@ -4,6 +4,7 @@ const Heading = styled.h1`
     font-size: 3rem;
     color: white;
     text-align: left;
+    margin-top: 80px;
 `
 const SubHeading = styled.h3`
     font-size: 1.5rem;
@@ -32,22 +33,29 @@ const Grid = styled.div`
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
-        "a b"
-        "c d";
-     @media (max-width: 768px) {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas:
-        "a"
-        "b";
-        }
-`
+      "a b"
+      "c d";
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+        "b"
+        "c";
+      .a {
+        display: none;
+      }
+    }
+  `;
 
 export default function Header(
 ) {
     return (
         <Grid>
-            <div>
+            <div style={
+                {
+                    gridArea: 'a',
+                }
+            }>
                 <></>
             </div>
             <div>

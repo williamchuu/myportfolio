@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { useRouter } from 'next/router'
 
 const NavbarCont = styled.div`
 display: flex;
@@ -12,6 +13,9 @@ padding: 0 20px;
 width: 100%;
 height: 60px;
 background-color: #2C2928;
+@media (max-width: 820px) {
+   padding: 0px;
+  }
 `
 
 const NavLinks = styled.ul`
@@ -23,16 +27,51 @@ list-style: none;
 
 const NavLists = styled.li`
 margin-right: 5rem;
+color: white;
+cursor: pointer;
+span {
+    border-bottom: 2px solid transparent;
+    transition: border-bottom-color 0.3s;
+  }
+
+  &:hover span {
+    border-bottom-color: white;
+  }
+  @media (max-width: 820px) {
+    margin-right: 2rem;
+   }
 `
 
+const Logo = styled.img`
+height: 120px;
+margin-left: 5rem;
+width: 120px;
+cursor: pointer;
+@media (max-width: 820px) {
+    margin-left: 3rem;
+   }`
+
+
 export default function Navbar() {
+    const router = useRouter();
+    const handleClick = () => {
+        router.push('/')
+    }
+    const handleProjects = () => {
+        router.push('/projects')
+    }
+    const handleContact = () => {
+        router.push('/contact')
+    }
+
     return (
         <NavbarCont>
-            <div>logo</div>
+            {/* <div><img src={logo} />logo here</div> */}
+            <Logo onClick={handleClick} src="/williamchu-01.svg" alt="logo" />
             <div>
                 <NavLinks>
-                    <NavLists>projects</NavLists>
-                    <NavLists>contact</NavLists>
+                    <NavLists onClick={handleProjects}><span>Projects</span></NavLists>
+                    <NavLists onClick={handleContact}><span>Contact</span></NavLists>
                 </NavLinks>
             </div>
         </NavbarCont>

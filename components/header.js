@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import styles from '../styles/Home.module.css'
 import { useRouter } from 'next/router'
 
 const Heading = styled.h1`
@@ -78,7 +79,7 @@ export default function Header() {
             }>
                 <></>
             </div>
-            <div>
+            <div className={styles.fadeInLeft}>
                 <Heading>
                     Hello, I&#39;m William Chu.
                 </Heading>

@@ -12,7 +12,7 @@ justify-content: space-between;
 padding: 0 20px;
 width: 100%;
 height: 60px;
-background-color: #2C2928;
+
 @media (max-width: 820px) {
    padding: 0px;
   }
@@ -21,7 +21,6 @@ background-color: #2C2928;
 const NavLinks = styled.ul`
 display: flex;
 flex-direction: row;
-// background-color: red;
 list-style: none;
 `
 

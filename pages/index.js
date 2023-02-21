@@ -6,13 +6,14 @@ import Heading from '../components/header'
 import Navbar from '../components/navbar'
 import animation from '../public/logoAni.json';
 import Lottie from 'lottie-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
 
   const [animationFinished, setAnimationFinished] = useState(false);
   const [hideAnimation, setHideAnimation] = useState(false);
+  const [hasLogoAnimated, setHasLogoAnimated] = useState(false);
 
   const handleAnimationComplete = () => {
     setAnimationFinished(true);

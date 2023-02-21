@@ -12,6 +12,8 @@ justify-content: space-between;
 padding: 0 20px;
 width: 100%;
 height: 60px;
+z-index: 999;
+background-color: #272423;
 
 @media (max-width: 820px) {
    padding: 0px;
@@ -48,8 +50,8 @@ width: 120px;
 cursor: pointer;
 @media (max-width: 820px) {
     margin-left: 3rem;
-   }`
-
+   }
+`
 
 export default function Navbar() {
     const router = useRouter();
@@ -57,7 +59,7 @@ export default function Navbar() {
         router.push('/')
     }
     const handleProjects = () => {
-        router.push('/projects')
+        router.push('/casestudies')
     }
     const handleContact = () => {
         router.push('/contact')
@@ -65,11 +67,10 @@ export default function Navbar() {
 
     return (
         <NavbarCont>
-            {/* <div><img src={logo} />logo here</div> */}
             <Logo onClick={handleClick} src="/williamchu-01.svg" alt="logo" />
             <div>
                 <NavLinks>
-                    <NavLists onClick={handleProjects}><span>Projects</span></NavLists>
+                    <NavLists onClick={handleProjects}><span>Case Studies</span></NavLists>
                     <NavLists onClick={handleContact}><span>Contact</span></NavLists>
                 </NavLinks>
             </div>

@@ -67,7 +67,7 @@ const Grid = styled.div`
 export default function Header() {
     const router = useRouter();
     const handleProjects = () => {
-        router.push('/projects')
+        router.push('/casestudies')
     }
 
     return (

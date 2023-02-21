@@ -8,7 +8,7 @@ margin-bottom: 100px;
 `
 const CaseStudyCont = styled.div`
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 2fr 1fr;
     // grid-template-rows: 1fr 1fr;
     grid-template-areas:
         "a b c d"
@@ -42,14 +42,14 @@ const ProjectName = styled.div`
 const ProjectDate = styled.div`
     font-size: 1rem;
     font-weight: 500;
-    color: white;
+    color: #5ABDB7;
     margin-bottom: 50px;
 `
 const ProjectDesc = styled.div`
     font-size: 1rem;
     font-weight: 400;
     color: white;
-    margin-right: 20px;
+    margin-right: 40px;
     line-height: 1.5;
 `
 const ViewCaseStudy = styled.div`

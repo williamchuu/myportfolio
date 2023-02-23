@@ -79,16 +79,16 @@ export default function Header() {
             }>
                 <></>
             </div>
-            <div className={styles.fadeInLeft}>
-                <Heading>
+            <div>
+                <Heading className={styles.fadeInLeft}>
                     Hello, I&#39;m William Chu.
                 </Heading>
-                <SubHeading>
+                <SubHeading className={styles.fadeInLeft2}>
                     I&#39;m a
                     <span style={{ color: '#0BB4AA', fontWeight: '500' }}> UI/UX designer </span>
                     with a passion in layout and design. I aspire to improve user experience by communication through design.
                 </SubHeading>
-                <Button onClick={handleProjects}>SEE WORK</Button>
+                <Button className={styles.fadeInLeft3} onClick={handleProjects}>SEE WORK</Button>
             </div>
         </Grid>
     )

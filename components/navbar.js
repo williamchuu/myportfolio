@@ -64,12 +64,16 @@ export default function Navbar() {
     const handleContact = () => {
         router.push('/contact')
     }
+    const handleAbout = () => {
+        router.push('/about')
+    }
 
     return (
         <NavbarCont>
             <Logo onClick={handleClick} src="/williamchu-01.svg" alt="logo" />
             <div>
                 <NavLinks>
+                    <NavLists onClick={handleAbout}><span>About</span></NavLists>
                     <NavLists onClick={handleProjects}><span>Case Studies</span></NavLists>
                     <NavLists onClick={handleContact}><span>Contact</span></NavLists>
                 </NavLinks>

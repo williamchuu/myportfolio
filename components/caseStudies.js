@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { useRouter } from 'next/router'
 import Image from 'next/image';
 import styles from '../styles/Home.module.css'
+import { useState, useEffect } from 'react';
 
 const Hr = styled.hr`
 margin-bottom: 100px;
@@ -86,7 +87,8 @@ export default function CaseStudy(props) {
         projectDate,
         projectDesc,
         viewCaseStudy,
-        previewImage
+        previewImage,
+        priority,
     } = props;
 
     const router = useRouter();
@@ -94,6 +96,8 @@ export default function CaseStudy(props) {
     const handleClick = () => {
         router.push(`/casestudies/${projectName}`);
     };
+
+
     return (
         <>
             <div>
@@ -115,7 +119,7 @@ export default function CaseStudy(props) {
                             </span>
                         </ViewCaseStudy>
                     </Project>
-                    <PreviewImage src={previewImage} alt={projectName} width={350} height={350} />
+                    <PreviewImage src={previewImage} alt={projectName} width={350} height={350} priority={true} />
                 </CaseStudyCont>
             </div>
         </>

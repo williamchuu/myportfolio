@@ -3,6 +3,8 @@ import { useRouter } from 'next/router'
 import Image from 'next/image';
 import styles from '../styles/Home.module.css'
 import { useState, useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
+import { motion, useAnimation, useTransform } from "framer-motion";
 
 const Hr = styled.hr`
 margin-bottom: 100px;
@@ -16,6 +18,8 @@ const CaseStudyCont = styled.div`
     max-width: 100px;
     min-height: 500px;
     margin: auto;
+    opacity: ${props => props.isVisible ? 1 : 0};
+    transition: opacity 1s ease-in-out;
  `
 
 const Number = styled.div`
@@ -24,8 +28,8 @@ const Number = styled.div`
     font-weight: 200;
 `
 const Roles = styled.div`
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
 `
 const Role = styled.div`
     font-size: 1rem;
@@ -97,12 +101,31 @@ export default function CaseStudy(props) {
         router.push(`/casestudies/${projectName}`);
     };
 
+    const [isAnimated, setIsAnimated] = useState(false);
+    const { ref, inView } = useInView({
+        threshold: 0.5,
+        triggerOnce: true,
+    });
 
+    const animation = useAnimation();
+
+    useEffect(() => {
+        if (inView) {
+            setIsAnimated(true);
+        }
+    }, [inView]);
     return (
         <>
-            <div>
+            <div ref={ref}>
                 <Hr />
-                <CaseStudyCont>
+                <CaseStudyCont
+                    isVisible={inView}
+                    animate={animation}
+                    initial="hidden"
+                    variants={{
+                        visible: { opacity: 1, y: 0 },
+                        hidden: { opacity: 0, y: 50 },
+                    }}>
                     <Number>{number}</Number>
                     <Roles>
                         {roles.map((role) => (

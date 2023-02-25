@@ -21,7 +21,7 @@ export default function Projects() {
             <main className={styles.main}>
                 <div>
                     <Navbar />
-                    <div className={styles.fadeInLeft}>
+                    <div>
                         <CaseStudies
                             number="1"
                             roles={['UI/UX Designer', 'Graphic Designer']}
@@ -32,7 +32,7 @@ export default function Projects() {
                             previewImage="/imgs/igaq.png">
                         </CaseStudies>
                     </div>
-                    <div className={styles.fadeInRight}>
+                    <div>
                         <CaseStudies
                             number="2"
                             roles={['UI/UX Designer']}
@@ -44,7 +44,7 @@ export default function Projects() {
                         >
                         </CaseStudies>
                     </div>
-                    <div className={styles.fadeInLeft}>
+                    <div>
                         <CaseStudies
                             number="3"
                             roles={['UI/UX Designer']}

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@next/font": "13.1.6",
+    "framer-motion": "^10.0.0",
     "lottie-react": "^2.3.1",
     "next": "13.1.6",
     "prop-types-exact": "^1.2.0",

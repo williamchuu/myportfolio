@@ -7,6 +7,10 @@ import Navbar from '../components/navbar'
 import animation from '../public/logoAni.json';
 import Lottie from 'lottie-react';
 import { useState, useEffect } from 'react';
+import AllCaseStudies from '../components/allCaseStudies'
+import H1 from '../components/h1'
+import About from '../components/about'
+import Contact from '../components/contact'
 
 const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
@@ -41,6 +45,9 @@ export default function Home() {
           <>
             <Navbar />
             <Heading />
+            <About />
+            <AllCaseStudies />
+            <Contact />
           </>
         ) : null}
       </main>

@@ -1,5 +1,8 @@
 import styled from 'styled-components'
 import { useRouter } from 'next/router'
+import { motion } from 'framer-motion'
+import Link from 'next/link'
+import { Link as ScrollLink } from 'react-scroll'
 
 const NavbarCont = styled.div`
 display: flex;
@@ -58,24 +61,27 @@ export default function Navbar() {
     const handleClick = () => {
         router.push('/')
     }
-    const handleProjects = () => {
-        router.push('/casestudies')
-    }
-    const handleContact = () => {
-        router.push('/contact')
-    }
-    const handleAbout = () => {
-        router.push('/about')
-    }
 
     return (
         <NavbarCont>
             <Logo onClick={handleClick} src="/williamchu-01.svg" alt="logo" />
             <div>
                 <NavLinks>
-                    <NavLists onClick={handleAbout}><span>About</span></NavLists>
-                    <NavLists onClick={handleProjects}><span>Case Studies</span></NavLists>
-                    <NavLists onClick={handleContact}><span>Contact</span></NavLists>
+                    <NavLists>
+                        <Link href="#about">
+                            <ScrollLink to="about" smooth={true}><span>About</span></ScrollLink>
+                        </Link>
+                    </NavLists>
+                    <NavLists>
+                        <Link href="#casestudies">
+                            <ScrollLink to="casestudies" smooth={true}><span>Case Studies</span></ScrollLink>
+                        </Link>
+                    </NavLists>
+                    <NavLists>
+                        <Link href="#contact">
+                            <ScrollLink to="contact" smooth={true}><span>Contact</span></ScrollLink>
+                        </Link>
+                    </NavLists>
                 </NavLinks>
             </div>
         </NavbarCont>

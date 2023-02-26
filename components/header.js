@@ -1,9 +1,11 @@
 import styled from 'styled-components'
 import styles from '../styles/Home.module.css'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
+import { Link as ScrollLink } from 'react-scroll'
 
 const Heading = styled.h1`
-    font-size: 3rem;
+    font-size: 4rem;
     color: white;
     text-align: left;
     margin-top: 80px;
@@ -19,6 +21,7 @@ const SubHeading = styled.h3`
     color: white;
     text-align: left;
     line-height: 2;
+    padding-bottom: 20px;
     @media (max-width: 390px) {
         margin-top: 20px;
         font-size: 1rem;
@@ -27,7 +30,7 @@ const SubHeading = styled.h3`
 
 const Button = styled.div`
     height: 50px;
-    width: 140px;
+    width: 180px;
     background-color: transparent;
     border: 2px solid white;
     border-radius: 15px;
@@ -65,10 +68,7 @@ const Grid = styled.div`
   `;
 
 export default function Header() {
-    const router = useRouter();
-    const handleProjects = () => {
-        router.push('/casestudies')
-    }
+
 
     return (
         <Grid>
@@ -81,14 +81,20 @@ export default function Header() {
             </div>
             <div>
                 <Heading className={styles.fadeInLeft}>
-                    Hello, I&#39;m William Chu.
+                    Hello, I&#39;m William Chu
                 </Heading>
                 <SubHeading className={styles.fadeInLeft2}>
-                    I&#39;m a
+                    and I am a
                     <span style={{ color: '#0BB4AA', fontWeight: '500' }}> UI/UX designer </span>
                     with a passion in layout and design. I aspire to improve user experience by communication through design.
                 </SubHeading>
-                <Button className={styles.fadeInLeft3} onClick={handleProjects}>SEE WORK</Button>
+                <Link href="#about">
+                    <ScrollLink to="about" smooth={true}>
+                        <Button className={styles.fadeInLeft3}>
+                            ABOUT ME
+                        </Button>
+                    </ScrollLink>
+                </Link>
             </div>
         </Grid>
     )

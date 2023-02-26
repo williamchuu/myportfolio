@@ -7,7 +7,8 @@ import { useInView } from 'react-intersection-observer';
 import { motion, useAnimation, useTransform } from "framer-motion";
 
 const Hr = styled.hr`
-margin-bottom: 100px;
+    margin-bottom: 100px;
+    margin-top: 100px;
 `
 const CaseStudyCont = styled.div`
     display: grid;
@@ -16,7 +17,7 @@ const CaseStudyCont = styled.div`
     grid-template-areas:
         "a b c d"
     max-width: 100px;
-    min-height: 500px;
+    // min-height: 500px;
     margin: auto;
     opacity: ${props => props.isVisible ? 1 : 0};
     transition: opacity 1s ease-in-out;
@@ -38,7 +39,9 @@ const Role = styled.div`
     margin-top: 12px;
     margin-bottom: -10px;
 `
-const Project = styled.div``
+const Project = styled.div`
+
+`
 const ProjectName = styled.div`
     font-size: 3rem;
     font-weight: 600;
@@ -62,6 +65,7 @@ const ViewCaseStudy = styled.div`
     font-size: 1rem;
     color: white;
     margin-top: 50px;
+    max-width: 160px;
     cursor: pointer;
     span {
         border-bottom: 2px solid transparent;
@@ -116,7 +120,7 @@ export default function CaseStudy(props) {
     }, [inView]);
     return (
         <>
-            <div ref={ref}>
+            <div id="casestudies" ref={ref}>
                 <Hr />
                 <CaseStudyCont
                     isVisible={inView}

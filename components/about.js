@@ -8,10 +8,11 @@ import { motion, useAnimation, useTransform } from "framer-motion";
 import H1 from '../components/h1';
 import Link from 'next/link';
 import { Link as ScrollLink } from 'react-scroll';
+import PropTypes from 'prop-types';
 
-const AboutCont = styled.div`
+const AboutCont = styled(motion.div)`
     padding-top: 100px;
-    opacity: ${props => props.isVisible ? 1 : 0};
+    opacity: ${props => props.isvisible ? "true" : "false"};
     transition: opacity 1s ease-in-out;
 `
 
@@ -30,7 +31,7 @@ const ImageCont = styled.div`
     `
 
 const MeImage = styled(Image)`
-    opacity: ${props => props.isVisible ? 1 : 0};
+    opacity: ${props => props.isvisible ? 1 : 0};
     transition: opacity 1s ease-in-out;
 `
 const Grid = styled.div`
@@ -93,11 +94,10 @@ export default function About() {
             <Grid>
                 <div style={{
                     gridArea: 'a',
-
                 }
                 }>
                     <AboutCont
-                        isVisible={inView}
+                        isvisible={inView ? "true" : undefined}
                         animate={animation}
                         initial="hidden"
                         variants={{
@@ -107,13 +107,11 @@ export default function About() {
                         <AboutText>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
                         </AboutText>
-                        <Link href="#casestudies">
-                            <ScrollLink to="casestudies" smooth={true}>
-                                <Button >
-                                    SEE WORK
-                                </Button>
-                            </ScrollLink>
-                        </Link>
+                        <ScrollLink to="casestudies" smooth={true}>
+                            <Button>
+                                SEE WORK
+                            </Button>
+                        </ScrollLink>
                     </AboutCont>
                 </div>
                 <div style={{
@@ -123,7 +121,7 @@ export default function About() {
                 }>
                     <ImageCont>
                         <MeImage
-                            isVisible={inView}
+                            isvisible={inView ? "true" : undefined}
                             animate={animation}
                             initial="hidden"
                             variants={{

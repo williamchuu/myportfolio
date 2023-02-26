@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion, useAnimation, useTransform } from "framer-motion";
 import H1 from '../components/h1'
+import Hr from '../components/caseStudies'
 
 const CaseStudiesCont = styled.div``
 
@@ -66,6 +67,7 @@ export default function AllCaseStudies() {
                     previewImage="/imgs/foodieshare.png"
                 >
                 </CaseStudies>
+                <Hr />
             </CaseStudiesCont>
         </div>
     )

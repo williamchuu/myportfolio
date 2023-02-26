@@ -88,13 +88,11 @@ export default function Header() {
                     <span style={{ color: '#0BB4AA', fontWeight: '500' }}> UI/UX designer </span>
                     with a passion in layout and design. I aspire to improve user experience by communication through design.
                 </SubHeading>
-                <Link href="#about">
-                    <ScrollLink to="about" smooth={true}>
-                        <Button className={styles.fadeInLeft3}>
-                            ABOUT ME
-                        </Button>
-                    </ScrollLink>
-                </Link>
+                <ScrollLink to="casestudies" smooth={true}>
+                    <Button className={styles.fadeInLeft3}>
+                        SEE WORK
+                    </Button>
+                </ScrollLink>
             </div>
         </Grid>
     )

@@ -10,7 +10,7 @@ const Hr = styled.hr`
     margin-bottom: 100px;
     margin-top: 100px;
 `
-const CaseStudyCont = styled.div`
+const CaseStudyCont = styled(motion.div)`
     display: grid;
     grid-template-columns: 1fr 1fr 2fr 1fr;
     // grid-template-rows: 1fr 1fr;
@@ -19,7 +19,8 @@ const CaseStudyCont = styled.div`
     max-width: 100px;
     // min-height: 500px;
     margin: auto;
-    opacity: ${props => props.isVisible ? 1 : 0};
+    opacity: ${props => props.isvisible ? "true" : "false"};
+
     transition: opacity 1s ease-in-out;
  `
 
@@ -82,7 +83,6 @@ const ViewCaseStudy = styled.div`
 `
 
 const PreviewImage = styled(Image)`
-    background-color: pink;
     width: 350px;
     height: 350px;
     `
@@ -118,12 +118,13 @@ export default function CaseStudy(props) {
             setIsAnimated(true);
         }
     }, [inView]);
+
     return (
         <>
             <div id="casestudies" ref={ref}>
                 <Hr />
                 <CaseStudyCont
-                    isVisible={inView}
+                    isvisible={inView ? "true" : undefined}
                     animate={animation}
                     initial="hidden"
                     variants={{
@@ -132,7 +133,7 @@ export default function CaseStudy(props) {
                     }}>
                     <Number>{number}</Number>
                     <Roles>
-                        {roles.map((role) => (
+                        {roles && roles.map((role) => (
                             <Role key={role}>{role}</Role>
                         ))}
                     </Roles>
@@ -146,7 +147,7 @@ export default function CaseStudy(props) {
                             </span>
                         </ViewCaseStudy>
                     </Project>
-                    <PreviewImage src={previewImage} alt={projectName} width={350} height={350} priority={true} />
+                    <PreviewImage src={previewImage || "/imgs/igaq.png"} alt={projectName || "Project Preview Image"} width={350} height={350} priority={true} />
                 </CaseStudyCont>
             </div>
         </>

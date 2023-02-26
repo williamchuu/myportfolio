@@ -9,7 +9,8 @@ import { motion, useAnimation, useTransform } from "framer-motion";
 import H1 from '../components/h1'
 import Hr from '../components/caseStudies'
 
-const CaseStudiesCont = styled.div``
+const CaseStudiesCont = styled.div`
+`
 
 export default function AllCaseStudies() {
 
@@ -24,13 +25,15 @@ export default function AllCaseStudies() {
     useEffect(() => {
         if (inView) {
             setIsAnimated(true);
+        } else {
+            setIsAnimated(false);
         }
     }, [inView]);
     return (
         <div id="casestudies" ref={ref}>
 
             <CaseStudiesCont
-                isVisible={inView}
+                visible={inView ? 'true' : undefined}
                 animate={animation}
                 initial="hidden"
                 variants={{
@@ -67,7 +70,6 @@ export default function AllCaseStudies() {
                     previewImage="/imgs/foodieshare.png"
                 >
                 </CaseStudies>
-                <Hr />
             </CaseStudiesCont>
         </div>
     )

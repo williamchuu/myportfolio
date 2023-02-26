@@ -10,7 +10,7 @@ const Hr = styled.hr`
     margin-bottom: 100px;
     margin-top: 100px;
 `
-const CaseStudyCont = styled(motion.div)`
+const CaseStudyCont = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 2fr 1fr;
     // grid-template-rows: 1fr 1fr;
@@ -19,7 +19,7 @@ const CaseStudyCont = styled(motion.div)`
     max-width: 100px;
     // min-height: 500px;
     margin: auto;
-    opacity: ${props => props.isvisible ? "true" : "false"};
+    opacity: ${props => props.visible ? 1 : 0};
 
     transition: opacity 1s ease-in-out;
  `
@@ -116,6 +116,8 @@ export default function CaseStudy(props) {
     useEffect(() => {
         if (inView) {
             setIsAnimated(true);
+        } else {
+            setIsAnimated(false);
         }
     }, [inView]);
 
@@ -124,7 +126,7 @@ export default function CaseStudy(props) {
             <div id="casestudies" ref={ref}>
                 <Hr />
                 <CaseStudyCont
-                    isvisible={inView ? "true" : undefined}
+                    visible={inView ? 'true' : undefined}
                     animate={animation}
                     initial="hidden"
                     variants={{

@@ -71,7 +71,7 @@ export default function Navbar() {
                         <ScrollLink to="about" smooth={true}><span>About</span></ScrollLink>
                     </NavLists>
                     <NavLists>
-                        <ScrollLink to="casestudies" smooth={true}><span>Case Studie</span></ScrollLink>
+                        <ScrollLink to="casestudies" smooth={true}><span>Case Studies</span></ScrollLink>
                     </NavLists>
                     <NavLists>
                         <ScrollLink to="contact" smooth={true}><span>Contact</span></ScrollLink>

@@ -10,9 +10,9 @@ import Link from 'next/link';
 import { Link as ScrollLink } from 'react-scroll';
 import PropTypes from 'prop-types';
 
-const AboutCont = styled(motion.div)`
+const AboutCont = styled.div`
     padding-top: 100px;
-    opacity: ${props => props.isvisible ? "true" : "false"};
+    opacity: ${props => props.visible ? 1 : 0};
     transition: opacity 1s ease-in-out;
 `
 
@@ -31,7 +31,7 @@ const ImageCont = styled.div`
     `
 
 const MeImage = styled(Image)`
-    opacity: ${props => props.isvisible ? 1 : 0};
+    opacity: ${props => props.visible ? 1 : 0};
     transition: opacity 1s ease-in-out;
 `
 const Grid = styled.div`
@@ -48,7 +48,7 @@ const Grid = styled.div`
         "b"
         "c";
       .a {
-        display: none;
+        // display: none;
       }
     }
   `;
@@ -85,6 +85,8 @@ export default function About() {
     useEffect(() => {
         if (inView) {
             setIsAnimated(true);
+        } else {
+            setIsAnimated(false);
         }
     }, [inView]);
 
@@ -97,7 +99,7 @@ export default function About() {
                 }
                 }>
                     <AboutCont
-                        isvisible={inView ? "true" : undefined}
+                        visible={inView ? 'true' : undefined}
                         animate={animation}
                         initial="hidden"
                         variants={{
@@ -121,7 +123,7 @@ export default function About() {
                 }>
                     <ImageCont>
                         <MeImage
-                            isvisible={inView ? "true" : undefined}
+                            visible={inView ? 'true' : undefined}
                             animate={animation}
                             initial="hidden"
                             variants={{

@@ -14,6 +14,9 @@ const AboutCont = styled.div`
     padding-top: 100px;
     opacity: ${props => props.visible ? 1 : 0};
     transition: opacity 1s ease-in-out;
+    @media (max-width: 820px) {
+        padding-top: 40px;
+       }
 `
 
 const AboutText = styled.p`
@@ -23,16 +26,26 @@ const AboutText = styled.p`
     text-align: left;
     line-height: 2;
     padding-bottom: 20px;
+    @media (max-width: 820px) {
+    
+      }
 `
 const ImageCont = styled.div`
     display: flex;
-    padding-top: 20px;
-    padding-left: 200px;
+    padding-top: 80px;
+    // padding-left: 100px;
+    @media (max-width: 820px) {
+        padding-left: 0px;
+        max-width: 100%;
+      }
     `
 
 const MeImage = styled(Image)`
     opacity: ${props => props.visible ? 1 : 0};
     transition: opacity 1s ease-in-out;
+    @media (max-width: 820px) {
+        margin: auto;
+      }
 `
 const Grid = styled.div`
     display: grid;
@@ -45,11 +58,8 @@ const Grid = styled.div`
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr;
       grid-template-areas:
-        "b"
-        "c";
-      .a {
-        // display: none;
-      }
+        "a"
+        "b";
     }
   `;
 
@@ -67,9 +77,11 @@ const Button = styled.div`
     font-size: 1rem;
     font-weight: 400;
     &:hover {
-        background-color: white;
+        background-color: #0BB4AA;
         color: #2C2928;
         cursor: pointer;
+        border: 2px solid #0BB4AA;
+      }
       }
     `
 export default function About() {
@@ -98,29 +110,6 @@ export default function About() {
                     gridArea: 'a',
                 }
                 }>
-                    <AboutCont
-                        visible={inView ? 'true' : undefined}
-                        animate={animation}
-                        initial="hidden"
-                        variants={{
-                            visible: { opacity: 1, y: 0 },
-                            hidden: { opacity: 0, y: 50 },
-                        }}>
-                        <AboutText>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                        </AboutText>
-                        <ScrollLink to="casestudies" smooth={true}>
-                            <Button>
-                                SEE WORK
-                            </Button>
-                        </ScrollLink>
-                    </AboutCont>
-                </div>
-                <div style={{
-                    gridArea: 'b',
-
-                }
-                }>
                     <ImageCont>
                         <MeImage
                             visible={inView ? 'true' : undefined}
@@ -134,6 +123,33 @@ export default function About() {
                             alt="Illustration of William"
                             width={400} height={400} />
                     </ImageCont>
+                </div>
+                <div style={{
+                    gridArea: 'b',
+
+                }
+                }>
+                    <AboutCont
+                        visible={inView ? 'true' : undefined}
+                        animate={animation}
+                        initial="hidden"
+                        variants={{
+                            visible: { opacity: 1, y: 0 },
+                            hidden: { opacity: 0, y: 50 },
+                        }}>
+                        <AboutText>
+                            I graduated from BCIT with a diploma in Digital Design and Development and a certificate in Communications Design Essentials. During my studies, I gained hands-on experience working on various projects, including designing mobile apps, creating brand identities, and developing websites. I enjoyed the challenge of solving complex design problems and working collaboratively to create innovative, user-centered solutions.
+                        </AboutText>
+                        <AboutText>
+                            In my free time, you can find me at home drawing or playing video games.
+                        </AboutText>
+                        <ScrollLink to="casestudies" smooth={true}>
+                            <Button>
+                                SEE WORK
+                            </Button>
+                        </ScrollLink>
+                    </AboutCont>
+
                 </div>
             </Grid>
         </div>

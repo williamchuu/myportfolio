@@ -43,7 +43,7 @@ export default function AllCaseStudies() {
                 <H1 title="Case Studies" />
                 <CaseStudies
                     number="1"
-                    roles={['UI/UX Designer', 'Graphic Designer']}
+                    roles={['UI/UX Design', 'Graphic Design', 'Brand Design']}
                     projectName="IGAQ"
                     projectDate="Sept &#8211; Dec 2022"
                     projectDesc="A safe space for the members of the LGBTQIA+ community to ask questions, share stories, and read resources about all things LGBTQIA+."
@@ -52,7 +52,7 @@ export default function AllCaseStudies() {
                 </CaseStudies>
                 <CaseStudies
                     number="2"
-                    roles={['UI/UX Designer']}
+                    roles={['UI/UX Design', 'Front-End Development']}
                     projectName="ShareFood"
                     projectDate="JAN &#8211; MAR 2022"
                     projectDesc="ShareFood is a web application that aims to save food by sharing it with others; whether receiving or giving away leftover foods."
@@ -62,7 +62,7 @@ export default function AllCaseStudies() {
                 </CaseStudies>
                 <CaseStudies
                     number="3"
-                    roles={['UI/UX Designer']}
+                    roles={['UI/UX Design']}
                     projectName="FoodieShare"
                     projectDate="JAN &#8211; MAR 2022"
                     projectDesc="FoodieShare is a food-based social media app where users can share their love of food with other locals."

@@ -4,7 +4,7 @@ import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 import Heading from '../components/header'
 import Navbar from '../components/navbar'
-import animation from '../public/logoAni.json';
+import animation from '../public/logoAni2.json';
 import Lottie from 'lottie-react';
 import { useState, useEffect } from 'react';
 import AllCaseStudies from '../components/allCaseStudies'
@@ -34,13 +34,15 @@ export default function Home() {
         <link rel="icon" href="faviconDark.svg" media="(prefers-color-scheme: light)" />
       </Head>
       <main className={styles.main}>
-        <Lottie
-          className={styles.lottie}
-          animationData={animation}
-          loop={false}
-          onComplete={handleAnimationComplete}
-          style={{ display: hideAnimation ? 'none' : 'block' }}
-        />
+        <div className={styles.lottie}>
+          <Lottie
+            className={styles.lottie}
+            animationData={animation}
+            loop={false}
+            onComplete={handleAnimationComplete}
+            style={{ display: hideAnimation ? 'none' : 'block' }}
+          />
+        </div>
         {animationFinished ? (
           <>
             <Navbar />

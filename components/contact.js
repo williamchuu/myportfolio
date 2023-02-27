@@ -9,6 +9,31 @@ import H1 from '../components/h1';
 import Link from 'next/link';
 import { Link as ScrollLink } from 'react-scroll';
 
+const Connect = styled.p`
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: white;
+    text-align: left;
+    padding-bottom: 10px;
+`
+const ConnectCont = styled.div`
+    padding-top: 100px;
+    opacity: ${props => props.visible ? 1 : 0};
+    transition: opacity 1s ease-in-out;
+`
+
+const SocialMediaImage = styled(Image)`
+    width: 25px;
+    height: 25px;
+    margin: 10px 20px 20px 0;
+    `
+const Copyright = styled.p`
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+    text-align: right;
+    `
+
 export default function Contact() {
 
     const [isAnimated, setIsAnimated] = useState(false);
@@ -25,10 +50,32 @@ export default function Contact() {
         }
     }, [inView]);
 
+    const handleLinkedIn = () => {
+        window.open('https://www.linkedin.com/in/william-chu/', '_blank');
+    }
+
+    const handleGmail = () => {
+        window.open('mailto:w.chu96@gmail.com', '_blank');
+    }
+
     return (
         <div id="contact" ref={ref}>
-            <H1 title="Let's Connect." />
-            <p> why is this centered</p>
+            <H1 title="Contact" />
+            <ConnectCont
+                visible={inView ? 'true' : undefined}
+                animate={animation}
+                initial="hidden"
+                variants={{
+                    visible: { opacity: 1, y: 0 },
+                    hidden: { opacity: 0, y: 50 },
+                }}>
+                <Connect> Let&#39;s connect.</Connect>
+                <SocialMediaImage onClick={handleLinkedIn} src="/linkedin.svg" alt="LinkedIn" width={50} height={50} />
+                <Link href="mailto:w.chu96@gmail.com">
+                    <SocialMediaImage onClick={handleGmail} src="/gmail.svg" alt="Gmail" width={50} height={30} />
+                </Link>
+                <Copyright>&#169; William Chu 2023</Copyright>
+            </ConnectCont>
         </div>
     )
 }

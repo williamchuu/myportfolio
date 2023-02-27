@@ -42,9 +42,10 @@ const Button = styled.div`
     font-size: 1rem;
     font-weight: 400;
     &:hover {
-        background-color: white;
+        background-color: #0BB4AA;
         color: #2C2928;
         cursor: pointer;
+        border: 2px solid #0BB4AA;
       }
     `
 
@@ -53,14 +54,12 @@ const Grid = styled.div`
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
-      "a b"
-      "c d";
+      "a b";
     @media (max-width: 820px) {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr;
       grid-template-areas:
         "b"
-        "c";
       .a {
         display: none;
       }
@@ -79,12 +78,16 @@ export default function Header() {
             }>
                 <></>
             </div>
-            <div>
+            <div style={
+                {
+                    gridArea: 'b',
+                }
+            }>
                 <Heading className={styles.fadeInLeft}>
-                    Hello, I&#39;m William Chu
+                    Hello, I&#39;m William Chu.
                 </Heading>
                 <SubHeading className={styles.fadeInLeft2}>
-                    and I am a
+                    I am a
                     <span style={{ color: '#0BB4AA', fontWeight: '500' }}> UI/UX designer </span>
                     with a passion in layout and design. I aspire to improve user experience by communication through design.
                 </SubHeading>

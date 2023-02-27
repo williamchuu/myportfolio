@@ -17,6 +17,60 @@
   /* align-items: center; */
 }
 
+.fadeInLeft {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: fadeInLeft 1s ease-in-out forwards 0s;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fadeInLeft2 {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: fadeInLeft2 1s ease-in-out forwards 0.5s;
+}
+
+@keyframes fadeInLeft2 {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fadeInLeft3 {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: fadeInLeft3 1s ease-in-out forwards 1s;
+}
+
+@keyframes fadeInLeft3 {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 
 /* ipad */
 @media (max-width: 820px) {

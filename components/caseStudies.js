@@ -20,7 +20,6 @@ const CaseStudyCont = styled.div`
     // min-height: 500px;
     margin: auto;
     opacity: ${props => props.visible ? 1 : 0};
-
     transition: opacity 1s ease-in-out;
  `
 

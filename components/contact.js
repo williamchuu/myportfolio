@@ -9,12 +9,17 @@ import H1 from '../components/h1';
 import Link from 'next/link';
 import { Link as ScrollLink } from 'react-scroll';
 
+const Hr = styled.hr`
+    margin-bottom: 100px;
+    margin-top: 100px;
+`
+
 const Connect = styled.p`
     font-size: 1.4rem;
     font-weight: 400;
     color: white;
     text-align: left;
-    padding-bottom: 10px;
+    padding-bottom: 10px; 
 `
 const ConnectCont = styled.div`
     padding-top: 100px;
@@ -26,6 +31,7 @@ const SocialMediaImage = styled(Image)`
     width: 25px;
     height: 25px;
     margin: 10px 20px 20px 0;
+    cursor: pointer;
     `
 const Copyright = styled.p`
     font-size: 1rem;
@@ -60,6 +66,7 @@ export default function Contact() {
 
     return (
         <div id="contact" ref={ref}>
+            <Hr />
             <H1 title="Contact" />
             <ConnectCont
                 visible={inView ? 'true' : undefined}

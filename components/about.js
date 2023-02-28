@@ -12,6 +12,7 @@ import PropTypes from 'prop-types';
 
 const AboutCont = styled.div`
     padding-top: 100px;
+    padding-bottom: 100px;
     opacity: ${props => props.visible ? 1 : 0};
     transition: opacity 1s ease-in-out;
     @media (max-width: 820px) {
@@ -50,10 +51,9 @@ const MeImage = styled(Image)`
 const Grid = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    // grid-template-rows: 1fr 1fr;
     grid-template-areas:
-      "a b"
-      "c d";
+      "a b";
     @media (max-width: 820px) {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr;
@@ -138,7 +138,11 @@ export default function About() {
                             hidden: { opacity: 0, y: 50 },
                         }}>
                         <AboutText>
-                            I graduated from BCIT with a diploma in Digital Design and Development and a certificate in Communications Design Essentials. During my studies, I gained hands-on experience working on various projects, including designing mobile apps, creating brand identities, and developing websites. I enjoyed the challenge of solving complex design problems and working collaboratively to create innovative, user-centered solutions.
+                            I graduated from BCIT with a diploma in
+                            <span style={{ color: '#0BB4AA', fontWeight: '500' }}> Digital Design and Development </span>and a certificate in
+
+                            <span style={{ color: '#0BB4AA', fontWeight: '500' }}> Communications Design Essentials</span>
+                            . During my studies, I gained hands-on experience working on various projects, including designing mobile apps, creating brand identities, and developing websites. I enjoyed the challenge of solving complex design problems and working collaboratively to create innovative solutions.
                         </AboutText>
                         <AboutText>
                             In my free time, you can find me at home drawing or playing video games.

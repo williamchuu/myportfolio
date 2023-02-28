@@ -8,7 +8,7 @@ const Heading = styled.h1`
     font-size: 4rem;
     color: white;
     text-align: left;
-    margin-top: 80px;
+    margin-top: 120px;
     @media (max-width: 390px) {
         font-size: 3rem;
         margin-top: 15px;
@@ -52,7 +52,6 @@ const Button = styled.div`
 const Grid = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
     grid-template-areas:
       "a b";
     @media (max-width: 820px) {
@@ -64,6 +63,7 @@ const Grid = styled.div`
         display: none;
       }
     }
+    padding-bottom: 200px;
   `;
 
 export default function Header() {
@@ -90,6 +90,7 @@ export default function Header() {
                     I am a
                     <span style={{ color: '#0BB4AA', fontWeight: '500' }}> UI/UX designer </span>
                     with a passion in layout and design. I aspire to improve user experience by communication through design.
+                    Check out some of my work below.
                 </SubHeading>
                 <ScrollLink to="casestudies" smooth={true}>
                     <Button className={styles.fadeInLeft3}>

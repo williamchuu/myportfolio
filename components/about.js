@@ -27,8 +27,8 @@ const AboutText = styled.p`
     text-align: left;
     line-height: 2;
     padding-bottom: 20px;
-    @media (max-width: 820px) {
-    
+    @media (max-width: 430px) {
+        font-size: 1rem;
       }
 `
 const ImageCont = styled.div`
@@ -47,10 +47,13 @@ const MeImage = styled(Image)`
     @media (max-width: 820px) {
         margin: auto;
       }
+    @media (max-width: 430px) {
+
+      }
 `
 const Grid = styled.div`
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     // grid-template-rows: 1fr 1fr;
     grid-template-areas:
       "a b";
@@ -61,6 +64,10 @@ const Grid = styled.div`
         "a"
         "b";
     }
+    @media (max-width: 430px) {
+       display: flex;
+         flex-direction: column;
+      }
   `;
 
 const Button = styled.div`

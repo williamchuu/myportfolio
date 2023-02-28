@@ -17,20 +17,33 @@ const CaseStudyCont = styled.div`
     grid-template-areas:
         "a b c d"
     max-width: 100px;
-    // min-height: 500px;
     margin: auto;
     opacity: ${props => props.visible ? 1 : 0};
     transition: opacity 1s ease-in-out;
+    @media (max-width: 820px) {
+        grid-template-columns: 1fr 1fr
+    }
+    @media (max-width: 430px) {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
  `
 
 const Number = styled.div`
     color: white;
     font-size: 3rem;
     font-weight: 200;
+    @media (max-width: 820px) {
+        display: none;
+    }
 `
 const Roles = styled.div`
     display: flex;
     flex-direction: column;
+    @media (max-width: 820px) {
+        display: none;
+    }
 `
 const Role = styled.div`
     font-size: 1rem;
@@ -46,6 +59,9 @@ const ProjectName = styled.div`
     font-size: 3rem;
     font-weight: 600;
     color: white;
+    @media (max-width: 430px) {
+        padding-top: 40px;
+    }
 `
 const ProjectDate = styled.div`
     font-size: 1rem;
@@ -101,8 +117,6 @@ export default function CaseStudy(props) {
     const router = useRouter();
 
     const handleClick = () => {
-        // router.push(`/casestudies/${projectName}`)
-        // router.push(`http://wchu.ca/${projectName}`, "_blank");
         window.open(`http://wchu.ca/${projectName}`, "_blank");
     };
 

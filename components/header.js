@@ -9,9 +9,9 @@ const Heading = styled.h1`
     color: white;
     text-align: left;
     margin-top: 120px;
-    @media (max-width: 390px) {
+    @media (max-width: 430px) {
         font-size: 3rem;
-        margin-top: 15px;
+        margin-top: 160px;
         min-width: 300px;
        }
 `
@@ -22,9 +22,9 @@ const SubHeading = styled.h3`
     text-align: left;
     line-height: 2;
     padding-bottom: 20px;
-    @media (max-width: 390px) {
+    @media (max-width: 430px) {
         margin-top: 20px;
-        font-size: 1rem;
+        font-size: 1.2rem;
        }
 `
 
@@ -51,19 +51,19 @@ const Button = styled.div`
 
 const Grid = styled.div`
     display: grid;
+    padding-bottom: 200px;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
       "a b";
     @media (max-width: 820px) {
+        padding-bottom: 100px;
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr;
       grid-template-areas:
         "b"
       .a {
         display: none;
       }
     }
-    padding-bottom: 200px;
   `;
 
 export default function Header() {

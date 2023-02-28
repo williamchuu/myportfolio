@@ -1,7 +1,10 @@
 import styled from 'styled-components'
 import { useRouter } from 'next/router'
+import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import MenuView from '../components/menu';
 import { Link as ScrollLink } from 'react-scroll'
 
 const NavbarCont = styled.div`
@@ -12,7 +15,7 @@ left: 0;
 right: 0;
 align-items: center;
 justify-content: space-between;
-padding: 0 20px;
+padding: 0 12rem;
 width: 100%;
 height: 60px;
 z-index: 999;
@@ -44,6 +47,9 @@ span {
   @media (max-width: 820px) {
     margin-right: 2rem;
    }
+    @media (max-width: 460px) {
+        display: none;
+    }
 `
 
 const Logo = styled.img`
@@ -56,12 +62,45 @@ cursor: pointer;
    }
 `
 
-export default function Navbar() {
+const MenuButton = styled.button`
+display: none;
+
+@media screen and (max-width: 460px) {
+    display: block;
+    background-color: transparent;
+    // background-color: red;
+    cursor: pointer;
+    border: none;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    right: 40px;
+    top: 10px;
+  }
+`;
+
+const Menu = styled(Image)`
+  cursor: pointer;
+  `
+
+//   hamburger menu 
+
+
+export default function Navbar({ open, setOpen }) {
     const router = useRouter();
     const handleClick = () => {
         router.push('/')
     }
 
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const handleMenuClick = () => {
+        setMenuOpen(!menuOpen);
+    };
+
+    const closeMenu = () => {
+        setMenuOpen(false);
+    };
     return (
         <NavbarCont>
             <Logo onClick={handleClick} src="/williamchu-01.svg" alt="logo" />
@@ -77,6 +116,17 @@ export default function Navbar() {
                         <ScrollLink to="contact" smooth={true}><span>Contact</span></ScrollLink>
                     </NavLists>
                 </NavLinks>
+                <nav>
+                    <MenuButton onClick={handleMenuClick}>
+                        {menuOpen ? (
+                            <Image src="/x-icon.svg" alt="Close Icon" width={20} height={20} />
+                        ) : (
+                            <Image src="/menu.svg" alt="Menu Icon" width={20} height={20} />
+                        )}
+                    </MenuButton>
+                    <MenuView onClose={closeMenu} open={menuOpen} />
+                </nav>
+
             </div>
         </NavbarCont>
     )

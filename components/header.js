@@ -84,7 +84,7 @@ export default function Header() {
                 }
             }>
                 <Heading className={styles.fadeInLeft}>
-                    Hello, I&#39;m William Chu.
+                    Hello, I&#39;m <br />William Chu.
                 </Heading>
                 <SubHeading className={styles.fadeInLeft2}>
                     I am a

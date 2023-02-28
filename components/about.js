@@ -45,6 +45,8 @@ const MeImage = styled(Image)`
     opacity: ${props => props.visible ? 1 : 0};
     transition: opacity 1s ease-in-out;
     width: 100%;
+    width: auto;
+    height: auto;
     @media (max-width: 820px) {
         margin: auto;
       }

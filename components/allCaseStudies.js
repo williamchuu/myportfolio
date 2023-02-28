@@ -43,8 +43,8 @@ export default function AllCaseStudies() {
                 <H1 title="Case Studies" />
                 <CaseStudies
                     number="1"
-                    roles={['UI/UX Design', 'Graphic Design', 'Brand Design']}
-                    projectName="IGAQ"
+                    roles={['UI/UX Design', 'Graphic Design', 'Branding']}
+                    projectName="I Got A Queery"
                     projectDate="Sept &#8211; Dec 2022"
                     projectDesc="A safe space for the members of the LGBTQIA+ community to ask questions, share stories, and read resources about all things LGBTQIA+."
                     viewCaseStudy="VIEW CASE STUDY"
@@ -52,7 +52,7 @@ export default function AllCaseStudies() {
                 </CaseStudies>
                 <CaseStudies
                     number="2"
-                    roles={['UI/UX Design', 'Front-End Development']}
+                    roles={['UI/UX Design']}
                     projectName="ShareFood"
                     projectDate="JAN &#8211; MAR 2022"
                     projectDesc="ShareFood is a web application that aims to save food by sharing it with others; whether receiving or giving away leftover foods."

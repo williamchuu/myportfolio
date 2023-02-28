@@ -6,7 +6,7 @@ import Image from 'next/image';
 const Circle = styled.button`
   position: fixed;
   bottom: 50px;
-  right: 15px;
+  right: 80px;
   background-color: #272423;
   color: #fff;
   width: 70px;

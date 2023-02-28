@@ -11,6 +11,8 @@ import AllCaseStudies from '../components/allCaseStudies'
 import H1 from '../components/h1'
 import About from '../components/about'
 import Contact from '../components/contact'
+import BackToTop from '../components/backToTop'
+
 
 const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
@@ -46,6 +48,7 @@ export default function Home() {
         {animationFinished ? (
           <>
             <Navbar />
+            <BackToTop />
             <Heading />
             <About />
             <AllCaseStudies />

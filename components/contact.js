@@ -78,8 +78,8 @@ export default function Contact() {
                 }}>
                 <Connect> Let&#39;s connect.</Connect>
                 <SocialMediaImage onClick={handleLinkedIn} src="/linkedin.svg" alt="LinkedIn" width={50} height={50} />
-                <Link href="mailto:w.chu96@gmail.com">
-                    <SocialMediaImage onClick={handleGmail} src="/gmail.svg" alt="Gmail" width={50} height={30} />
+                <Link href="mailto:w.chu96@gmail.com" target="_blank">
+                    <SocialMediaImage src="/gmail.svg" alt="Gmail" width={50} height={30} />
                 </Link>
                 <Copyright>&#169; William Chu 2023</Copyright>
             </ConnectCont>

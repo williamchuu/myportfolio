@@ -89,7 +89,7 @@ export default function Header() {
                 <SubHeading className={styles.fadeInLeft2}>
                     I am a
                     <span style={{ color: '#0BB4AA', fontWeight: '500' }}> UI/UX designer </span>
-                    with a passion in layout and design. I aspire to improve user experience by communication through design.
+                    with a passion in layout and design. I improve user experience through communication by design.
                     Check out some of my work below.
                 </SubHeading>
                 <ScrollLink to="casestudies" smooth={true}>

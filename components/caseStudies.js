@@ -56,8 +56,9 @@ const Project = styled.div`
 
 `
 const ProjectName = styled.div`
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 600;
+    padding-bottom: 10px;
     color: white;
     @media (max-width: 430px) {
         padding-top: 40px;

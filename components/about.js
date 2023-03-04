@@ -152,7 +152,7 @@ export default function About() {
                             <span style={{ color: '#0BB4AA', fontWeight: '500' }}> Digital Design and Development </span>and a certificate in
 
                             <span style={{ color: '#0BB4AA', fontWeight: '500' }}> Communications Design Essentials</span>
-                            . During my studies, I gained hands-on experience working on various projects, including designing mobile apps, creating brand identities, and developing websites. I enjoyed the challenge of solving complex design problems and working collaboratively to create innovative solutions.
+                            . During my studies, I gained hands-on experience working on various projects, including designing mobile apps, creating brand identities, and developing websites. I also developed a love for simplicity and minimalism.
                         </AboutText>
                         <AboutText>
                             In my free time, you can find me at home drawing or playing video games.

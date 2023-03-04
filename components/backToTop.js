@@ -8,6 +8,7 @@ const Circle = styled.button`
   bottom: 50px;
   right: 80px;
   background-color: #272423;
+  z-index: 999;
   color: #fff;
   width: 70px;
   height: 70px;

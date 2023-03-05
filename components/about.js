@@ -91,6 +91,7 @@ const Button = styled.div`
       color: #2C2928;
       cursor: pointer;
       border: 2px solid #0BB4AA;
+      transition: all 0.2s ease-in-out;
   }
 `;
 export default function About() {

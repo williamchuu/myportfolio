@@ -74,26 +74,25 @@ const Grid = styled.div`
   `;
 
 const Button = styled.div`
-    height: 50px;
-    width: 180px;
-    background-color: transparent;
-    border: 2px solid white;
-    border-radius: 15px;
-    color: white;
-    margin: 20px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1rem;
-    font-weight: 400;
-    &:hover {
-        background-color: #0BB4AA;
-        color: #2C2928;
-        cursor: pointer;
-        border: 2px solid #0BB4AA;
-      }
-      }
-    `
+  max-width: 180px;
+  min-height: 50px;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 15px;
+  color: white;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 400;
+  &:hover {
+      background-color: #0BB4AA;
+      color: #2C2928;
+      cursor: pointer;
+      border: 2px solid #0BB4AA;
+  }
+`;
 export default function About() {
 
     const [isAnimated, setIsAnimated] = useState(false);

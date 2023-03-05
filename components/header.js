@@ -29,8 +29,8 @@ const SubHeading = styled.h3`
 `
 
 const Button = styled.div`
-    height: 50px;
-    width: 180px;
+    max-width: 180px;
+    min-height: 50px;
     background-color: transparent;
     border: 2px solid white;
     border-radius: 15px;
@@ -46,8 +46,8 @@ const Button = styled.div`
         color: #2C2928;
         cursor: pointer;
         border: 2px solid #0BB4AA;
-      }
-    `
+    }
+`;
 
 const Grid = styled.div`
     display: grid;

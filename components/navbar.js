@@ -15,7 +15,7 @@ left: 0;
 right: 0;
 align-items: center;
 justify-content: space-between;
-padding: 0 12rem;
+padding: 0 10rem;
 width: 100%;
 height: 60px;
 z-index: 999;
@@ -34,7 +34,7 @@ list-style: none;
 
 const NavLists = styled.li`
 margin-right: 5rem;
-color: white;
+color: #F1F6F6;
 cursor: pointer;
 span {
     border-bottom: 2px solid transparent;
@@ -53,9 +53,9 @@ span {
 `
 
 const Logo = styled.img`
-height: 120px;
+height: 130px;
 margin-left: 5rem;
-width: 120px;
+width: 130px;
 cursor: pointer;
 @media (max-width: 820px) {
     margin-left: 3rem;

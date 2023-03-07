@@ -23,7 +23,7 @@ const AboutCont = styled.div`
 const AboutText = styled.p`
     font-size: 1.2rem;
     font-weight: 400;
-    color: white;
+    color: #F1F6F6;
     text-align: left;
     line-height: 2;
     padding-bottom: 20px;
@@ -44,7 +44,7 @@ const ImageCont = styled.div`
 const MeImage = styled(Image)`
     opacity: ${props => props.visible ? 1 : 0};
     transition: opacity 1s ease-in-out;
-    width: 100%;
+    margin: auto;
     width: auto;
     height: auto;
     @media (max-width: 820px) {

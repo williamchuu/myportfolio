@@ -31,7 +31,7 @@ const CaseStudyCont = styled.div`
  `
 
 const Number = styled.div`
-    color: white;
+    color: #F1F6F6;
     font-size: 3rem;
     font-weight: 200;
     @media (max-width: 820px) {

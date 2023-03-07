@@ -3,12 +3,14 @@ import styles from '../styles/Home.module.css'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { Link as ScrollLink } from 'react-scroll'
+import H1 from '../components/h1';
+import Image from 'next/image';
 
 const Heading = styled.h1`
     font-size: 4rem;
-    color: white;
+    color: #F1F6F6;
     text-align: left;
-    margin-top: 120px;
+    margin-top: 100px;
     @media (max-width: 430px) {
         font-size: 3rem;
         margin-top: 160px;
@@ -16,9 +18,9 @@ const Heading = styled.h1`
        }
 `
 const SubHeading = styled.h3`
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 400;
-    color: white;
+    color: #F1F6F6;
     text-align: left;
     line-height: 2;
     padding-bottom: 20px;
@@ -67,6 +69,34 @@ const Grid = styled.div`
     }
   `;
 
+
+const ImageCont = styled.div`
+    display: flex;
+    `
+const Me = styled(Image)`
+    transition: transform 0.3s ease-in-out;
+    margin: auto;
+    width: auto;
+    height: auto;
+    margin-top: 100px;
+    @media (max-width: 820px) {
+        display: none;
+      }
+    @media (max-width: 430px) {
+        display: none;
+      }
+    &:hover {
+        transform: scale(1.1);
+        content: url('/placeholder.svg');
+      }
+`
+const MeHover = styled(Me)`
+  &:hover {
+    // transform: scale(1.1);
+    // background-color: red;
+  }
+`;
+
 export default function Header() {
 
 
@@ -77,7 +107,12 @@ export default function Header() {
                     gridArea: 'a',
                 }
             }>
-                <></>
+                <ImageCont>
+                    <MeHover
+                        src="/me.svg"
+                        alt="Illustration of William"
+                        width={400} height={400} />
+                </ImageCont>
             </div>
             <div style={
                 {

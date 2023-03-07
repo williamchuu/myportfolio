@@ -59,10 +59,8 @@ const Grid = styled.div`
     grid-template-areas:
       "a b";
     @media (max-width: 820px) {
-        padding-bottom: 100px;
-      grid-template-columns: 1fr;
-      grid-template-areas:
-        "b"
+        display: flex;
+        flex-direction: column;
       .a {
         display: none;
       }
@@ -72,29 +70,26 @@ const Grid = styled.div`
 
 const ImageCont = styled.div`
     display: flex;
+    &:hover {
+        transition: transform 0.1s ease-in-out;
+        cursor: pointer;
+        transform: scale(1.1);
+    }
     `
 const Me = styled(Image)`
-    transition: transform 0.3s ease-in-out;
+    
     margin: auto;
     width: auto;
     height: auto;
-    margin-top: 100px;
+    margin-top: 50px;
     @media (max-width: 820px) {
         display: none;
       }
-    @media (max-width: 430px) {
-        display: none;
-      }
     &:hover {
-        transform: scale(1.1);
-        content: url('/placeholder.svg');
+        content: url('/me_wave1.svg');
       }
 `
 const MeHover = styled(Me)`
-  &:hover {
-    // transform: scale(1.1);
-    // background-color: red;
-  }
 `;
 
 export default function Header() {
@@ -109,9 +104,10 @@ export default function Header() {
             }>
                 <ImageCont>
                     <MeHover
-                        src="/me.svg"
+                        className={styles.fadeInLeft}
+                        src="/me_wave0.svg"
                         alt="Illustration of William"
-                        width={400} height={400} />
+                        width={500} height={500} priority />
                 </ImageCont>
             </div>
             <div style={

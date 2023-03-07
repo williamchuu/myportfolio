@@ -50,9 +50,6 @@ const MeImage = styled(Image)`
     @media (max-width: 820px) {
         margin: auto;
       }
-    @media (max-width: 430px) {
-
-      }
 `
 const Grid = styled.div`
     display: grid;
@@ -98,7 +95,7 @@ export default function About() {
 
     const [isAnimated, setIsAnimated] = useState(false);
     const { ref, inView } = useInView({
-        threshold: 0.5,
+        threshold: 0.3,
         triggerOnce: true,
     });
 

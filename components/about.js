@@ -46,7 +46,7 @@ const MeImage = styled(Image)`
     transition: opacity 1s ease-in-out;
     margin: auto;
     width: auto;
-    height: auto;
+    height: 400px;
     @media (max-width: 820px) {
         margin: auto;
       }
@@ -126,8 +126,8 @@ export default function About() {
                                 visible: { opacity: 1, y: 0 },
                                 hidden: { opacity: 0, y: 50 },
                             }}
-                            src="/me.svg"
-                            alt="Illustration of William"
+                            src="/laptop.svg"
+                            alt="Illustration of a laptop, tablet and a cup of tea"
                             width={400} height={400} priority />
                     </ImageCont>
                 </div>

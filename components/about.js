@@ -128,7 +128,7 @@ export default function About() {
                             }}
                             src="/me.svg"
                             alt="Illustration of William"
-                            width={400} height={400} />
+                            width={400} height={400} priority />
                     </ImageCont>
                 </div>
                 <div style={{

@@ -102,13 +102,15 @@ export default function Header() {
                     gridArea: 'a',
                 }
             }>
-                <ImageCont>
-                    <MeHover
-                        className={styles.fadeInLeft}
-                        src="/me_wave0.svg"
-                        alt="Illustration of William"
-                        width={500} height={500} priority />
-                </ImageCont>
+                <ScrollLink to="about" smooth={true}>
+                    <ImageCont>
+                        <MeHover
+                            className={styles.fadeInLeft}
+                            src="/me_wave0.svg"
+                            alt="Illustration of William"
+                            width={500} height={500} priority />
+                    </ImageCont>
+                </ScrollLink>
             </div>
             <div style={
                 {

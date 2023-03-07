@@ -70,6 +70,7 @@ const Grid = styled.div`
 
 const ImageCont = styled.div`
     display: flex;
+    // background-color: red;
     &:hover {
         transition: transform 0.1s ease-in-out;
         cursor: pointer;
@@ -80,7 +81,7 @@ const Me = styled(Image)`
     
     margin: auto;
     width: auto;
-    height: auto;
+    height: 450px;
     margin-top: 50px;
     @media (max-width: 820px) {
         display: none;
@@ -108,7 +109,7 @@ export default function Header() {
                             className={styles.fadeInLeft}
                             src="/me_wave0.svg"
                             alt="Illustration of William"
-                            width={500} height={500} priority />
+                            width={100} height={100} priority />
                     </ImageCont>
                 </ScrollLink>
             </div>

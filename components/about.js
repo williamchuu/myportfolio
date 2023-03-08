@@ -50,6 +50,10 @@ const MeImage = styled(Image)`
     @media (max-width: 820px) {
         margin: auto;
       }
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        }
 `
 const Grid = styled.div`
     display: grid;

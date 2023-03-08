@@ -118,7 +118,8 @@ export default function CaseStudy(props) {
     const router = useRouter();
 
     const handleClick = () => {
-        window.open(`http://wchu.ca/${projectName}`, "_blank");
+        // window.open(`http://wchu.ca/${projectName}`, "_blank");
+        router.push(`/casestudies/${projectName}`);
     };
 
     const [isAnimated, setIsAnimated] = useState(false);

@@ -27,6 +27,9 @@ const Info = styled.p`
     color: #F1F6F6;
     font-weight: 300;
     line-height: 2;
+    @media (max-width: 430px) {
+        padding: 0 30px 0 0;
+    }   
 `
 
 const Text = styled.p`
@@ -45,11 +48,8 @@ const Grid = styled.div`
     grid-template-areas:
       "a b c";
     @media (max-width: 430px) {
-        grid-template-columns: 1fr; 
-        grid-template-areas:
-            "a"
-            "b"
-            "c";   
+        display: flex;
+        flex-wrap: wrap;
     }
   `;
 
@@ -226,13 +226,13 @@ export default function IGAQ() {
                     <Text>
                         Our target audience was more specific than just the LGBTQIA+ community; we narrowed it down even more. We interviewed several users between the age group of 16 to 30 year olds who identified as LGBTQIA+ and had them take a survey for us to better understand how we can create a safe space. The consensus was that users weren't completely open and didn't have a space to discuss LGBTQIA+ topics without being exposed to hate and homophobic comments.
                     </Text>
-                    <></>
+                    <div></div>
                     <Text> The survey helped me get a better understanding of my users and their main frustrations and goals. Sexuality can be a very personal topic. There are many external factors that contribute to a user&#39;s comfort level in their sexuality, such as family, religion, and education. The survey results were the base of my user research and served as the motivation and building blocks for designing IGAQ.</Text>
                 </Grid2>
                 <Hr />
                 <TheHeading>PERSONAS</TheHeading>
                 <PersonaCont>
-                    <Personas src="/imgs/igaq_persona1.png" alt="IGAQ Primary Persona" width={570} height={2100} />
+                    <Personas src="/imgs/igaq_persona1.png" alt="IGAQ Primary Persona" width={550} height={2100} />
                     <Personas src="/imgs/igaq_persona2.png" alt="IGAQ Secondary Persona" width={550} height={2100} />
                 </PersonaCont>
                 <Hr />

@@ -67,13 +67,16 @@ export default function MenuView2({ open, onClose }) {
         router.push('/about')
     }
 
+    const handleClickCaseStudies = () => {
+        router.push('/casestudies')
+    }
+
     return (
         <MenuToggleCont open={open}>
             <MenuToggleList onClick={handleClickAbout}><span>About</span>
             </MenuToggleList>
             <Hr />
-            <MenuToggleList>
-                <ScrollLink onClick={onClose} to="casestudies" smooth={true}><span>Case Studies</span></ScrollLink>
+            <MenuToggleList onClick={handleClickCaseStudies}><span>Case Studies</span>
             </MenuToggleList>
             <Hr />
             <MenuToggleList>

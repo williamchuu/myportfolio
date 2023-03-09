@@ -103,13 +103,10 @@ export default function Navbar({ open, setOpen }) {
     };
 
     const handleClickAbout = () => {
-        router.push('/')
+        router.push('/about')
     }
     const handleCaseStudiesClick = () => {
         router.push('/casestudies')
-    }
-    const handleClickContact = () => {
-        router.push('/')
     }
     return (
         <NavbarCont>

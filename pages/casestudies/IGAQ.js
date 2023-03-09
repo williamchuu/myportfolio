@@ -216,6 +216,7 @@ export default function IGAQ() {
                 </StyleGuideCont>
                 <Hr />
                 <TheHeading>FINAL SCREENS</TheHeading>
+                <UserMap src="/imgs/igaq.png" alt="IGAQ Screens" width={1200} height={750} />
                 <Hr />
                 <TheHeading>PROMOTIONAL WORK</TheHeading>
                 <UserMap src="/imgs/igaq_brochure.png" alt="IGAQ Brochure" width={1200} height={750} />

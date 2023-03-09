@@ -48,7 +48,7 @@ export default function AllCaseStudies() {
                     projectDate="Sept &#8211; Dec 2022"
                     projectDesc="A safe space for the members of the LGBTQIA+ community to ask questions, share stories, and read resources about all things LGBTQIA+."
                     viewCaseStudy="VIEW CASE STUDY"
-                    previewImage="/imgs/igaq.png">
+                    previewImage="/imgs/igaq_preview.png">
                 </CaseStudies>
                 <CaseStudies
                     number="2"
@@ -57,7 +57,7 @@ export default function AllCaseStudies() {
                     projectDate="JAN &#8211; MAR 2022"
                     projectDesc="ShareFood is a web application that aims to save food by sharing it with others; whether receiving or giving away leftover foods."
                     viewCaseStudy="VIEW CASE STUDY"
-                    previewImage="/imgs/sharefood.png"
+                    previewImage="/imgs/sharefood_preview.png"
                 >
                 </CaseStudies>
                 <CaseStudies
@@ -67,7 +67,7 @@ export default function AllCaseStudies() {
                     projectDate="JAN &#8211; MAR 2022"
                     projectDesc="FoodieShare is a food-based social media app where users can share their love of food with other locals."
                     viewCaseStudy="VIEW CASE STUDY"
-                    previewImage="/imgs/foodieshare.png"
+                    previewImage="/imgs/foodieshare_preview.png"
                 >
                 </CaseStudies>
             </CaseStudiesCont>

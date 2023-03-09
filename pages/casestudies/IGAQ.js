@@ -5,6 +5,9 @@ import styled from 'styled-components'
 import Navbar2 from '../../components/navbar2';
 import loader from '../../public/IGAQ_loader.json';
 import Lottie from 'lottie-react';
+import BackToTop from '../../components/backToTop';
+import BackToCaseStudies from '../../components/backToCaseStudies';
+import Contact from '../../components/contact';
 
 const Hr = styled.hr`
     margin-bottom: 100px;
@@ -22,7 +25,7 @@ const Title = styled.h1`
 `
 const Info = styled.p`
     color: #F1F6F6;
-    font-weight: 600;
+    font-weight: 300;
     line-height: 2;
 `
 
@@ -34,7 +37,7 @@ const Text = styled.p`
 
 const Grid = styled.div`
     display: grid;
-    padding-bottom: 200px;
+    padding-bottom: 50px;
     grid-template-columns: 1fr 1fr 2fr;
     grid-template-areas:
       "a b c";
@@ -64,7 +67,7 @@ const TheHeading = styled.h2`
 
 const DesignProcess = styled(Image)`
     align-self: center;
-    width: auto;
+    max-width: 100%;
     padding-top: 50px;
 `
 
@@ -84,9 +87,25 @@ const PersonaCont = styled.div`
     justify-content: space-between;
 `
 
-const Personas = styled(Image)``
+const Personas = styled(Image)`
+    max-width: 100%;
+    height: auto;
+`
 
 const UserMap = styled(Image)`
+    padding-top: 100px;
+    max-width: 100%;
+    height: auto;
+`
+const StyleGuideCont = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+`
+
+const StyleGuide = styled(Image)`
+    max-width: 100%;
+    height: auto;
     padding-top: 100px;
 `
 
@@ -102,11 +121,7 @@ export default function IGAQ() {
             </Head>
             <main className={styles.main}>
                 <Navbar2 />
-                {/* <Lottie
-                    animationData={loader}
-                    loop={true}
-                    style={{ width: '50%', height: '50%', position: 'absolute', top: '9%', left: '10%' }}
-                /> */}
+                <BackToTop />
                 <LogoCont>
                     <Logo src="/IGAQ_logo.svg" alt="IGAQ Logo" width={100} height={100} />
                 </LogoCont>
@@ -137,6 +152,11 @@ export default function IGAQ() {
                         <Text>I worked with a team of 6 other talented designers and developers over the span of 3 months. I was involved in the entire design process &#8212; planning the concept, conducting user research, creating wireframes and prototypes, and implementing feedback. We focused on inclusiveness and accessibility to give more representation to the under appreciated.</Text>
                     </div>
                 </Grid>
+                <Lottie
+                    animationData={loader}
+                    loop={true}
+                    style={{ width: 500, height: 300, margin: 'auto', display: 'block' }}
+                />
                 <IgaqWide
                     src="/imgs/igaqWide.png"
                     alt="Display of I Got A Queery screens"
@@ -184,13 +204,35 @@ export default function IGAQ() {
                 </PersonaCont>
                 <Hr />
                 <TheHeading>USER JOURNEY MAP</TheHeading>
-                <UserMap src="/imgs/igaq_userjourneymap.png" alt="IGAQ User Journey Map" width={1200} height={750} />
+                <UserMap src="/imgs/igaq_userjourney.png" alt="IGAQ User Journey Map" width={1200} height={750} />
                 <Hr />
                 <TheHeading>WIREFRAMES</TheHeading>
+                <UserMap src="/imgs/igaq_wireframe.png" alt="IGAQ Wireframes" width={1200} height={750} />
+                <Hr />
                 <TheHeading>STYLE GUIDE</TheHeading>
+                <StyleGuideCont>
+                    <StyleGuide src="/imgs/igaq_color.png" alt="IGAQ Color Guide" width={450} height={490} />
+                    <StyleGuide src="/imgs/igaq_typography.png" alt="IGAQ Typography Guide" width={450} height={490} />
+                </StyleGuideCont>
+                <Hr />
                 <TheHeading>FINAL SCREENS</TheHeading>
-                <TheHeading>FEEDBACK</TheHeading>
-                <TheHeading>CONCLUSION</TheHeading>
+                <Hr />
+                <TheHeading>PROMOTIONAL WORK</TheHeading>
+                <UserMap src="/imgs/igaq_brochure.png" alt="IGAQ Brochure" width={1200} height={750} />
+                <Hr />
+                <Grid2>
+                    <TheHeading>FEEDBACK</TheHeading>
+                    <Text>The overall feedback of IGAQ was positive. Users thought the colour contrast was accessible and appropriately fit the theme of the app without it being childish. One of the main issues we ran into during our usability testing was our users having trouble recalling the “Queery of the Day”. A lot of our users initially ignored the container thinking it was an ad. A lot of our users liked our unique features such as choosing the level of anonymity in the profile section. They also found it incredibly helpful to have a “Resources” page that had a list of terms, articles, and flags.</Text>
+                </Grid2>
+                <Hr />
+                <Grid2>
+                    <TheHeading>CONCLUSION</TheHeading>
+                    <Text>This project allowed me to work with 6 other talented designers and developers for the LGBTQIA+ community. We were able to create an intuitive and visually appealing interface that addressed some of the pain points of a specific group of members within the community. Through extensive user research, usability testing, and feedback, we applied user-centred design principles. My team and I presented IGAQ to an audience of over 100 people and it has since received positive feedback.</Text>
+                </Grid2>
+                <Hr />
+
+                <BackToCaseStudies />
+                <Contact />
 
             </main>
         </>

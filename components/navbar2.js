@@ -122,8 +122,8 @@ export default function Navbar({ open, setOpen }) {
                     <NavLists onClick={handleCaseStudiesClick}>
                         <span>Case Studies</span>
                     </NavLists>
-                    <NavLists onClick={handleClickContact}>
-                        <span>Contact</span>
+                    <NavLists >
+                        <ScrollLink to="contact" smooth={true}><span>Contact</span></ScrollLink>
                     </NavLists>
                 </NavLinks>
                 <nav>

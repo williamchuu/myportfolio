@@ -22,8 +22,8 @@ export default function Home() {
     return (
         <>
             <Head>
-                <title>About William Chu</title>
-                <meta name="description" content="William Chu Portfolio About" />
+                <title>William Chu</title>
+                <meta name="description" content="William Chu Portfolio" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="faviconLight.svg" media="(prefers-color-scheme: dark)" />
                 <link rel="icon" href="faviconDark.svg" media="(prefers-color-scheme: light)" />
@@ -31,6 +31,7 @@ export default function Home() {
             <main className={styles.main}>
                 <Navbar2 />
                 <About />
+                <AllCaseStudies />
                 <Contact />
             </main>
         </>

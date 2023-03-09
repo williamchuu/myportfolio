@@ -33,6 +33,9 @@ const Text = styled.p`
     color: #F1F6F6;
     padding-bottom: 50px;
     line-height: 2;
+    @media (max-width: 430px) {
+        padding-top: 50px;
+    }
 `
 
 const Grid = styled.div`
@@ -41,8 +44,12 @@ const Grid = styled.div`
     grid-template-columns: 1fr 1fr 2fr;
     grid-template-areas:
       "a b c";
-    @media (max-width: 820px) {
-
+    @media (max-width: 430px) {
+        grid-template-columns: 1fr; 
+        grid-template-areas:
+            "a"
+            "b"
+            "c";   
     }
   `;
 
@@ -51,6 +58,12 @@ const Grid2 = styled.div`
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
         "a b"; 
+    @media (max-width: 430px) {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "a"
+            "b";
+    }
     `
 
 const IgaqWide = styled(Image)`
@@ -71,13 +84,20 @@ const DesignProcess = styled(Image)`
     padding-top: 50px;
 `
 
-const Survey = styled(Image)`
-`
-
 const LogoCont = styled.div`
     padding-top: 100px;
+    @media (max-width: 430px) {
+        padding-top: 50px;
+    }
 `
 const Logo = styled(Image)`
+    @media (max-width: 430px) {
+        width: 100%;
+        max-height: auto;
+        display: flex;
+        justify-content: center;
+        
+    }
 `
 
 const PersonaCont = styled.div`
@@ -85,11 +105,16 @@ const PersonaCont = styled.div`
     flex-direction: row;
     padding-top: 100px;
     justify-content: space-between;
+    @media (max-width: 820px) {
+        flex-direction: column;
+    }
 `
 
 const Personas = styled(Image)`
     max-width: 100%;
     height: auto;
+    display: block;
+    padding: 10px;
 `
 
 const UserMap = styled(Image)`
@@ -101,12 +126,21 @@ const StyleGuideCont = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    @media (max-width: 430px) {
+        flex-direction: column;
+    }
 `
 
 const StyleGuide = styled(Image)`
     max-width: 100%;
     height: auto;
     padding-top: 100px;
+`
+
+const LottieCont = styled.div`
+    @media (max-width: 430px) {
+        display: flex;
+    }
 `
 
 export default function IGAQ() {
@@ -152,11 +186,13 @@ export default function IGAQ() {
                         <Text>I worked with a team of 6 other talented designers and developers over the span of 3 months. I was involved in the entire design process &#8212; planning the concept, conducting user research, creating wireframes and prototypes, and implementing feedback. We focused on inclusiveness and accessibility to give more representation to the under appreciated.</Text>
                     </div>
                 </Grid>
-                <Lottie
-                    animationData={loader}
-                    loop={true}
-                    style={{ width: 500, height: 300, margin: 'auto', display: 'block' }}
-                />
+                <LottieCont>
+                    <Lottie
+                        animationData={loader}
+                        loop={true}
+                        style={{ width: 500, height: 300, margin: 'auto', display: 'block' }}
+                    />
+                </LottieCont>
                 <IgaqWide
                     src="/imgs/igaqWide.png"
                     alt="Display of I Got A Queery screens"
@@ -190,17 +226,14 @@ export default function IGAQ() {
                     <Text>
                         Our target audience was more specific than just the LGBTQIA+ community; we narrowed it down even more. We interviewed several users between the age group of 16 to 30 year olds who identified as LGBTQIA+ and had them take a survey for us to better understand how we can create a safe space. The consensus was that users weren't completely open and didn't have a space to discuss LGBTQIA+ topics without being exposed to hate and homophobic comments.
                     </Text>
-                    <Survey
-                        src="/imgs/igaqSurvey.png"
-                        alt="IGAQ Survey"
-                        width={500} height={500} />
+                    <></>
                     <Text> The survey helped me get a better understanding of my users and their main frustrations and goals. Sexuality can be a very personal topic. There are many external factors that contribute to a user&#39;s comfort level in their sexuality, such as family, religion, and education. The survey results were the base of my user research and served as the motivation and building blocks for designing IGAQ.</Text>
                 </Grid2>
                 <Hr />
                 <TheHeading>PERSONAS</TheHeading>
                 <PersonaCont>
                     <Personas src="/imgs/igaq_persona1.png" alt="IGAQ Primary Persona" width={570} height={2100} />
-                    <Personas src="/imgs/igaq_persona2.png" alt="IGAQ Secondary Persona" width={570} height={2100} />
+                    <Personas src="/imgs/igaq_persona2.png" alt="IGAQ Secondary Persona" width={550} height={2100} />
                 </PersonaCont>
                 <Hr />
                 <TheHeading>USER JOURNEY MAP</TheHeading>
@@ -231,7 +264,6 @@ export default function IGAQ() {
                     <Text>This project allowed me to work with 6 other talented designers and developers for the LGBTQIA+ community. We were able to create an intuitive and visually appealing interface that addressed some of the pain points of a specific group of members within the community. Through extensive user research, usability testing, and feedback, we applied user-centred design principles. My team and I presented IGAQ to an audience of over 100 people and it has since received positive feedback.</Text>
                 </Grid2>
                 <Hr />
-
                 <BackToCaseStudies />
                 <Contact />
 

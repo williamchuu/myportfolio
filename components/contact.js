@@ -37,7 +37,8 @@ const Copyright = styled.p`
     font-size: 1rem;
     font-weight: 400;
     color: white;
-    text-align: right;
+    text-align: left;
+    padding-top: 80px;
     `
 
 export default function Contact() {

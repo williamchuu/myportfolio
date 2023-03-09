@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import MenuView from '../components/menu';
+import MenuView2 from '../components/menu2';
 import { Link as ScrollLink } from 'react-scroll'
 
 const NavbarCont = styled.div`
@@ -131,7 +131,7 @@ export default function Navbar({ open, setOpen }) {
                             <Image src="/menu.svg" alt="Menu Icon" width={20} height={20} />
                         )}
                     </MenuButton>
-                    <MenuView onClose={closeMenu} open={menuOpen} />
+                    <MenuView2 onClose={closeMenu} open={menuOpen} />
                 </nav>
 
             </div>

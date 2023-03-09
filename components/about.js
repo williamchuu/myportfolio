@@ -158,11 +158,11 @@ export default function About() {
                         <AboutText>
                             In my free time, you can find me at home drawing or playing video games.
                         </AboutText>
-                        {/* <ScrollLink to="casestudies" smooth={true}>
+                        <ScrollLink to="casestudies" smooth={true}>
                             <Button>
                                 SEE WORK
                             </Button>
-                        </ScrollLink> */}
+                        </ScrollLink>
                     </AboutCont>
 
                 </div>

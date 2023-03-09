@@ -2,10 +2,11 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
-import Navbar from '../components/navbar'
+import Navbar2 from '../components/navbar2'
 import CaseStudies from '../components/caseStudies'
 import { useState } from 'react';
 import H1 from '../components/h1';
+import Contact from '../components/contact';
 
 const inter = Inter({ subsets: ['latin'] })
 export default function Projects() {
@@ -13,7 +14,7 @@ export default function Projects() {
     return (
         <>
             <Head>
-                <title>William Chu Projects</title>
+                <title>William Chus</title>
                 <meta name="description" content="William Chu Case Studies" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="faviconLight.svg" media="(prefers-color-scheme: dark)" />
@@ -21,7 +22,7 @@ export default function Projects() {
             </Head>
             <main className={styles.main}>
                 <div>
-                    <Navbar />
+                    <Navbar2 />
                     <H1 title="Case Studies" />
                     <div>
                         <CaseStudies
@@ -31,7 +32,7 @@ export default function Projects() {
                             projectDate="Sept &#8211; Dec 2022"
                             projectDesc="A safe space for the members of the LGBTQIA+ community to ask questions, share stories, and read resources about all things LGBTQIA+."
                             viewCaseStudy="VIEW CASE STUDY"
-                            previewImage="/imgs/igaq.png">
+                            previewImage="/imgs/igaq_preview.png">
                         </CaseStudies>
                     </div>
                     <div>
@@ -42,7 +43,7 @@ export default function Projects() {
                             projectDate="JAN &#8211; MAR 2022"
                             projectDesc="ShareFood is a web application that aims to save food by sharing it with others; whether receiving or giving away leftover foods."
                             viewCaseStudy="VIEW CASE STUDY"
-                            previewImage="/imgs/sharefood.png"
+                            previewImage="/imgs/sharefood_preview.png"
                         >
                         </CaseStudies>
                     </div>
@@ -54,10 +55,11 @@ export default function Projects() {
                             projectDate="JAN &#8211; MAR 2022"
                             projectDesc="FoodieShare is a food-based social media app where users can share their love of food with other locals."
                             viewCaseStudy="VIEW CASE STUDY"
-                            previewImage="/imgs/foodieshare.png"
+                            previewImage="/imgs/foodieshare_preview.png"
                         >
                         </CaseStudies>
                     </div>
+                    <Contact />
                 </div>
             </main>
         </>

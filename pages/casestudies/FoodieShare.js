@@ -150,7 +150,7 @@ export default function FoodieShare() {
                 <Navbar2 />
                 <BackToTop />
                 <LogoCont>
-                    <Logo src="/imgs/sharefood_logo.png" alt="FoodieShare Logo" width={100} height={150} />
+                    <Logo src="/foodieshare_logo.svg" alt="FoodieShare Logo" width={150} height={200} />
                 </LogoCont>
                 <Title>FoodieShare </Title>
                 <Grid>
@@ -211,25 +211,25 @@ export default function FoodieShare() {
                 </Grid2>
                 <Hr />
                 <TheHeading>PERSONAS</TheHeading>
-                <PersonaCont>
-                    {/* <Personas src="/imgs/igaq_persona1.png" alt="IGAQ Primary Persona" width={570} height={2100} />
-                    <Personas src="/imgs/igaq_persona2.png" alt="IGAQ Secondary Persona" width={550} height={2100} /> */}
+                <PersonaCont>Coming soon...
+                    {/* <Personas src="/imgs/foodieshare_persona1.png" alt="FoodieeShare Primary Persona" width={570} height={2100} />
+                    <Personas src="/imgs/foodieshare_persona2.png" alt="FoodieShare Secondary Persona" width={550} height={2100} /> */}
                 </PersonaCont>
                 <Hr />
-                <TheHeading>SITE MAP</TheHeading>
-                <UserMap src="/imgs/sharefood_sitemap.png" alt="Site map for ShareFood" width={1200} height={750} />
+                <TheHeading>USER JOURNEY MAP FRAMEWORK</TheHeading>
+                <UserMap src="/imgs/foodieshare_userjourney.png" alt="User Story Map Framework for FoodieShare" width={1200} height={750} />
                 <Hr />
                 <TheHeading>WIREFRAMES</TheHeading>
-                <UserMap src="/imgs/sharefood_wireframe.png" alt="ShareFood Wireframes" width={1200} height={750} />
+                <UserMap src="/imgs/foodieshare_wireframe.png" alt="FoodieShare Wireframes" width={1200} height={750} />
                 <Hr />
                 <TheHeading>STYLE GUIDE</TheHeading>
                 <StyleGuideCont>
-                    <StyleGuide src="/imgs/sharefood_color.png" alt="ShareFood Color Guide" width={430} height={450} />
-                    <StyleGuide src="/imgs/sharefood_typography.png" alt="ShareFood Typography Guide" width={430} height={450} />
+                    <StyleGuide src="/imgs/foodieshare_color.png" alt="FoodieShare Color Guide" width={430} height={450} />
+                    <StyleGuide src="/imgs/foodieshare_typography.png" alt="FoodieShare Typography Guide" width={430} height={450} />
                 </StyleGuideCont>
                 <Hr />
                 <TheHeading>FINAL SCREENS</TheHeading>
-                <UserMap src="/imgs/sharefood.png" alt="ShareFood Screens" width={1200} height={750} />
+                <UserMap src="/imgs/foodieshare.png" alt="FoodieShare Screens" width={1200} height={750} />
                 <Hr />
                 <Grid2>
                     <TheHeading>FEEDBACK</TheHeading>

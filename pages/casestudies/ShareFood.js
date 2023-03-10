@@ -207,7 +207,7 @@ export default function ShareFood() {
                     alt="The Design Process"
                     width={500} height={200}
                 />
-                <Hr />
+                {/* <Hr />
                 <Grid2>
                     <TheHeading>USER RESEARCH</TheHeading>
                     <Text>
@@ -217,9 +217,9 @@ export default function ShareFood() {
                 <Hr />
                 <TheHeading>PERSONAS</TheHeading>
                 <PersonaCont>
-                    {/* <Personas src="/imgs/igaq_persona1.png" alt="IGAQ Primary Persona" width={570} height={2100} />
-                    <Personas src="/imgs/igaq_persona2.png" alt="IGAQ Secondary Persona" width={550} height={2100} /> */}
-                </PersonaCont>
+                    <Personas src="/imgs/igaq_persona1.png" alt="IGAQ Primary Persona" width={570} height={2100} />
+                    <Personas src="/imgs/igaq_persona2.png" alt="IGAQ Secondary Persona" width={550} height={2100} />
+                </PersonaCont> */}
                 <Hr />
                 <TheHeading>SITE MAP</TheHeading>
                 <UserMap src="/imgs/sharefood_sitemap.png" alt="Site map for ShareFood" width={1200} height={750} />

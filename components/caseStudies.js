@@ -101,6 +101,7 @@ const ViewCaseStudy = styled.div`
 const PreviewImage = styled(Image)`
     width: 350px;
     height: 350px;
+    border-radius: 10px;
     `
 
 export default function CaseStudy(props) {

@@ -210,11 +210,12 @@ export default function FoodieShare() {
                     </Text>
                 </Grid2>
                 <Hr />
-                <TheHeading>PERSONAS</TheHeading>
-                <PersonaCont>Coming soon...
-                    {/* <Personas src="/imgs/foodieshare_persona1.png" alt="FoodieeShare Primary Persona" width={570} height={2100} />
-                    <Personas src="/imgs/foodieshare_persona2.png" alt="FoodieShare Secondary Persona" width={550} height={2100} /> */}
-                </PersonaCont>
+                <Grid2>
+                    <TheHeading>PERSONA</TheHeading>
+                    {/* <PersonaCont> */}
+                    <Personas src="/imgs/foodieshare_persona.png" alt="FoodieeShare Primary Persona" width={570} height={2100} />
+                    {/* </PersonaCont> */}
+                </Grid2>
                 <Hr />
                 <TheHeading>USER JOURNEY MAP FRAMEWORK</TheHeading>
                 <UserMap src="/imgs/foodieshare_userjourney.png" alt="User Story Map Framework for FoodieShare" width={1200} height={750} />
@@ -224,7 +225,7 @@ export default function FoodieShare() {
                 <Hr />
                 <TheHeading>STYLE GUIDE</TheHeading>
                 <StyleGuideCont>
-                    <StyleGuide src="/imgs/foodieshare_color.png" alt="FoodieShare Color Guide" width={430} height={450} />
+                    <StyleGuide src="/imgs/foodieshare_color.png" alt="FoodieShare Color Guide" width={500} height={450} />
                     <StyleGuide src="/imgs/foodieshare_typography.png" alt="FoodieShare Typography Guide" width={430} height={450} />
                 </StyleGuideCont>
                 <Hr />

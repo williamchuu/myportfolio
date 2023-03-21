@@ -14,7 +14,7 @@ export default function Projects() {
     return (
         <>
             <Head>
-                <title>William Chus</title>
+                <title>William Chu</title>
                 <meta name="description" content="William Chu Case Studies" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="faviconLight.svg" media="(prefers-color-scheme: dark)" />

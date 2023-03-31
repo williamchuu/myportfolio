@@ -8,6 +8,7 @@ import animation from '../public/logoAni2.json';
 import Lottie from 'lottie-react';
 import { useState, useEffect } from 'react';
 import AllCaseStudies from '../components/allCaseStudies'
+import AllDesignProjects from '../components/allDesignProjects'
 import H1 from '../components/h1'
 import About from '../components/about'
 import Contact from '../components/contact'
@@ -52,6 +53,7 @@ export default function Home() {
             <Heading />
             <About />
             <AllCaseStudies />
+            <AllDesignProjects />
             <Contact />
           </>
         ) : null}

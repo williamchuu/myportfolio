@@ -16,7 +16,7 @@ export default function BoyWithNoFace() {
             </Head>
             <main className={styles.main}>
                 <Navbar2 />
-                Hey! You're not supposed to see this yet. Come back later!
+                COMING SOON
                 <BackToTop />
             </main>
         </>

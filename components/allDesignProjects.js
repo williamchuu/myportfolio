@@ -31,7 +31,7 @@ export default function AllDesignProjects() {
         }
     }, [inView]);
     return (
-        <div id="designprojects" ref={ref}>
+        <div id="designs" ref={ref}>
 
             <DesignProjectsCont
                 visible={inView ? 'true' : undefined}
@@ -41,7 +41,7 @@ export default function AllDesignProjects() {
                     visible: { opacity: 1, y: 0 },
                     hidden: { opacity: 0, y: 50 },
                 }}>
-                <H1 title="Design Projects" />
+                <H1 title="Designs" />
                 <DesignProjects
                     number="1"
                     roles={['Graphic Design', 'Photo Editing']}
@@ -57,7 +57,7 @@ export default function AllDesignProjects() {
                     roles={['Graphic Design', 'Illustration']}
                     projectName="The Boy With No Face"
                     projectDate="Dec 2022"
-                    projectDesc="An online digital storybook illustrated by me."
+                    projectDesc="An online digital storybook with illustrations."
                     viewProject="VIEW PROJECT"
                     previewImage="/imgs/boywithnoface_preview.png"
                     projectWithSpace="BoyWithNoFace"

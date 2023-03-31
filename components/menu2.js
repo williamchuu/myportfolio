@@ -20,7 +20,7 @@ const MenuToggleCont = styled.ul`
     left: 0;
     width: 100%;
     background-color: #111111;
-    height: 45vh;
+    min-height: 500px;
     line-height: 2;
     z-index: 99;
     padding: 2rem;
@@ -71,12 +71,19 @@ export default function MenuView2({ open, onClose }) {
         router.push('/casestudies')
     }
 
+    const handleClickDesignProjects = () => {
+        router.push('/design')
+    }
+
     return (
         <MenuToggleCont open={open}>
             <MenuToggleList onClick={handleClickAbout}><span>About</span>
             </MenuToggleList>
             <Hr />
             <MenuToggleList onClick={handleClickCaseStudies}><span>Case Studies</span>
+            </MenuToggleList>
+            <Hr />
+            <MenuToggleList onClick={handleClickDesignProjects}><span>Designs</span>
             </MenuToggleList>
             <Hr />
             <MenuToggleList>

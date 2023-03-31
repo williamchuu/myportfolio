@@ -19,7 +19,7 @@ const MenuToggleCont = styled.ul`
     left: 0;
     width: 100%;
     background-color: #111111;
-    height: 45vh;
+    min-height: 500px;
     line-height: 2;
     z-index: 99;
     padding: 2rem;
@@ -69,6 +69,10 @@ export default function MenuView({ open, onClose }) {
             <Hr />
             <MenuToggleList>
                 <ScrollLink onClick={onClose} to="casestudies" smooth={true}><span>Case Studies</span></ScrollLink>
+            </MenuToggleList>
+            <Hr />
+            <MenuToggleList>
+                <ScrollLink onClick={onClose} to="designs" smooth={true}><span>Designs</span></ScrollLink>
             </MenuToggleList>
             <Hr />
             <MenuToggleList>

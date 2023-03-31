@@ -4,7 +4,7 @@ import styles from '../../styles/Home.module.css'
 import styled from 'styled-components'
 import Navbar2 from '../../components/navbar2';
 import BackToTop from '../../components/backToTop';
-import BackToDesignProjects from '../../components/BackToDesignProjects';
+import BackToDesignProjects from '../../components/backToDesignProjects';
 import Contact from '../../components/contact';
 
 const Hr = styled.hr`

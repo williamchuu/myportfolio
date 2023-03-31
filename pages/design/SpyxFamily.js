@@ -164,17 +164,17 @@ export default function IGAQ() {
                     <OriginalImage
                         src="/imgs/anya.png"
                         alt="Image of a cosplayer dressed as Anya from Spy x Family"
-                        width={250} height={250}
+                        width={250} height={300}
                         priority />
                     <OriginalImage
                         src="/imgs/loid.png"
                         alt="Image of a man in a suit"
-                        width={250} height={250}
+                        width={250} height={300}
                         priority />
                     <OriginalImage
                         src="/imgs/yor.png"
                         alt="Image of a woman in a black dress"
-                        width={250} height={250}
+                        width={250} height={300}
                         priority />
                 </OriginalImagesCont>
                 <Hr />

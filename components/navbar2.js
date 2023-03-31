@@ -108,6 +108,9 @@ export default function Navbar({ open, setOpen }) {
     const handleCaseStudiesClick = () => {
         router.push('/casestudies')
     }
+    const handleDesignProjectsClick = () => {
+        router.push('/design')
+    }
     return (
         <NavbarCont>
             <Logo onClick={handleClick} src="/williamchu-01.svg" alt="logo" />
@@ -118,6 +121,9 @@ export default function Navbar({ open, setOpen }) {
                     </NavLists>
                     <NavLists onClick={handleCaseStudiesClick}>
                         <span>Case Studies</span>
+                    </NavLists>
+                    <NavLists onClick={handleDesignProjectsClick}>
+                        <span>Designs</span>
                     </NavLists>
                     <NavLists >
                         <ScrollLink to="contact" smooth={true}><span>Contact</span></ScrollLink>

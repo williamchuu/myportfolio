@@ -115,7 +115,7 @@ export default function IGAQ() {
         <>
             <Head>
                 <title>William Chu</title>
-                <meta name="description" content="I Got A Queery Case Study" />
+                <meta name="description" content="Spy x Family Poster" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="faviconLight.svg" media="(prefers-color-scheme: dark)" />
                 <link rel="icon" href="faviconDark.svg" media="(prefers-color-scheme: light)" />

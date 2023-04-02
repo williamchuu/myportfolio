@@ -82,7 +82,6 @@ const ViewCaseStudy = styled.div`
     font-size: 1rem;
     color: white;
     margin-top: 50px;
-    max-width: 160px;
     cursor: pointer;
     span {
         border-bottom: 2px solid transparent;

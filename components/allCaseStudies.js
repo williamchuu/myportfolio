@@ -7,7 +7,11 @@ import { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion, useAnimation, useTransform } from "framer-motion";
 import H1 from '../components/h1'
-import Hr from '../components/caseStudies'
+
+const Hr = styled.hr`
+    margin-bottom: 100px;
+    margin-top: 100px;
+`
 
 const CaseStudiesCont = styled.div`
 `
@@ -71,6 +75,7 @@ export default function AllCaseStudies() {
                 >
                 </CaseStudies>
             </CaseStudiesCont>
+            <Hr />
         </div>
     )
 }

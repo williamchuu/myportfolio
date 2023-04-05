@@ -11,6 +11,7 @@ import Hr from '../components/caseStudies'
 import Design from '../pages/design';
 
 const DesignProjectsCont = styled.div`
+margin-top: 200px;
 `
 
 export default function AllDesignProjects() {

@@ -125,7 +125,7 @@ const UserMap = styled(Image)`
 const StyleGuideCont = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     @media (max-width: 430px) {
         flex-direction: column;
     }

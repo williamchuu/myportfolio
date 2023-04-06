@@ -79,6 +79,7 @@ const TheHeading = styled.h2`
 const OriginalImage = styled(Image)`
     align-self: center;
     max-width: 100%;
+    height: auto;
     padding-top: 50px;
 `
 
@@ -152,7 +153,7 @@ export default function IGAQ() {
                 <Mockup
                     src="/imgs/busAdMockup.png"
                     alt="Image of the Spy x Family Live Action Poster"
-                    width={500} height={200}
+                    width={2000} height={1000}
                     priority />
                 <Grid2>
                     <TheHeading>ABOUT THE PROJECT</TheHeading>

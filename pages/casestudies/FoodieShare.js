@@ -79,6 +79,7 @@ const TheHeading = styled.h2`
 const DesignProcess = styled(Image)`
     align-self: center;
     max-width: 100%;
+    height: auto;
     padding-top: 50px;
 `
 
@@ -119,6 +120,7 @@ const UserMap = styled(Image)`
     padding-top: 100px;
     max-width: 100%;
     height: auto;
+    margin: 0 auto;
 `
 const StyleGuideCont = styled.div`
     display: flex;
@@ -180,7 +182,7 @@ export default function FoodieShare() {
                 <ShareFoodWide
                     src="/imgs/foodieshareWide.png"
                     alt="Display of FoodieShare screens"
-                    width={500} height={200}
+                    width={1500} height={1000}
                     priority />
                 <Grid2>
                     <TheHeading>THE PROBLEM</TheHeading>

@@ -88,10 +88,10 @@ const Button = styled.div`
   font-size: 1rem;
   font-weight: 400;
   &:hover {
-      background-color: #0BB4AA;
+      background-color: #7DC9FF;
       color: #2C2928;
       cursor: pointer;
-      border: 2px solid #0BB4AA;
+      border: 2px solid #7DC9FF;
       transition: all 0.2s ease-in-out;
   }
 `;
@@ -150,9 +150,9 @@ export default function About() {
                         }}>
                         <AboutText>
                             I graduated from BCIT with a diploma in
-                            <span style={{ color: '#0BB4AA', fontWeight: '500' }}> Digital Design and Development </span>and a certificate in
+                            <span style={{ color: '#7DC9FF', fontWeight: '500' }}> Digital Design and Development </span>and a certificate in
 
-                            <span style={{ color: '#0BB4AA', fontWeight: '500' }}> Communications Design Essentials</span>
+                            <span style={{ color: '#7DC9FF', fontWeight: '500' }}> Communications Design Essentials</span>
                             . During my studies, I gained hands-on experience working on various projects, including designing mobile apps, creating brand identities, and developing websites. I also developed a love for simplicity and minimalism.
                         </AboutText>
                         <AboutText>

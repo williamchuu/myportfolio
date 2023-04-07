@@ -67,7 +67,7 @@ const ProjectName = styled.div`
 const ProjectDate = styled.div`
     font-size: 1rem;
     font-weight: 500;
-    color: #5ABDB7;
+    color: #7DC9FF;
     margin-bottom: 50px;
 `
 const ProjectDesc = styled.div`
@@ -88,10 +88,12 @@ const ViewCaseStudy = styled.div`
       }
     
       &:hover span {
-        border-bottom-color: #0BB4AA;
-        color: #0BB4AA;
+        border-bottom-color: #7DC9FF;
+        color: #7DC9FF;
         img {
             content: url('/arrowGreen.svg');
+            width: 12px; 
+            height: 12px
         }
       }
 

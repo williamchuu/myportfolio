@@ -21,8 +21,8 @@ const BackToCaseStudiesText = styled.p`
           }
         
           &:hover span {
-            border-bottom-color: #0BB4AA;
-            color: #0BB4AA;
+            border-bottom-color: #7DC9FF;
+            color: #7DC9FF;
           }
     }
 

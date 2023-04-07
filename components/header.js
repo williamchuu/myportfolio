@@ -44,10 +44,10 @@ const Button = styled.div`
     font-size: 1rem;
     font-weight: 400;
     &:hover {
-        background-color: #0BB4AA;
+        background-color: #7DC9FF;
         color: #2C2928;
         cursor: pointer;
-        border: 2px solid #0BB4AA;
+        border: 2px solid #7DC9FF;
         transition: all 0.2s ease-in-out;
     }
 `;
@@ -123,7 +123,7 @@ export default function Header() {
                 </Heading>
                 <SubHeading className={styles.fadeInLeft2}>
                     I am a
-                    <span style={{ color: '#0BB4AA', fontWeight: '500' }}> UI/UX designer </span>
+                    <span style={{ color: '#7DC9FF', fontWeight: '500' }}> UI/UX designer </span>
                     with a passion in layout and design. I improve user experience through communication by design.
                     Check out some of my work below.
                 </SubHeading>

@@ -27,12 +27,20 @@ const ConnectCont = styled.div`
     transition: opacity 1s ease-in-out;
 `
 
-const SocialMediaImage = styled(Image)`
+const LinkedInImage = styled(Image)`
     width: 25px;
     height: 25px;
     margin: 10px 20px 20px 0;
     cursor: pointer;
     `
+
+const GmailImage = styled(Image)`
+    width: 25px;
+    height: 25px;
+    margin: 10px 20px 20px 0;
+    cursor: pointer;
+    `
+
 const Copyright = styled.p`
     font-size: 1rem;
     font-weight: 400;
@@ -61,10 +69,6 @@ export default function Contact() {
         window.open('https://www.linkedin.com/in/william-chu/', '_blank');
     }
 
-    const handleGmail = () => {
-        window.open('mailto:w.chu96@gmail.com', '_blank');
-    }
-
     return (
         <div id="contact" ref={ref}>
             <Hr />
@@ -78,9 +82,16 @@ export default function Contact() {
                     hidden: { opacity: 0, y: 50 },
                 }}>
                 <Connect> Let&#39;s connect.</Connect>
-                <SocialMediaImage onClick={handleLinkedIn} src="/linkedin.svg" alt="LinkedIn" width={50} height={50} />
+                <LinkedInImage onClick={handleLinkedIn} src="/linkedin.svg" 
+                onMouseOver={(e) => e.target.src='/linkedin_hover.svg'}
+                onMouseOut={(e) => e.target.src='/linkedin.svg'}
+                alt="LinkedIn" 
+                width={50} height={50} />
                 <Link href="mailto:w.chu96@gmail.com" target="_blank">
-                    <SocialMediaImage src="/gmail.svg" alt="Gmail" width={50} height={30} />
+                    <GmailImage src="/gmail.svg"
+                    onMouseOver={(e) => e.target.src='/gmail_hover.svg'}
+                    onMouseOut={(e) => e.target.src='/gmail.svg'}
+                    alt="Gmail" width={50} height={30} />
                 </Link>
                 <Copyright>&#169; William Chu 2023</Copyright>
             </ConnectCont>

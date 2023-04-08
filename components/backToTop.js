@@ -22,7 +22,7 @@ const Circle = styled.button`
   }
 
   &:hover {
-    background-color: #3B3938;
+    background-color: #7DC9FF;
   }
   `
 

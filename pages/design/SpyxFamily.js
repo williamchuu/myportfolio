@@ -86,7 +86,6 @@ const OriginalImage = styled(Image)`
 const PosterCont = styled.div`
     display: flex;
     flex-direction: row;
-    padding-top: 100px;
     justify-content: space-between;
     @media (max-width: 820px) {
         flex-direction: column;
@@ -97,13 +96,12 @@ const Poster = styled(Image)`
     max-width: 100%;
     height: auto;
     display: block;
-    padding: 10px;
 `
 
 const OriginalImagesCont = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding-left: 50px;
     padding-right: 50px;
     @media (max-width: 820px) {

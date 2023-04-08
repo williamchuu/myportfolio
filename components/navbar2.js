@@ -42,7 +42,8 @@ span {
   }
 
   &:hover span {
-    border-bottom-color: white;
+    color: #7DC9FF;
+    border-bottom-color: #7DC9FF;
   }
   @media (max-width: 820px) {
     margin-right: 2rem;

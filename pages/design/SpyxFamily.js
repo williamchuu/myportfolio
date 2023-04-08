@@ -15,11 +15,15 @@ const Hr = styled.hr`
 const Title = styled.h1`
     font-size: 4rem;
     color: #F1F6F6;
-    line-height: 3;
     span {
         font-size: 1.5rem;
         font-weight: 400;
     }
+    @media (max-width: 430px) {
+        font-size: 3rem;
+        padding-bottom: 10px;
+        padding-top: 20px;
+    }   
 `
 const Info = styled.p`
     color: #F1F6F6;
@@ -122,7 +126,7 @@ export default function IGAQ() {
             <main className={styles.main}>
                 <Navbar2 />
                 <BackToTop />
-                <Title>Spy x Family Poster </Title>
+                <Title>Spy x Family</Title>
                 <Grid>
                     <div style={
                         {

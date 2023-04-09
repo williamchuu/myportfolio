@@ -156,9 +156,9 @@ export default function FoodieShare() {
             <main className={styles.main}>
                 <Navbar2 />
                 <BackToTop />
-                <LogoCont>
+                {/* <LogoCont>
                     <Logo src="/foodieshare_logo.svg" alt="FoodieShare Logo" width={150} height={200} />
-                </LogoCont>
+                </LogoCont> */}
                 <Title>FoodieShare </Title>
                 <Grid>
                     <div style={

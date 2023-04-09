@@ -152,9 +152,9 @@ export default function ShareFood() {
             <main className={styles.main}>
                 <Navbar2 />
                 <BackToTop />
-                <LogoCont>
+                {/* <LogoCont>
                     <Logo src="/imgs/sharefood_logo.png" alt="ShareFood Logo" width={100} height={150} />
-                </LogoCont>
+                </LogoCont> */}
                 <Title>ShareFood </Title>
                 <Grid>
                     <div style={

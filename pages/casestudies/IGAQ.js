@@ -168,9 +168,9 @@ export default function IGAQ() {
             <main className={styles.main}>
                 <Navbar2 />
                 <BackToTop />
-                <LogoCont>
+                {/* <LogoCont>
                     <Logo src="/IGAQ_logo.svg" alt="IGAQ Logo" width={100} height={100} />
-                </LogoCont>
+                </LogoCont> */}
                 <Title>IGAQ <span>&#40;I Got A Queery&#41;</span> </Title>
                 <Grid>
                     <div style={

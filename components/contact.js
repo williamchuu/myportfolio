@@ -46,9 +46,13 @@ const Copyright = styled.p`
     font-weight: 400;
     color: white;
     text-align: left;
-    padding-top: 80px;
+    padding-top: 10px;
     `
-
+const Text = styled.p`
+    font-size: 1rem;
+    color: white;
+    padding-top 80px;
+    `
 export default function Contact() {
 
     const [isAnimated, setIsAnimated] = useState(false);
@@ -93,6 +97,7 @@ export default function Contact() {
                     onMouseOut={(e) => e.target.src='/gmail.svg'}
                     alt="Gmail" width={50} height={30} />
                 </Link>
+                <Text>This site is coded with &#128153;</Text>
                 <Copyright>&#169; William Chu 2023</Copyright>
             </ConnectCont>
         </div>

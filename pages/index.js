@@ -13,6 +13,7 @@ import H1 from '../components/h1'
 import About from '../components/about'
 import Contact from '../components/contact'
 import BackToTop from '../components/backToTop'
+import Spacer from '../components/spacer'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -53,6 +54,7 @@ export default function Home() {
             <Heading />
             <About />
             <AllCaseStudies />
+            <Spacer />
             <AllDesignProjects />
             <Contact />
           </>

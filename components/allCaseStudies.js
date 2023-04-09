@@ -49,7 +49,7 @@ export default function AllCaseStudies() {
                     number="1"
                     roles={['UI/UX Design', 'Graphic Design', 'Branding']}
                     projectName="IGAQ"
-                    projectDate="Sept &#8211; Dec 2022"
+                    projectDate="SEPT &#8211; DEC 2022"
                     projectDesc="A safe space for the members of the LGBTQIA+ community to ask questions, share stories, and read resources about all things LGBTQIA+."
                     viewCaseStudy="VIEW CASE STUDY"
                     previewImage="/imgs/igaq_preview.png">

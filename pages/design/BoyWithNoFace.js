@@ -16,6 +16,7 @@ const Hr = styled.hr`
 const Title = styled.h1`
     font-size: 4rem;
     color: #F1F6F6;
+    padding-bottom: 90px;
     span {
         font-size: 1.5rem;
         font-weight: 400;

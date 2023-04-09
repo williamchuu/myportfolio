@@ -147,7 +147,7 @@ export default function BoyWithNoFace() {
                 <Hr />
                 <Grid2>
                     <TheHeading>DRAWING THE ASSETS</TheHeading>
-                    <Text>I went with a hand-drawn art style, which gives the book a playful and whimsical mood. The sketchy lines and rough coloring to provide a sense of familiarity to traditional children books. art style also helps to create a sense of warmth and approachability that is perfect for children.</Text>
+                    <Text>I went with a hand-drawn art style, which gives the book a playful and whimsical mood. The sketchy lines and rough coloring to provide a sense of familiarity to traditional children books. The colors of the characters are chosen carefully to give them enough contrast from the background. The background is primarily a white background to give focus on the characters and text on the page. </Text>
                     <div/>
                     <Mockup src="/imgs/drawings.png"
                     alt="The Boy With No Face concept art"

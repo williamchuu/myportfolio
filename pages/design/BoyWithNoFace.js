@@ -135,17 +135,33 @@ export default function BoyWithNoFace() {
                     <Text>This project is a showcase of my illustration skills, featuring a collection of hand-drawn illustrations created in a sketchy art style. The story took inspiration from a fairy tale written in a drama. I also made the storybook interactive to encourage young readers to enjoy reading. I've included a text-to-speech feature so that it can be more accessible to users who have trouble reading.</Text>
                 </Grid2>
                 <Hr />
-                
-                <TheHeading>STORYBOARD</TheHeading>
-                <Text>coming soon</Text>
+                <Grid2>
+                    <TheHeading>STORYBOARD</TheHeading>
+                    <Mockup
+                    src="/imgs/storyboard2.png"
+                    alt="Sketches and storyboard of The Boy With No Face"
+                    width={2000} height={1000}
+                    priority />
+                </Grid2>
                 <Hr />
                 <Grid2>
                     <TheHeading>DRAWING THE ASSETS</TheHeading>
                     <Text>I went with a hand-drawn art style, which gives the book a playful and whimsical mood. The sketchy lines and rough coloring to provide a sense of familiarity to traditional children books. art style also helps to create a sense of warmth and approachability that is perfect for children.</Text>
+                    <div/>
+                    <Mockup src="/imgs/drawings.png"
+                    alt="The Boy With No Face concept art"
+                    height={1100} width={1100}></Mockup>
                 </Grid2>
-                <Mockup src="/imgs/drawings.png"
-                alt="The Boy With No Face concept art"
-                height={1100} width={1100}></Mockup>
+               <Hr />
+                <Grid2>
+                    <TheHeading>FINAL OUTCOME</TheHeading>
+                    <Mockup src="/imgs/bookPages.png"
+                    alt="The Boy With No Face concept art"
+                    height={1100} width={1100}></Mockup>
+                    <div/>
+                    <Text>Read the story 
+                        <Link href="https://indd.adobe.com/view/dca92a45-8423-4776-b782-fa007bcb309e" target="_blank"> <span style={{ color: '#7DC9FF'}}> here</span></Link>.</Text>
+                </Grid2>
                <Hr />
                <BackToDesignProjects />
                <Contact />

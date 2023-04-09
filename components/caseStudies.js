@@ -16,14 +16,15 @@ const CaseStudyCont = styled.div`
     // grid-template-rows: 1fr 1fr;
     grid-template-areas:
         "a b c d"
-    max-width: 100px;
+    // max-width: 100px;
     margin: auto;
+    padding: 10px;
     opacity: ${props => props.visible ? 1 : 0};
     transition: opacity 1s ease-in-out;
-    @media (max-width: 820px) {
+    @media (max-width: 1000px) {
         grid-template-columns: 1fr 1fr
     }
-    @media (max-width: 430px) {
+    @media (max-width: 600px) {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
@@ -34,14 +35,14 @@ const Number = styled.div`
     color: #F1F6F6;
     font-size: 3rem;
     font-weight: 200;
-    @media (max-width: 820px) {
+    @media (max-width: 1000px) {
         display: none;
     }
 `
 const Roles = styled.div`
     display: flex;
     flex-direction: column;
-    @media (max-width: 820px) {
+    @media (max-width: 1000px) {
         display: none;
     }
 `
@@ -59,8 +60,9 @@ const ProjectName = styled.div`
     font-size: 2.5rem;
     font-weight: 600;
     padding-bottom: 10px;
+    padding-right: 10px;
     color: white;
-    @media (max-width: 430px) {
+    @media (max-width: 600px) {
         padding-top: 40px;
     }
 `

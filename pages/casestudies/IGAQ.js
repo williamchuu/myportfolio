@@ -22,6 +22,11 @@ const Title = styled.h1`
         font-size: 1.5rem;
         font-weight: 400;
     }
+    @media (max-width: 430px) {
+        font-size: 3rem;
+        line-height: 1;
+        padding-bottom: 70px;
+    }
 `
 const Info = styled.p`
     color: #F1F6F6;
@@ -35,7 +40,7 @@ const Info = styled.p`
 const Text = styled.p`
     color: #F1F6F6;
     padding-bottom: 50px;
-    line-height: 2;
+    line-height: 2em;
     @media (max-width: 430px) {
         padding-top: 50px;
     }
@@ -81,6 +86,7 @@ const TheHeading = styled.h2`
 const DesignProcess = styled(Image)`
     align-self: center;
     max-width: 100%;
+    width: auto;
     height: auto;
     padding-top: 50px;
 `
@@ -92,9 +98,11 @@ const LogoCont = styled.div`
     }
 `
 const Logo = styled(Image)`
+    width: auto;
+    height: auto;
     @media (max-width: 430px) {
         width: auto;
-        height: auto;
+        max-height: auto;
         margin: 0 auto;
         display: flex;
         justify-content: center;
@@ -106,7 +114,7 @@ const PersonaCont = styled.div`
     display: flex;
     flex-direction: row;
     padding-top: 100px;
-    justify-content: space-between;
+    justify-content: space-evenly;
     @media (max-width: 820px) {
         flex-direction: column;
     }

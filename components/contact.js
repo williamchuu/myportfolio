@@ -97,7 +97,7 @@ export default function Contact() {
                     onMouseOut={(e) => e.target.src='/gmail.svg'}
                     alt="Gmail" width={50} height={30} />
                 </Link>
-                <Text>This site is coded with &#128153;</Text>
+                <Text>This site is coded with &#129293;.</Text>
                 <Copyright>&#169; William Chu 2023</Copyright>
             </ConnectCont>
         </div>

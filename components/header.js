@@ -22,12 +22,13 @@ const SubHeading = styled.h3`
     font-weight: 400;
     color: #F1F6F6;
     text-align: left;
-    line-height: 2;
+    line-height: 1.5em;
     padding-bottom: 20px;
     @media (max-width: 430px) {
         margin-top: 20px;
-        font-size: 1.2rem;
-       }
+        font-size: 1.2em;
+        line-height: 1.3em;
+      }
 `
 
 const Button = styled.div`

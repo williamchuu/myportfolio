@@ -25,7 +25,7 @@ const AboutText = styled.p`
     font-weight: 400;
     color: #F1F6F6;
     text-align: left;
-    line-height: 2;
+    line-height: 2em;
     padding-bottom: 20px;
     @media (max-width: 430px) {
         font-size: 1rem;

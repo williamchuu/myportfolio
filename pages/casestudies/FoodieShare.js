@@ -20,6 +20,9 @@ const Title = styled.h1`
         font-size: 1.5rem;
         font-weight: 400;
     }
+    @media (max-width: 430px) {
+        font-size: 3rem;
+    }
 `
 const Info = styled.p`
     color: #F1F6F6;
@@ -33,7 +36,7 @@ const Info = styled.p`
 const Text = styled.p`
     color: #F1F6F6;
     padding-bottom: 50px;
-    line-height: 2;
+    line-height: 2em;
     @media (max-width: 430px) {
         padding-top: 50px;
     }
@@ -90,9 +93,11 @@ const LogoCont = styled.div`
     }
 `
 const Logo = styled(Image)`
+    width: auto;
+    height: auto;
     @media (max-width: 430px) {
-        width: 100%;
-        max-height: auto;
+        width: auto;
+        height: auto;
         display: flex;
         justify-content: center;
         

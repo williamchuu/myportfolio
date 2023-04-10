@@ -24,7 +24,6 @@ const Title = styled.h1`
     }
     @media (max-width: 430px) {
         font-size: 3rem;
-        line-height: 1;
         padding-bottom: 70px;
     }
 `

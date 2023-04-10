@@ -22,7 +22,7 @@ const Title = styled.h1`
     }
     @media (max-width: 430px) {
         font-size: 3rem;
-        padding-bottom: 10px;
+        padding-bottom: 50px;
         padding-top: 20px;
     }   
 `

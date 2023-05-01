@@ -124,7 +124,7 @@ export default function Header() {
                 </Heading>
                 <SubHeading className={styles.fadeInLeft2}>
                     I am a
-                    <span style={{ color: '#7DC9FF', fontWeight: '500' }}> UI/UX designer </span>
+                    <span style={{ color: '#7DC9FF', fontWeight: '500' }}>  designer </span>
                     with a passion in layout and design. I improve user experience through communication by design.
                     Check out some of my work below.
                 </SubHeading>

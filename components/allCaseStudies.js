@@ -49,7 +49,7 @@ export default function AllCaseStudies() {
                     number="1"
                     roles={['UI/UX Design', 'Graphic Design', 'Branding']}
                     projectName="IGAQ"
-                    projectDate="SEPT &#8211; DEC 2022"
+                    projectDate="DURATION: 3 MONTHS"
                     projectDesc="A safe space for the members of the LGBTQIA+ community to ask questions, share stories, and read resources about all things LGBTQIA+."
                     viewCaseStudy="VIEW CASE STUDY"
                     previewImage="/imgs/igaq_preview.png">
@@ -58,7 +58,7 @@ export default function AllCaseStudies() {
                     number="2"
                     roles={['UI/UX Design']}
                     projectName="ShareFood"
-                    projectDate="JAN &#8211; MAR 2022"
+                    projectDate="DURATION: 3 MONTHS"
                     projectDesc="ShareFood is a web application that aims to save food by sharing it with others; whether receiving or giving away leftover foods."
                     viewCaseStudy="VIEW CASE STUDY"
                     previewImage="/imgs/sharefood_preview.png"
@@ -68,7 +68,7 @@ export default function AllCaseStudies() {
                     number="3"
                     roles={['UI/UX Design']}
                     projectName="FoodieShare"
-                    projectDate="JAN &#8211; MAR 2022"
+                    projectDate="DURATION: 3 MONTHS"
                     projectDesc="FoodieShare is a food-based social media app where users can share their love of food with other locals."
                     viewCaseStudy="VIEW CASE STUDY"
                     previewImage="/imgs/foodieshare_preview.png"

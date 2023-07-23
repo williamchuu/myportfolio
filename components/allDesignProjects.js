@@ -47,7 +47,7 @@ export default function AllDesignProjects() {
                     number="1"
                     roles={['Graphic Design', 'Photo Editing']}
                     projectName="Spy x Family"
-                    projectDate="DEC 2022"
+                    projectDate="DURATION: 1 MONTH"
                     projectDesc="A live-action adaptation movie poster based on the manga series and anime Spy x Family."
                     viewProject="VIEW PROJECT"
                     previewImage="/imgs/spyxfamily_preview.png"
@@ -57,7 +57,7 @@ export default function AllDesignProjects() {
                     number="2"
                     roles={['Graphic Design', 'Illustration']}
                     projectName="The Boy With No Face"
-                    projectDate="DEC 2022"
+                    projectDate="DURATION: 1 MONTH"
                     projectDesc="An online digital storybook with illustrations."
                     viewProject="VIEW PROJECT"
                     previewImage="/imgs/boywithnoface_preview.png"

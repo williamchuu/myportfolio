@@ -98,7 +98,7 @@ export default function Contact() {
                     alt="Gmail" width={50} height={30} />
                 </Link>
                 <Text>This site is coded with &#129293;.</Text>
-                <Copyright>&#169; William Chu 2023</Copyright>
+                <Copyright>&#169; William Chu</Copyright>
             </ConnectCont>
         </div>
     )

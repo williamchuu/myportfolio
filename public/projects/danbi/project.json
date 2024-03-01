@@ -1,0 +1,52 @@
+{
+    "title": "Danbi Skin",
+    "wide_mockup":"/wide_mockup.webp",
+    "projectname": "danbi",
+    "description": "Experience a skincare journey guided by top skin scientists and board-certified dermatologists.",
+    "link": "/projects/danbi",
+    "duration": "2 months",
+    "role": "UI/UX Designer",
+    "tags": "Design Strategy, User Research, Wireframing, User Testing",
+    "tools": "Figma",
+    "problem": "With an abundance of skincare products available on the market and varying skin concerns among users, finding the right products tailored to one's specific needs can be daunting. Additionally, misinformation and conflicting advice further complicate the decision-making process. The app sought to simplify this journey by providing users with expert guidance from leading skin scientists and board-certified dermatologists. By leveraging their expertise, the app aimed to offer personalized recommendations and reliable information to help users achieve their skincare goals effectively and confidently.",
+    "statement": "How can we streamline the process of finding personalized skincare?",
+    "solution": {
+        "aim": "To address the challenges faced by users in finding their skincare routine, the solution involves combining the expertise of leading skin scientists and board-certified dermatologists to provide personalized recommendations tailored to individual skin concerns and goals.",
+        "solutions": [
+            {
+                "feature": "Skin Quiz",
+                "solution": "Users have the option to complete a 20-question multiple-choice quiz to assess their skin type, goals, and concerns."
+            },
+            {
+                "feature": "Ingredient Dictionary",
+                "solution": "We've included an ingredient dictionary to simplify terminology and provide users with the information they need."
+            },
+            {
+                "feature": "Routine Analysis",
+                "solution": "The app analyzes the products selected by the user in their skincare routine and assigns ratings based on their skincare goals and concerns identified in the skin quiz."
+            }
+        ]
+    },
+    "research": [
+        "In the early stages of our skincare app development, we recognized the importance of understanding the diverse skincare needs and challenges faced by our target audience. To gather in-depth insights, we conducted user research involving interviews and surveys with potential users aged 18 to 45, spanning a wide range of skin types, concerns, and lifestyles. Our focus was on identifying common skincare routines, prevalent skin issues, and the level of skincare knowledge among our audience. This approach allowed us to uncover key pain points, such as confusion about choosing the right products for specific skin types.",
+        "The feedback collected was instrumental in shaping the app's features, including a custom skincare routine builder, detailed product information, and a community forum for sharing tips and advice. This user-centric approach ensured that our app was tailored to meet the actual needs and preferences of our users, setting a solid foundation for the development of a solution that was both practical and engaging for our target audience."
+    ],
+    "sitemap": "/projects/danbi/sitemap.png",
+    "styleguide": {
+        "colors": [
+            "##FFFFFF",
+            "#DFDFF6",
+            "#F1F6F6",
+            "#A1A2DA",
+            "#979797",
+            "#7966EF"
+        ],
+        "font": "IBM_plex_sans"
+    },
+    "features": "/projects/danbi/features.png",
+    "outcomes": {
+        "image": "/projects/danbi/outcome.webp"
+    },
+    "feedback": "The feedback from our skincare app users was overwhelmingly positive, with many praising the app's user-friendly interface and comprehensive product database. However, a notable challenge arose during usability testing, as users reported difficulties in customizing their skincare routines to address their specific concerns. Despite the feature's intent to provide personalized recommendations, users found the interface to be somewhat cumbersome and lacking in intuitive guidance. On a more positive note, users expressed enthusiasm for the app's educational content, particularly the articles and tutorials on skincare best practices and ingredient knowledge. Additionally, the integration of a skincare diary feature received high praise for its ability to track progress and monitor changes in skin condition over time. This valuable feedback has prompted us to reevaluate and enhance the customization process for skincare routines, ensuring that users can easily tailor their regimens to meet their individual needs",
+    "conclusion": "The creation of our skincare app has been an exciting journey of innovation and teamwork, focusing on meeting the varied skincare needs of our users. By conducting thorough user research, refining designs through iterative processes, and gathering ongoing feedback, we've developed a platform that helps users make informed choices about their skincare routines, improving their overall skincare journey. My dedication to user-centered design principles has led to an intuitive and user-friendly app interface, ensuring high levels of user satisfaction and interaction, all while maintaining an elegant appearance."
+}

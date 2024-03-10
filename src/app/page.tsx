@@ -32,7 +32,7 @@ export default function Home() {
         window.scrollTo(0, 0);
         setTimeout(() => {
           scroll.scrollToBottom({
-            duration:2000
+            duration: 2000
           });
         }, 500)
       }
@@ -45,7 +45,8 @@ export default function Home() {
         <AnimatePresence>
           {loading ?
             <>
-              <div className="h-[100dvh]"></div>
+              {/* <div className="min-h-[120dvh]"></div> */}
+              {/* <HeroSection /> */}
               <LoadingAnimation onComplete={() => setLoading(false)} onClick={() => { setLoading(false) }} />
             </>
             :

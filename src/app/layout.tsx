@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Rubik, Heebo } from "next/font/google";
 import "./globals.css";
 const heebo = Heebo({
@@ -21,11 +21,33 @@ export const metadata: Metadata = {
       },
     ],
   },
-  keywords:["UI/UX Design", "Graphic Design", "Portfolio", "Design", "Layouts", "Minimalism", "Simplicity"],
+  keywords: ["UI/UX Design", "Graphic Design", "Portfolio", "Design", "Layouts", "Minimalism", "Simplicity"],
   openGraph: {
-    images: "/faviconDark.svg"
+    images: "/faviconDark.svg",
+    locale: "en_US",
+    type: "website"
   },
+  creator: "William Chu",
+  robots: {
+    index: false,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: false,
+      noimageindex: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
 };
+
+export const viewport: Viewport = {
+  themeColor: 'black',
+  colorScheme: 'dark',
+}
+
 
 export default function RootLayout({
   children,
@@ -34,7 +56,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={` ${rubik.className} ${heebo.variable} bg-bg`}>{children}</body>
+      <body className={` ${rubik.className} ${heebo.variable}`}>{children}</body>
     </html>
   );
 }

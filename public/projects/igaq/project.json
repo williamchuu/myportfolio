@@ -1,12 +1,40 @@
 {
     "title": "IGAQ",
-    "subtitle": "I Got A Queery",
+    "heading": "I Got A Queery",
     "projectname": "igaq",
     "link": "/projects/igaq",
     "wide_mockup":"/wide_mockup.webp",
     "description": "A safe space for the members of the LGBTQIA+ community to ask questions, share stories and read resources about all things LGBTQIA+.",
     "duration": "3 months",
     "role": "UI/UX Designer and Graphic Designer",
-    "tags": "UI/UX Design, Graphic Design, Branding",
-    "tools": "Figma"
+    "roledescription": ["UI/UX Design", "Graphic Design", "Branding"],
+    "tags": "Design Strategy, User Research, Wireframing, User Testing",
+    "tools": "Figma, Illustrator, After Effects",
+    "problem": ["Although the LGBTQIA+ community gets more representation, there aren't many safe spaces for questioning or shy members. The top search results are mainly dating apps or public and broad search forums.", "The LGBTQIA+ community is also represented through Pride month, where proud LGBTQIA+ members celebrate their sexuality. There’s a lack of representation of the members on the other side of the spectrum who have trouble accepting themselves."],
+    "statement": "How can we better support members who don’t feel comfortable within those safe places?",
+    "solution": {
+        "aim": ["The aim is to help facilitate a safe space for people to find comfort and explore their identities. Users can safely ask a Queery (question) or share a Story with like-minded users. There is also a library of curated LGBTQIA+ resources to help users to learn more about their sexuality."],
+        "solutions": [
+            {
+                "feature": "Queery of the Day and Story of the Day",
+                "solution": "We introduced two unique features called “Queery of the Day” and “Story of the Day” to nurture the community by spotlighting less interactive posts and providing insights to users who may be exploring their sexualities."
+            },
+            {
+                "feature": "AI for Detecting and Anti-LGBTQ+ Hate Speech",
+                "solution": "One significant issue uncovered during our research was the fear our users experienced regarding encountering hate speech. To address this concern, we implemented an AI-powered solution to detect hate speech in posts before they are published. This technology automatically identifies and flags potentially harmful content, thereby preventing users from posting it."
+            }
+        ],
+        "solutionimg":"/solution.png"
+    },
+    "research": [
+        "Our target audience was more specific than just the LGBTQIA+ community; we narrowed it down even more. We interviewed several users between the age group of 16 to 30 years old who identified as LGBTQIA+ and had them take a survey for us to better understand how we can create a safe space. The consensus was that users weren’t completely open and didn’t have a space to discuss LGBTQIA+ topics without being exposed to hate and homophobic comments.", 
+        "The survey helped me get a better understanding of my users and their main frustrations and goals. Sexuality can be a very personal topic. Many external factors contribute to a user’s comfort level in their sexuality, such as family, religion, and education. The survey results were the base of my user research and served as the motivation and building blocks for designing IGAQ."
+    ],
+    "researchimg": "/research.png",
+    "features": "/features.png",
+    "userjourney": "/userjourney.png",
+    "prototypes": "/prototypes.png",
+    "outcomes": "/outcome.png",
+    "feedback": "The general feedback on IGAQ was positive, with users appreciating the accessible color contrast that aligned well with the app's theme without appearing childish. However, a key challenge emerged during usability testing, as users encountered difficulty recalling the \"Queery of the Day,\" often mistaking it for an ad due to its presentation. On a brighter note, many users expressed enthusiasm for our unique features, such as the ability to adjust anonymity levels in the profile section. Additionally, the inclusion of a \"Resources\" page, featuring a comprehensive list of terms, articles, and flags, was widely regarded as incredibly helpful by our users.",
+    "conclusion": "This project provided me with the opportunity to collaborate with six other talented designers and developers, all dedicated to serving the LGBTQIA+ community. Together, we crafted an intuitive and visually captivating interface aimed at alleviating the pain points experienced by a particular group within the community. Through rigorous user research, extensive usability testing, and ongoing feedback, we applied user-centered design principles to ensure our solution met the diverse needs of our users. Presenting IGAQ to an audience of over 100 people was a rewarding experience, and we have been gratified by the positive feedback it has received since."
 }

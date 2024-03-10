@@ -21,7 +21,7 @@ export default function LoadingAnimation({
             />
         </div>
         <motion.p initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: .5, duration: 1, ease: "easeInOut" }} exit={{}}
-            className="text-accent pt-16 md:pt-32 cursor-pointer">Click anywhere to skip
+            className="text-accent pt-16 md:pt-32 cursor-pointer">(Click anywhere to skip)
             </motion.p>
     </motion.section>
 }

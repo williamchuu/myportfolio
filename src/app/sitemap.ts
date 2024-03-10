@@ -21,9 +21,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 import Projects from "./helper/projectList";
 const generateBlogPostsSitemapObjects = async () => {
   let sitemap = [];
-  let project = Projects();
+  let project = await Projects();
   for (let i = 0; i < Projects.length - 1; i++) {
     sitemap.push({
+      //@ts-ignore
       slug: project[i].projectname,
       updatedAt: new Date()
     }

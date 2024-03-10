@@ -29,7 +29,7 @@ export default function NavBar({
 
     return (
         <>
-            <motion.nav className="w-full fixed flex justify-between z-[2000] font-bold px-5 bg-bg" variants={{
+            <motion.nav className="w-full fixed flex justify-between z-[2000] font-bold px-5 bg-bg-light" variants={{
                 visible: { y: 0 },
                 hidden: { y: "-100%" },
             }}
@@ -38,16 +38,16 @@ export default function NavBar({
             >
                 <div className="w-full flex items-center justify-center">
                     <div className="justify-between w-full flex max-w-7xl">
-                        <div className="border-primary cursor-pointer grid place-items-center -ml-2 md:pl-0 ">
+                        <div className="border-primary cursor-pointer grid place-items-center  -ml-2 md:pl-0 ">
                             {home ? <Scroll to="hero" className=""
                                 smooth={true}
                                 duration={1000}
                             >
-                                <Image src="/logos/WC_Logo_White.svg" width={200} height={50} alt="William Chu White Logo" />
+                                <Image src="/logos/WC_Logo_White.svg" width={175} height={50} alt="William Chu White Logo" className="w-44 md:w-48"/>
                             </Scroll>
                                 :
                                 <Link href="/" className="flex items-center justify-center transition-all cursor-pointer ">
-                                    <Image src="/logos/WC_Logo_White.svg" width={200} height={45} alt="William Chu White Logo" />
+                                    <Image src="/logos/WC_Logo_White.svg" width={175} height={45} alt="William Chu White Logo" className="w-44 md:w-48"/>
                                 </Link>
                             }
                         </div>
@@ -84,15 +84,15 @@ export default function NavBar({
 
                         </div>
                         <div className="flex md:hidden flex-col">
-                            {ham && <IoClose onClick={() => { showHam(!ham) }} className="p-1 text-white text-5xl cursor-pointer transition-all" />}
-                            {!ham && <GiHamburgerMenu onClick={() => { showHam(!ham) }} className="p-1 text-white text-5xl cursor-pointer transition-all" />}
+                            {ham && <IoClose onClick={() => { showHam(!ham) }} className="p-1 text-white text-4xl cursor-pointer transition-all" />}
+                            {!ham && <GiHamburgerMenu onClick={() => { showHam(!ham) }} className="p-1 text-white text-4xl cursor-pointer transition-all" />}
                         </div>
                     </div>
                 </div>
             </motion.nav>
             <AnimatePresence>
-                {ham && <motion.div className="p-8 fixed bg-bg-dark w-full flex flex-col text-heebo top-10 text-xl gap-2 z-[1000] border-primary md:hidden"
-                    initial={{ opacity: 0, y: "-100%" }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: "-100%" }} transition={{ ease: "easeInOut" }}>
+                {ham && <motion.nav className="p-8 fixed bg-bg-light w-full flex flex-col text-heebo top-8 text-xl gap-2 z-[1000] border-primary md:hidden"
+                    initial={{ opacity: 0, y: "-110%" }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: "-100%" }} transition={{ ease: "easeInOut" }}>
                     <li className="flex flex-col gap-5 w-full">
                         <ul className="border-b py-2 w-full transition-all cursor-pointer hover:text-primary hover:border-primary">
                             {home ? <Scroll
@@ -135,10 +135,10 @@ export default function NavBar({
 
                         <p className="pt-40 text-accent text-md">© William Chu</p>
                     </li>
-                </motion.div>}
+                </motion.nav>}
             </AnimatePresence>
             <AnimatePresence>
-                <motion.div className={`w-full fixed z-10 h-full bg-zinc-950 bg-opacity-20 ${ham ? "fixed" : "hidden"}`} onClick={() => { showHam(!ham) }}>
+                <motion.div className={`w-full fixed z-10 h-full bg-zinc-950 bg-opacity-30 ${ham ? "fixed" : "hidden"}`} onClick={() => { showHam(!ham) }}>
 
                 </motion.div>
             </AnimatePresence>

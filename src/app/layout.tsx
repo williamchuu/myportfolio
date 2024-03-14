@@ -8,7 +8,7 @@ const rubik = Rubik({ subsets: ["latin"], variable: '--font-rubik' });
 
 export const metadata: Metadata = {
   title: "William Chu Portfolio - Graphic and UI/UX Designer",
-  description: "UI/UX and Graphic designer with a passion in layout and design. Improving user experience through communication by design. Developed by Philip Ho.",
+  description: "UI/UX and Graphic designer with a passion in layout and design. Improving user experience through communication by design.",
   icons: {
     icon: [
       {
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   keywords: ["UI/UX Design", "Graphic Design", "Portfolio", "Design", "Layouts", "Minimalism", "Simplicity"],
   openGraph: {
-    images: "/faviconDark.svg",
+    images: "/landing/me_wave0.svg",
     locale: "en_US",
     type: "website"
   },

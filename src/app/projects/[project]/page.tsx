@@ -40,7 +40,7 @@ export default function Page({
         <motion.div className="pt-8 md:pt-14" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }}>
             {data ?
                 <div>
-                    <BlurImage src={`/projects/${params.project}/wide_mockup.webp`} width={3840} height={2160} className="w-screen min-h-[30dvh] md:max-h-[65dvh] object-cover" alt="Mockup" priority />
+                    <BlurImage src={`/projects/${params.project}/wide_mockup.webp`} width={3840} height={2160} className="w-screen min-h-[30dvh] md:max-h-[75dvh] object-scale-down" alt="Mockup" priority />
                     <ProjectInfoSection data={data} header/>
                     {data.problem != undefined && <ProjectProblemSection title={"THE PROBLEM"} paragraph={data.problem} statement={data.statement} />}
                     {data.solution != undefined && <ProjectSection title={"THE SOLUTION"} paragraph={data.solution.aim} projectname={data.projectname} wideImage={data.solution.solutionimg} solution={data.solution} botLine={false} />}

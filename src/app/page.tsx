@@ -19,20 +19,22 @@ export default function Home() {
   useLayoutEffect(() => {
     if (window.location.hash.length > 1) {
       setLoading(false);
-      if (window.location.hash == "#case") {
-        window.scrollTo(0, 0);
-        setTimeout(() => {
-          scroller.scrollTo('case', {
-            duration: 1500,
-            smooth: true,
-          });
-        }, 500)
-      }
+      // if (window.location.hash == "#case") {
+      //   if (window.innerHeight > 600) {
+      //     scroll.scrollMore(750)
+      //   } else if (window.innerWidth > 900) {
+      //     scroll.scrollMore(1000)
+      //   }
+      //   else {
+      //     scroll.scrollMore(1000)
+      //     console.log("GEGEASG")
+      //   }
+      //   console.log(window.innerHeight, window.innerWidth)
+      // }
       if (window.location.hash == "#contact") {
-        window.scrollTo(0, 0);
         setTimeout(() => {
           scroll.scrollToBottom({
-            duration: 2000
+            duration: 1000
           });
         }, 500)
       }

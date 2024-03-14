@@ -15,7 +15,7 @@ export default function ProjectProblemSection({
         </div>
         <div className="space-y-4">
             {paragraph.map((para, index) => (<p key={index}>{para}</p>))}
-            <blockquote className="border-l-4 pl-4 mt-4 py-2 border-primary italic font-medium">{statement}</blockquote>
+            <blockquote className="border-l-4 pl-4 mt-4 py-2 border-primary text-lg italic font-medium">{statement}</blockquote>
         </div>
     </Section>
 }

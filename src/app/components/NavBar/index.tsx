@@ -29,7 +29,7 @@ export default function NavBar({
 
     return (
         <>
-            <motion.nav className="w-full fixed flex justify-between z-[2000] font-bold px-5 bg-bg-light" variants={{
+            <motion.nav className="w-full fixed flex justify-between z-[2000] font-bold px-5 py-2 md:py-0 bg-bg" variants={{
                 visible: { y: 0 },
                 hidden: { y: "-100%" },
             }}
@@ -38,16 +38,16 @@ export default function NavBar({
             >
                 <div className="w-full flex items-center justify-center">
                     <div className="justify-between w-full flex max-w-7xl">
-                        <div className="border-primary cursor-pointer grid place-items-center  -ml-2 md:pl-0 ">
+                        <div className="border-primary cursor-pointer grid place-items-center -ml-2 md:pl-0 ">
                             {home ? <Scroll to="hero" className=""
                                 smooth={true}
                                 duration={1000}
                             >
-                                <Image src="/logos/WC_Logo_White.svg" width={175} height={50} alt="William Chu White Logo" className="w-44 md:w-48"/>
+                                <Image src="/logos/WC_Logo_White.svg" width={175} height={50} alt="William Chu White Logo" className="w-40 md:w-48"/>
                             </Scroll>
                                 :
                                 <Link href="/" className="flex items-center justify-center transition-all cursor-pointer ">
-                                    <Image src="/logos/WC_Logo_White.svg" width={175} height={45} alt="William Chu White Logo" className="w-44 md:w-48"/>
+                                    <Image src="/logos/WC_Logo_White.svg" width={175} height={45} alt="William Chu White Logo" className="w-40 md:w-48"/>
                                 </Link>
                             }
                         </div>
@@ -91,7 +91,7 @@ export default function NavBar({
                 </div>
             </motion.nav>
             <AnimatePresence>
-                {ham && <motion.nav className="p-8 fixed bg-bg-light w-full flex flex-col text-heebo top-8 text-xl gap-2 z-[1000] border-primary md:hidden"
+                {ham && <motion.nav className="p-8 fixed bg-bg w-full flex flex-col text-heebo top-8 text-xl gap-2 z-[1000] border-primary md:hidden"
                     initial={{ opacity: 0, y: "-110%" }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: "-100%" }} transition={{ ease: "easeInOut" }}>
                     <li className="flex flex-col gap-5 w-full">
                         <ul className="border-b py-2 w-full transition-all cursor-pointer hover:text-primary hover:border-primary">

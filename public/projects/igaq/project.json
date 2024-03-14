@@ -7,7 +7,7 @@
     "description": "A safe space for the members of the LGBTQIA+ community to ask questions, share stories and read resources about all things LGBTQIA+.",
     "duration": "3 months",
     "role": "UI/UX Designer and Graphic Designer",
-    "roledescription": ["UI/UX Design", "Graphic Design", "Branding"],
+    "roledescription": ["UI/UX Design", "Graphic Design"],
     "tags": "Design Strategy, User Research, Wireframing, User Testing",
     "tools": "Figma, Illustrator, After Effects",
     "problem": ["Although the LGBTQIA+ community gets more representation, there aren't many safe spaces for questioning or shy members. The top search results are mainly dating apps or public and broad search forums.", "The LGBTQIA+ community is also represented through Pride month, where proud LGBTQIA+ members celebrate their sexuality. There’s a lack of representation of the members on the other side of the spectrum who have trouble accepting themselves."],
@@ -16,7 +16,7 @@
         "aim": ["The aim is to help facilitate a safe space for people to find comfort and explore their identities. Users can safely ask a Queery (question) or share a Story with like-minded users. There is also a library of curated LGBTQIA+ resources to help users to learn more about their sexuality."],
         "solutions": [
             {
-                "feature": "Queery of the Day and Story of the Day",
+                "feature": "Queery of the Day",
                 "solution": "We introduced two unique features called “Queery of the Day” and “Story of the Day” to nurture the community by spotlighting less interactive posts and providing insights to users who may be exploring their sexualities."
             },
             {

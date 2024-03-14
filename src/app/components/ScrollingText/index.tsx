@@ -28,7 +28,7 @@ export default function ScrollingText({
             <hr className="border-dark-accent" />
             <div className="absolute bg-gradient-to-r from-bg h-4 p-6 z-[80] pointer-events-none"> </div>
             <div className="absolute right-0 bg-gradient-to-l from-bg h-4 p-6 z-[80] pointer-events-none"> </div>
-            <motion.div className="inline-flex gap-6 overflow-x-hidden select-none" ref={ref} style={{ x: xTranslation }}>
+            <motion.div className="inline-flex gap-8 overflow-x-hidden select-none" ref={ref} style={{ x: xTranslation }}>
                 {[...words, ...words].map((item, index) => (
                     <motion.div className="justify-center items-center" key={index}>
                         <p className="text-dark-accent whitespace-nowrap">{item}</p>

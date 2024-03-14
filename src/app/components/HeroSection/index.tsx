@@ -21,27 +21,34 @@ export default function HeroSection() {
           </Scroll>
         </div>
       </motion.div>
-      <div className="flex flex-col md:gap-12 gap-6 justify-center w-full">
-        <motion.h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-balance"
+      <div className="flex flex-col md:gap-4 gap-6 justify-center w-full">
+      <motion.h2 className="text-3xl md:text-4xl text-balance"
           initial={{ x: -50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ delay: .5, duration: .5, ease: "easeInOut" }}
           viewport={{ once: true }}
-        >Hello, I&apos;m William Chu</motion.h1>
-        <motion.p className="font-medium text-lg text-balance"
+        >Hello, I&apos;m</motion.h2>
+        <motion.h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-balance"
           initial={{ x: -50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ delay: .7, duration: .5, ease: "easeInOut" }}
           viewport={{ once: true }}
-        >I’m a <span className="text-primary">UI/UX</span> and <span className="text-primary">Graphic designer</span> with a passion in layout and design. I improve user experience through communication by design.</motion.p>
-        <motion.div
+        >William Chu</motion.h1>
+        <motion.p className=" text-lg text-balance"
           initial={{ x: -50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ delay: .9, duration: .5, ease: "easeInOut" }}
           viewport={{ once: true }}
+        >I’m a <span className="text-primary font-medium">UI/UX</span> and <span className="text-primary font-medium">Graphic designer</span> with a passion in layout and design. I improve user experience through communication by design.</motion.p>
+        <motion.div
+          initial={{ x: -50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ delay: 1.1, duration: .5, ease: "easeInOut" }}
+          viewport={{ once: true }}
+          className="mt-4"
         >
           <Scroll smooth={true}
-            duration={1000} to="case" className=" ">
+            duration={1000} to="case" className="">
             <Button text="See My Projects" />
           </Scroll>
         </motion.div>

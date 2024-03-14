@@ -21,7 +21,7 @@ export default function HeroSection() {
           </Scroll>
         </div>
       </motion.div>
-      <div className="flex flex-col md:gap-4 gap-6 justify-center w-full">
+      <div className="flex flex-col md:gap-3 gap-6 justify-center w-full">
       <motion.h2 className="text-3xl md:text-4xl text-balance"
           initial={{ x: -50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
@@ -45,7 +45,7 @@ export default function HeroSection() {
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ delay: 1.1, duration: .5, ease: "easeInOut" }}
           viewport={{ once: true }}
-          className="mt-4"
+          className="mt-5"
         >
           <Scroll smooth={true}
             duration={1000} to="case" className="">

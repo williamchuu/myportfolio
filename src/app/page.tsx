@@ -19,25 +19,6 @@ export default function Home() {
   useLayoutEffect(() => {
     if (window.location.hash.length > 1) {
       setLoading(false);
-      // if (window.location.hash == "#case") {
-      //   if (window.innerHeight > 600) {
-      //     scroll.scrollMore(750)
-      //   } else if (window.innerWidth > 900) {
-      //     scroll.scrollMore(1000)
-      //   }
-      //   else {
-      //     scroll.scrollMore(1000)
-      //     console.log("GEGEASG")
-      //   }
-      //   console.log(window.innerHeight, window.innerWidth)
-      // }
-      if (window.location.hash == "#contact") {
-        setTimeout(() => {
-          scroll.scrollToBottom({
-            duration: 1000
-          });
-        }, 500)
-      }
     }
   }, [])
 

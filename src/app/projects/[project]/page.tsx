@@ -40,12 +40,12 @@ export default function Page({
         <motion.div className="pt-8 md:pt-14" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }}>
             {data ?
                 <div>
-                    <BlurImage src={`/projects/${params.project}/wide_mockup.webp`} width={3840} height={2160} className="w-screen min-h-[30dvh] md:max-h-[75dvh] object-scale-down" alt="Mockup" priority />
+                    <BlurImage src={`/projects/${params.project}/wide_mockup.webp`} width={3840} height={2160} className="w-screen min-h-[30dvh] md:max-h-[80dvh] object-cover" alt="Mockup" priority />
                     <ProjectInfoSection data={data} header/>
                     {data.problem != undefined && <ProjectProblemSection title={"THE PROBLEM"} paragraph={data.problem} statement={data.statement} />}
                     {data.solution != undefined && <ProjectSection title={"THE SOLUTION"} paragraph={data.solution.aim} projectname={data.projectname} wideImage={data.solution.solutionimg} solution={data.solution} botLine={false} />}
                     {data.research != undefined && <ProjectSection title={"USER RESEARCH"} paragraph={data.research} projectname={data.projectname} image={data.researchimg} />}
-                    {data.sitemap != undefined && <ProjectSection title={"SITE MAP"} projectname={data.projectname} smallImage={data.sitemap} fullWidth />}
+                    {data.sitemap != undefined && <ProjectSection title={"SITE MAP"} projectname={data.projectname} smallImage={data.sitemap} fullWidth sitemap />}
                     {data.userjourney != undefined && <ProjectSection title={"USER JOURNEY"} projectname={data.projectname} largeImage={data.userjourney} />}
                     {data.wireframes != undefined && <ProjectSection title={"WIREFRAMES"} projectname={data.projectname} largeImage={data.wireframes} fullWidth />}
                     {data.prototypes != undefined && <ProjectSection title={"LOW FIDELITY PROTOTYPES"} projectname={data.projectname} largeImage={data.prototypes} fullWidth/>}

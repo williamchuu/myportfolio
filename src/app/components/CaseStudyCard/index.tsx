@@ -47,12 +47,14 @@ export default function CaseStudyCard({
                     <Link href={link}>
                         <BlurImage src={`/projects/${projectname}/mockup.webp`} alt={`Mockup design of the project ${title}`} height={1080} width={1920} className="w-full h-full transition-all" />
                     </Link>
-                    <div className="grid grid-cols-1 md:grid-cols-[40%_59.5%] gap-2">
+                    <div className="grid grid-cols-1 md:grid-cols-[35%_64.5%] gap-2 ">
                         <Link href={link} className="hover:text-primary transition-all md:hidden justify-between inline-flex">
                             <h3 className="font-medium text-4xl">{title}</h3>
                         </Link>
                         <p className="text-accent text-balance font-heebo">{roledescription.map((tag, index) => (<span key={index}>{tag}{index != roledescription.length - 1 && ","} </span>))}</p>
-                        <p className="text-pretty text-start">{description}</p>
+                        <div className="inline-flex justify-end flex-1 text-start">
+                            <p className="inline-flex text-left md:text-justify text-wrap self-end justify-end items-end flex-1">{description}</p>
+                        </div>
                         <div className="md:hidden mt-6">
                             <BottomBorderTextHover href={link}>
                                 {study ? "VIEW CASE STUDY" : "VIEW DESIGN"} <span className="font-bold text-2xl"><MdArrowOutward /></span>

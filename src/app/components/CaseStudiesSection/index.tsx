@@ -18,9 +18,12 @@ export default function CaseStudiesSection() {
     }, [])
 
     return <Section title="Case Studies" id="case" className="">
-        {cases.map((project: any, index: number) => {
-            return <CaseStudyCard title={project.title} projectname={project.projectname} description={project.description} roledescription={project.roledescription} link={project.link} key={index} number={index} />
-        })}
+
+        {cases.length > 0 ? cases.map((project: any, index: number) => (
+            <CaseStudyCard title={project.title} projectname={project.projectname} description={project.description} roledescription={project.roledescription} link={project.link} key={index} number={index} />
+        )) : <div className="h-[100dvh]">
+        </div>
+        }
         <hr className="h-1 bg-text " />
     </Section>
 }

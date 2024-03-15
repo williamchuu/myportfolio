@@ -4,14 +4,12 @@ import HeroSection from "@/app/components/HeroSection";
 import AboutMeSection from "./components/AboutMeSection";
 import CaseStudiesSection from "./components/CaseStudiesSection";
 import Footer from "./components/Footer";
-import GraphicDesignSection from "./components/GraphicDesignSection";
 import BackToTop from "./components/BackToTopButton";
 import Carousel from "./components/Carousel";
 import LoadingAnimation from "./components/LoadingAnimation";
 import { useLayoutEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 
-import { animateScroll as scroll, Element, scroller } from 'react-scroll';
 
 export default function Home() {
   const [loading, setLoading] = useState<boolean>(true);
@@ -42,13 +40,8 @@ export default function Home() {
         </AnimatePresence>
 
         <Carousel />
-        <Element name="about">
-          <AboutMeSection />
-        </Element>
-        <Element name="case">
-          <CaseStudiesSection />
-        </Element>
-        {/* <GraphicDesignSection/> */}
+        <AboutMeSection />
+        <CaseStudiesSection />
         <Footer />
 
       </main>

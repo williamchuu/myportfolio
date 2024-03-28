@@ -1,5 +1,4 @@
 "use client"
-import Image from "next/image"
 import Button from "../Button"
 import { Link as Scroll } from "react-scroll"
 import { motion } from "framer-motion"

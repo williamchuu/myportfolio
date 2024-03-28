@@ -3,11 +3,10 @@ import React from "react";
 
 export default function BottomBorderTextHover({
     href,
-    children,
+    children
 }: {
     href: string,
     children: React.ReactNode,
-
 }) {
     return (
         <div className="group inline-flex hover:-translate-y-1 transition-all">

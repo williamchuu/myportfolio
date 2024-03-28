@@ -7,44 +7,38 @@ import Footer from "./components/Footer";
 import BackToTop from "./components/BackToTopButton";
 import Carousel from "./components/Carousel";
 import LoadingAnimation from "./components/LoadingAnimation";
-import { useLayoutEffect, useState } from "react";
+import { useLayoutEffect, useState, useInsertionEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 
-
 export default function Home() {
-  const [loading, setLoading] = useState<boolean>(true);
-
+  const [loading, setLoading] = useState<boolean>(false);
+  const [home, setHome] = useState<boolean>(false);
+  
   useLayoutEffect(() => {
-    if (window.location.hash.length > 1) {
-      setLoading(false);
+    if (window.location.hash.length > 0) {
+      setHome(true)
+    }
+    else {
+      setLoading(true);
     }
   }, [])
 
+  if (loading) {
+    return <LoadingAnimation onComplete={() => { setLoading(false); setHome(true); }} onClick={() => { setLoading(false); setHome(true); }} />
+  }
   return (
     <>
       <main className={`flex min-h-screen flex-col gap-12 items-center `}>
-        <AnimatePresence>
-          {loading ?
-            <>
-              {/* <div className="min-h-[120dvh]"></div> */}
-              {/* <HeroSection /> */}
-              <LoadingAnimation onComplete={() => setLoading(false)} onClick={() => { setLoading(false) }} />
-            </>
-            :
-            <>
-              <HeroSection />
-              <NavBar home />
-              <BackToTop />
-            </>
-          }
-        </AnimatePresence>
 
+        <HeroSection />
+        {home && <NavBar home />}
+        {home && <BackToTop />}
         <Carousel />
         <AboutMeSection />
         <CaseStudiesSection />
         <Footer />
 
-      </main>
+      </main >
     </>
   );
 }

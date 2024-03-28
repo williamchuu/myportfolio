@@ -55,8 +55,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={` ${rubik.className} ${heebo.variable}`}>{children}</body>
+    <html lang="en" className="overscroll-none scroll-auto ">
+      <body className={` ${rubik.className} ${heebo.variable} scroll-smooth`}>{children}</body>
     </html>
   );
 }

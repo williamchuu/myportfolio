@@ -41,7 +41,7 @@ export default function Carousel() {
     const xTranslation = useMotionValue(0);
     let [ref, { width }] = useMeasure();
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         let controls;
         let finalPos = -width / 2 - 2;
 

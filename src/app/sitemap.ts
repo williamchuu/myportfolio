@@ -7,12 +7,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 1,
     },
     {
-      url: "https://wchu.ca/projects/igaq/",
+      url: "https://wchu.ca/projects/igaq",
       changeFrequency: "weekly",
       priority: 0.8,
     },
     ...(await generateBlogPostsSitemapObjects()).map((o) => ({
-      url: `https://wchu.ca/projects/${o.slug}/`,
+      url: `https://wchu.ca/projects/${o.slug}`,
       lastModified: o.updatedAt,
     })),
   ];

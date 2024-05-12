@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   creator: "William Chu",
   robots: {
-    index: false,
+    index: true,
     follow: true,
     nocache: true,
     googleBot: {

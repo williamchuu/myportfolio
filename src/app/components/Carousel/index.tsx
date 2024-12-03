@@ -17,10 +17,6 @@ export default function Carousel() {
         "/landing/carousel/frame9.webp",
         "/landing/carousel/frame10.webp",
         "/landing/carousel/frame11.webp",
-        "/landing/carousel/frame13.webp",
-        "/landing/carousel/frame14.webp",
-        "/landing/carousel/frame15.webp",
-        "/landing/carousel/frame16.webp",
         "/landing/carousel/frame18.webp",
     ];
 
@@ -52,8 +48,6 @@ export default function Carousel() {
             repeatType: "loop",
             repeatDelay: 0
         });
-
-
         return controls.stop;
     }, [xTranslation, width, images.length])
 

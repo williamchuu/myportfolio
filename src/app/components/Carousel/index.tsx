@@ -1,8 +1,7 @@
 "use client"
-import Image from "next/image";
 import { animate, useMotionValue, motion } from "framer-motion";
 import useMeasure from "react-use-measure";
-import { useEffect, useLayoutEffect } from "react";
+import { useLayoutEffect } from "react";
 import BlurImage from "../BlurImage";
 export default function Carousel() {
     const images = [

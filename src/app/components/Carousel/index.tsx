@@ -5,18 +5,20 @@ import { useLayoutEffect } from "react";
 import BlurImage from "../BlurImage";
 export default function Carousel() {
     const images = [
-        "/landing/carousel/frame1.webp",
-        "/landing/carousel/frame2.webp",
-        "/landing/carousel/frame3.webp",
-        "/landing/carousel/frame4.webp",
-        "/landing/carousel/frame5.webp",
-        "/landing/carousel/frame6.webp",
-        "/landing/carousel/frame7.webp",
-        "/landing/carousel/frame8.webp",
-        "/landing/carousel/frame9.webp",
-        "/landing/carousel/frame10.webp",
-        "/landing/carousel/frame11.webp",
-        "/landing/carousel/frame18.webp",
+        "/landing/carousel/boy.webp",
+        "/landing/carousel/car.webp",
+        "/landing/carousel/danbi.webp",
+        "/landing/carousel/dashboard.webp",
+        "/landing/carousel/drink.webp",
+        "/landing/carousel/equip.webp",
+        "/landing/carousel/foodie.webp",
+        "/landing/carousel/igaq.webp",
+        "/landing/carousel/igaq2.webp",
+        "/landing/carousel/payflow.webp",
+        "/landing/carousel/sharefood.webp",
+        "/landing/carousel/spy.webp",
+        "/landing/carousel/berries.webp",
+        "/landing/carousel/penguin.webp",
     ];
 
     function shuffle(array: any) {

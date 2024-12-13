@@ -11,6 +11,8 @@ body {
   overflow-x: hidden;
 }
 
+
+
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
@@ -35,7 +37,7 @@ body {
   }
   p {
     @apply text-pretty;
-    @apply leading-loose;
+    @apply leading-relaxed;
   }
 }
 @layer utilities {

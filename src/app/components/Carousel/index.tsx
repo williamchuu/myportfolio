@@ -44,7 +44,7 @@ export default function Carousel() {
 
         controls = animate(xTranslation, [0, finalPos], {
             ease: "linear",
-            duration: images.length * 6,
+            duration: images.length * 5,
             repeat: Infinity,
             repeatType: "loop",
             repeatDelay: 0
@@ -52,10 +52,10 @@ export default function Carousel() {
         return controls.stop;
     }, [xTranslation, width, images.length])
 
-    return <section className="w-full h-[35rem] hidden md:flex mt-16 overflow-x-hidden max-w-screen max-h-screen pointer-events-none">
+    return <section className="w-full h-80 hidden md:flex mt-16 overflow-x-hidden max-w-screen max-h-screen pointer-events-none">
         <motion.div className="absolute left-0 select-none overflow-x-hidden flex gap-2" ref={ref} style={{ x: xTranslation, }}>
             {[...images, ...images].map((item, index) => (
-                <div className="relative overflow-hidden h-[22rem] min-w-[25rem] md:h-[30rem] md:min-w-[35rem] flex justify-center items-center" key={index}>
+                <div className="relative overflow-hidden md:h-[18rem] md:min-w-[21rem] flex justify-center items-center" key={index}>
                     <BlurImage src={item} alt={`Carousel Image #${index}`} fill className="object-cover" priority={false} />
                 </div>
             ))}

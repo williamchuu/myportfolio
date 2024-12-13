@@ -6,7 +6,7 @@ import BlurImage from "../BlurImage"
 
 export default function HeroSection() {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 gap-1 px-5 lg:px-0 lg:pr-2 2xl:pr-0 pt-32 w-full max-w-7xl" id="hero">
+    <section className="grid grid-cols-1 md:grid-cols-2 gap-1 px-5 lg:px-0 lg:pr-2 2xl:pr-0 pt-32 w-full max-w-default" id="hero">
       <motion.div className="hidden md:flex" initial={{ x: -50, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: .5, ease: "easeInOut" }}
@@ -27,7 +27,7 @@ export default function HeroSection() {
           transition={{ delay: .5, duration: .5, ease: "easeInOut" }}
           viewport={{ once: true }}
         >Hello, I&apos;m</motion.h2>
-        <motion.h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-balance"
+        <motion.h1 className="text-5xl md:text-6xl text-balance"
           initial={{ x: -50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ delay: .7, duration: .5, ease: "easeInOut" }}

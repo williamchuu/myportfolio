@@ -37,7 +37,7 @@ export default function NavBar({
                 transition={{ ease: "easeInOut", duration: .5 }}
             >
                 <div className="w-full flex items-center justify-center">
-                    <div className="justify-between w-full flex max-w-7xl">
+                    <div className="justify-between w-full flex max-w-default ">
                         <div className="border-primary cursor-pointer grid place-items-center -ml-2 md:pl-0 ">
                             {home ? <Scroll to="hero" className=""
                                 smooth={true}

@@ -14,7 +14,7 @@ export default function Footer({
 }) {
 
     return (
-        <Section title="Let's connect." id="contact" width="w-full max-w-7xl">
+        <Section title="Let's connect." id="contact">
             <div className="flex gap-8">
                 <Link href="https://www.linkedin.com/in/william-chu/" target="__blank" passHref>
                     <FaLinkedin className="text-4xl hover:text-primary transition-all hover:drop-shadow-primary" aria-label="Click to Open William Chu Linkedin" />

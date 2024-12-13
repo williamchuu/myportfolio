@@ -30,7 +30,7 @@ export default function ProjectSection({
         {fullWidth ?
             <Section width="w-full" className="flex flex-col items-center" px="px-0">
                 <div className="px-5 w-full flex items-center justify-center">
-                    <div className="w-full max-w-7xl">
+                    <div className="w-full max-w-default">
                         <h3 className="font-bold text-2xl">{title}</h3>
                     </div>
                 </div>
@@ -40,7 +40,7 @@ export default function ProjectSection({
                 {smallImage && <div className="w-full grid place-items-center">
                     <Image src={`/projects/${projectname}${smallImage}`} width={1920} height={1080} className="w-full md:max-w-4xl px-5 2xl:px-0 col-span-2 items-center" alt={`Image of ${projectname}`} />
                 </div>}
-                <div className="w-full max-w-7xl px-5 md:px-0">
+                <div className="w-full max-w-default px-5 md:px-0">
                     <hr className="bg-text mt-12 " />
                 </div>
             </Section>

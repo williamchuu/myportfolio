@@ -40,7 +40,7 @@ export default function Section({
             transition={{ duration: .5, ease: "easeInOut" }}
             viewport={{ once: true }}
         >
-            <div className={`flex flex-col gap-8 md:gap-12 w-full z-2 ${width ? width : "max-w-7xl"} ${className ? className : " "}`}>
+            <div className={`flex flex-col gap-8 md:gap-12 w-full z-2 ${width ? width : "max-w-default"} ${className ? className : " "}`}>
                 {title && <div className={`flex gap-4 items-end `}>
                     <>
                         {header ?

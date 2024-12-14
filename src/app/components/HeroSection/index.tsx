@@ -19,7 +19,7 @@ export default function HeroSection() {
           transition={{ delay: .7, duration: .5, ease: "easeInOut" }}
           viewport={{ once: true }}
         >William Chu.</motion.h1>
-        <motion.p className="text-lg text-pretty"
+        <motion.p className="text-pretty"
           initial={{ x: -50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ delay: .9, duration: .5, ease: "easeInOut" }}

@@ -15,7 +15,7 @@ export default function ProjectInfoSection({
         </div>
         <div className="flex flex-col gap-4 w-full">
             <div className="grid md:grid-cols-[30%_70%] grid-cols-1 gap-2">
-                <p className="font-bold">Project Description</p>
+                <p className="font-bold">Description</p>
                 <p className="text-pretty">{data.description}</p>
             </div>
             <hr className="bg-text" />

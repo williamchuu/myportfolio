@@ -5,13 +5,16 @@
 /* * {
   border: 1px red solid;
 } */
-
+html {
+  font-size: 18px;
+}
+p {
+  font-size: 20px;
+}
 body {
   font-size: clamp(1rem, 0.5vw, 1rem);
   overflow-x: hidden;
 }
-
-
 
 @media (prefers-color-scheme: dark) {
   :root {

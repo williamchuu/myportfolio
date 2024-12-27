@@ -52,8 +52,10 @@ export default function CaseStudyCard({
                             <h3 className="font-medium text-4xl">{title}</h3>
                         </Link>
                         <p className="text-accent text-balance font-heebo">{roledescription.map((tag, index) => (<span key={index}>{tag}{index != roledescription.length - 1 && ","} </span>))}</p>
-                        <div className="inline-flex justify-end flex-1 text-start">
-                            <p className="inline-flex text-left md:text-justify text-wrap self-end justify-end items-end flex-1">{description}</p>
+                        <div className="flex justify-end flex-1 text-start">
+                            <p className="text-left md:text-justify self-end flex-1">
+                                {description}
+                            </p>
                         </div>
                         <div className="md:hidden mt-6">
                             <BottomBorderTextHover href={link}>

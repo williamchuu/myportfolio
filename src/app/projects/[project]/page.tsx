@@ -37,7 +37,7 @@ export default function Page({
 
     return <main className="flex min-h-screen flex-col gap-12 items-center">
         <NavBar />
-        <motion.div className="pt-8 md:pt-14" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }}>
+        <motion.div className="pt-12 md:pt-14" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }}>
             {data ?
                 <div>
                     <BlurImage src={`/projects/${params.project}/wide_mockup.webp`} width={3840} height={2160} className="w-screen min-h-[30dvh] md:max-h-[80dvh] object-cover" alt="Mockup" priority />

@@ -18,7 +18,7 @@ const config: Config = {
         'dark-accent': '#878787',
       },
       maxWidth: {
-        'default': "52rem",
+        'default': "49rem",
       },
       dropShadow: {
         'primary': '0px 10px 10px rgba(91, 205, 249, .2)',

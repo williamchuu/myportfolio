@@ -24,7 +24,20 @@ export default function Home() {
   }, [])
 
   if (loading) {
-    return <LoadingAnimation onComplete={() => { setLoading(false); setHome(true); }} onClick={() => { setLoading(false); setHome(true); }} />
+    return <LoadingAnimation onComplete={() => { 
+      setLoading(false); 
+      setHome(true); 
+      if (window.location.hostname === "wchu.ca") {
+      // if (window.location.hostname === "localhost" && window.location.port === "3000") {
+        window.location.href = "https://scratch-anorak-0e8.notion.site/William-Chu-Graphic-Designer-1908a094a1978033b1a1d0ef5d1c3d0e";
+      }
+        }} onClick={() => { 
+      setLoading(false); 
+      setHome(true); 
+      if (window.location.hostname === "wchu.ca") {
+        window.location.href = "https://scratch-anorak-0e8.notion.site/William-Chu-Graphic-Designer-1908a094a1978033b1a1d0ef5d1c3d0e";
+      }
+    }} />
   }
   return (
     <>
@@ -36,6 +49,7 @@ export default function Home() {
         <Carousel />
         <AboutMeSection />
         <CaseStudiesSection />
+        {/* <GraphicDesignSection /> */}
         <Footer />
 
       </main >

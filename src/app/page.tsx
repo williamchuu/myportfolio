@@ -7,8 +7,7 @@ import Footer from "./components/Footer";
 import BackToTop from "./components/BackToTopButton";
 import Carousel from "./components/Carousel";
 import LoadingAnimation from "./components/LoadingAnimation";
-import { useLayoutEffect, useState, useInsertionEffect } from "react";
-import { AnimatePresence } from "framer-motion";
+import { useLayoutEffect, useState } from "react";
 
 export default function Home() {
   const [loading, setLoading] = useState<boolean>(false);

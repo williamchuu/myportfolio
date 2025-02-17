@@ -43,29 +43,10 @@ export default function HeroSection() {
           thoughtful and elegant designs. Explore my work and see how simplicity
           shapes everything I do.
         </motion.p>
-
-        <motion.p
-          initial={{ x: -50, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ delay: 1.1, duration: 0.5, ease: "easeInOut" }}
-          viewport={{ once: true }}
-        >
-          Click{" "}
-          <Link
-            className="text-primary hover:font-medium transition-all"
-            href={
-              "https://scratch-anorak-0e8.notion.site/William-Chu-Graphic-Designer-1908a094a1978033b1a1d0ef5d1c3d0e"
-            }
-            target="_blank"
-          >
-            here
-          </Link>{" "}
-          to see my Graphic Design works.
-        </motion.p>
         <motion.div
           initial={{ x: -50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
-          transition={{ delay: 1.3, duration: 0.5, ease: "easeInOut" }}
+          transition={{ delay: 1.1, duration: 0.5, ease: "easeInOut" }}
           viewport={{ once: true }}
           className="mt-4 w-max"
         >

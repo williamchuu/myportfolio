@@ -1,0 +1,23 @@
+{
+  "title": "Digital Illustrations - Stickers",
+  "mockup": "/rainy.png",
+  "projectname": "rainy",
+  "description": "A playful packaging concept designed to evoke cozy, rainy day vibes.",
+  "link": "/graphics/rainy",
+  "role": "Graphic Designer",
+  "roledescription": [
+    "Illustration",
+    "Packaging Design"
+  ],
+  "tools": "Adobe InDesign, Adobe Photoshop",
+  "order": 3,
+
+  "content": {
+    "RESEARCH AND CONCEPT": {
+      "text": [
+        "The project began by identifying the brand’s goal: to create a product that brings warmth and comfort, even on rainy days. The concept was inspired by cozy weather, where coffee and rain pair perfectly."
+      ],
+      "size": "grid"
+    }
+  }
+}

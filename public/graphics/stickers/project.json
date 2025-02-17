@@ -1,0 +1,32 @@
+{
+  "title": "Digital Illustrations - Stickers",
+  "mockup": "/stickers.png",
+  "projectname": "stickers",
+  "description": "These are vector illustrations created in Adobe Illustrator.",
+  "link": "/graphics/stickers",
+  "role": "Graphic Designer",
+  "roledescription": [
+    "Illustration",
+    "Graphic Design"
+  ],
+  "tools": "Adobe Illustrator",
+  "order": 6,
+
+  "content": {
+    "PENGUINS":
+    {
+      "size": "full",
+      "largeImage": "/penguin.png"
+    },
+    "CAT CAFE":
+    {
+      "size": "full",
+      "largeImage": "/cat.png"
+    },
+    "BOBA":
+    {
+      "size": "full",
+      "largeImage": "/boba.png"
+    }
+  }
+}

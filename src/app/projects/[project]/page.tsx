@@ -23,13 +23,13 @@ export default function Page({
     
     useLayoutEffect(() => {
         const SelectProject = async () => {
-            const project = await ProjectPull(params.project, true);
-            if(project == false) {
-                router.push("/error")
-            }
-            else {
-                setData(project);
-            }
+        const response = await fetch(`/api/projects/${params.project}`);
+        const projectData = await response.json();
+        if (response.ok) {
+            setData(projectData);
+        } else {
+            // router.push('/');
+        }
         }
         SelectProject();
 
@@ -48,7 +48,7 @@ export default function Page({
           {data ? (
             <div>
               <BlurImage
-                src={`/projects/${params.project}/${data.wide_mockup}`}
+                src={`/projects/${params.project}${data.wide_mockup}`}
                 width={3840}
                 height={2160}
                 className="w-screen min-h-[30dvh] md:max-h-[80dvh] object-cover"

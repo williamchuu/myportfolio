@@ -12,7 +12,7 @@ export default function ProjectSection({
     solution,
     wideImage,
     botLine = true,
-    type = "project",
+    type = "projects",
 }: {
     title: string,
     paragraph?: string[],

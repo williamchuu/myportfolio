@@ -1,25 +1,25 @@
 import CaseStudyCard from "../CaseStudyCard";
 import Section from "../Section";
 
-import Projects from "@/app/helper/projectList";
 import { useLayoutEffect, useState } from "react";
 
 export default function CaseStudiesSection() {
-  const [cases, setCases] = useState<any>([]);
+  const [projectData, setProjectData] = useState<any>([]);
 
-  const ProjectPull = async () => {
-    const projects = await Projects();
-    setCases(projects);
+  const fetchProjects = async () => {
+    const response = await fetch("/api/projects");
+    const data = await response.json();
+    setProjectData(data);
   };
 
   useLayoutEffect(() => {
-    ProjectPull();
+    fetchProjects();
   }, []);
 
   return (
     <Section title="Case Studies" id="case" className="">
-      {cases.length > 0 ? (
-        cases.map((project: any, index: number) => (
+      {projectData.length > 0 ? (
+        projectData.map((project: any, index: number) => (
           <CaseStudyCard
             title={project.title}
             projectname={project.projectname}

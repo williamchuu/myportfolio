@@ -1,0 +1,43 @@
+{
+  "title": "CD Cover and Lyric Booklet",
+  "mockup": "/mockup.png",
+  "projectname": "cover",
+  "description": "A CD cover and lyric booklet concept for Korean artist Kim Taeyeon.",
+  "link": "/graphics/cover",
+  "role": "Graphic Designer",
+  "roledescription": [
+    "Illustration",
+    "Typography",
+    "Layout"
+  ],
+  "tools": "Adobe InDesign, Adobe Photoshop",
+  "order": 2,
+
+  "content": {
+    "PROJECT OVERVIEW": {
+      "text": [
+        "This project involved designing a CD cover, disc label, and lyric booklet for Time Lapse, a concept album featuring three calming and introspective songs. The design aimed to evoke feelings of nostalgia, serenity, and emotional depth through a clean, minimal aesthetic."
+      ],
+      "image": "/booklet.png"
+    },
+    "DESIGN APPROACH": {
+      "text": [
+        "To reflect the mood of the songs, I selected a *soft and calming color palette*, primarily using gentle teal tones that convey a sense of tranquility and introspection. The *clean, minimal layout* allows the lyrics and imagery to shine without distraction, enhancing the overall experience of the album.",
+        "On the cover, I chose an *artistic design concept of the artist “fading away,”* representing the fleeting nature of memories and time. The subtle fading effect blends seamlessly into the background, creating a dreamy and ethereal atmosphere."
+      ],
+      "size": "grid"
+    },
+    "TYPOGRAPHY AND LAYOUT": {
+      "text": [
+        "The typography was carefully chosen to ensure legibility while maintaining the minimalist aesthetic. Song titles and lyrics are arranged in a structured yet spacious layout, allowing the text to breathe and providing a sense of calm as listeners follow along. The lyric booklet complements the cover design by incorporating soft imagery and clean text alignment."
+      ],
+      "size": "grid"
+    },
+    "RESULTS": {
+      "text": [
+        "This project was a fun experience of how design can reflect emotion and storytelling. I was able to think creatively about composition and image blending. Balance artistic expression with functional design by keeping the layout minimal and ensuring the lyrics remained easy to read."
+      ],
+      "size": "grid"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "title": "IGAQ Brochure",
+  "mockup": "/brochure.png",
+  "projectname": "igaq",
+  "description": "A brochure designed for IGAQ, a company that provides quality assurance services to the food industry.",
+  "link": "/graphics/igaq",
+  "role": "Graphic Designer",
+  "roledescription": [
+    "Graphic Design",
+    "Branding",
+    "Packaging Design"
+  ],
+  "tools": "Adobe InDesign, Adobe Illustrator",
+  "order": 5,
+
+  "content": {
+    "SUMMARY": {
+      "text": [
+        "The IGAQ brochure was designed to introduce and promote an app that provides a safe, supportive space for the LGBTQIA+ community. The app allows users to ask questions, share personal stories, and access educational resources on LGBTQIA+ topics. The brochure’s goal was to highlight the app’s features and introduce the designers and developers."
+      ],
+      "size": "grid"
+    },
+    "STYLEGUIDE":{
+      "largeImage": "/styleguide.png",
+      "size": "full"
+    }
+  }
+}

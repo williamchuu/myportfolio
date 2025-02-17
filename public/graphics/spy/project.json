@@ -1,0 +1,44 @@
+{
+  "title": "Spy x Family Live Action Movie Poster",
+  "mockup": "/mockup.png",
+  "projectname": "spy",
+  "description": "This design reimagines the popular anime Spy × Family as a live-action film with an engaging and cinematic poster. The poster combines dramatic lighting, action elements, and bold typography to capture the thrill and charm of the story.",
+  "link": "/graphics/spy",
+  "role": "Graphic Designer",
+  "roledescription": [
+    "Graphic Design",
+    "Illustration",
+    "Concept Development"
+  ],
+  "tools": "Adobe Photoshop, Adobe Illustrator",
+  "order": 4,
+
+  "content": {
+    "PROJECT OVERVIEW": {
+      "text": [
+        "The Spy x Family live-action movie poster reimagines the slice-of-life anime as a high-stakes action thriller. By shifting the tone from heartwarming family moments to a fast-paced, espionage-driven narrative, the design aims to capture the intense spy action and the underlying family dynamic. The poster blends cinematic lighting, dramatic poses, and bold typography to evoke excitement."
+      ],
+      "wideImage": "/bus.png"
+    },
+    "CHALLENGES ": {
+      "text": [
+        "One of the biggest challenges was making the three separate stock images of the characters look cohesive as part of the same environment. Each image had different lighting and shadow conditions, so I had to carefully adjust Photoshop's light sources, highlights, and shadows to ensure they blended naturally and appeared as if they were shot together."
+      ],
+      "size": "grid"
+    },
+    "SOLUTION": {
+      "text": [
+        "The final poster successfully combines elements of action, suspense, and family in a way that feels cohesive and visually striking. The glowing background adds intrigue, while the bold typography reinforces the blockbuster feel. The poster bridges the gap between its original medium and live-action storytelling by blending realistic character poses with anime-inspired elements."
+      ],
+      "size": "grid"
+    },
+    "RESULTS": {
+      "text": [
+        "The final poster successfully combines elements of action, suspense, and family in a way that feels cohesive and visually striking. The glowing background adds intrigue, while the bold typography reinforces the blockbuster feel. The poster bridges the gap between its original medium and live-action storytelling by blending realistic character poses with anime-inspired elements."
+      ],
+      "size": "grid",
+      "wideImage": "/result.jpg",
+      "botLine": false
+    }
+  }
+}

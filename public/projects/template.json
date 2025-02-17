@@ -1,0 +1,78 @@
+{
+  "title": "{{title}}",
+  "wide_mockup": "{{wide_mockup}}",
+  "projectname": "{{projectname}}",
+  "description": "{{description}}",
+  "link": "{{link}}",
+  "duration": "{{duration}}",
+  "role": "{{role}}",
+  "tags": "{{tags}}",
+  "roledescription": ["{{roledescription}}"],
+  "tools": "{{tools}}",
+
+  "content": {
+    "THE PROBLEM": {
+      "text": [
+        "{{problem_text}}"
+      ],
+      "size": "grid",
+      "statement": "{{problem_statement}}"
+    },
+    "THE SOLUTION": {
+      "text": [
+        "{{solution_text}}"
+      ],
+      "list": [
+        {
+          "feature": "{{feature_1}}",
+          "solution": "{{solution_1}}"
+        },
+        {
+          "feature": "{{feature_2}}",
+          "solution": "{{solution_2}}"
+        },
+        {
+          "feature": "{{feature_3}}",
+          "solution": "{{solution_3}}"
+        }
+      ],
+      "wideImage": "{{solution_image}}",
+      "botLine": false
+    },
+    "USER RESEARCH": {
+      "text": [
+        "{{user_research_text_1}}",
+        "{{user_research_text_2}}"
+      ],
+      "size": "grid"
+    },
+    "SITE MAP": {
+      "largeImage": "{{sitemap_image}}",
+      "size": "full"
+    },
+    "WIREFRAMES": {
+      "largeImage": "{{wireframes_image}}",
+      "size": "screen"
+    },
+    "FEATURES": {
+      "largeImage": "{{features_image}}",
+      "size": "full"
+    },
+    "FINAL OUTCOME": {
+      "largeImage": "{{outcome_image}}",
+      "size": "screen"
+    },
+    "FEEDBACK": {
+      "text": [
+        "{{feedback_text}}"
+      ],
+      "size": "grid"
+    },
+    "CONCLUSION": {
+      "text": [
+        "{{conclusion_text}}"
+      ],
+      "size": "grid"
+    }
+  }
+}

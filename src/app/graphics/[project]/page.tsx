@@ -23,7 +23,7 @@ export default function Page({
     
     useLayoutEffect(() => {
         const SelectProject = async () => {
-            const project = await ProjectPull(params.project, true);
+            const project = await ProjectPull(params.project, false);
             if(project == false) {
                 router.push("/error")
             }
@@ -48,10 +48,10 @@ export default function Page({
           {data ? (
             <div>
               <BlurImage
-                src={`/projects/${params.project}/${data.wide_mockup}`}
+                src={`/graphics/${params.project}${data.mockup}`}
                 width={3840}
                 height={2160}
-                className="w-screen min-h-[30dvh] md:max-h-[80dvh] object-cover"
+                className="w-screen min-h-[30dvh] md:max-h-[80dvh] object-contain"
                 alt="Mockup"
                 priority
               />
@@ -59,32 +59,22 @@ export default function Page({
 
               {data.content &&
                 Object.keys(data.content).map((key, index) => {
-                    if (index === 0) {
-                        return (
-                            <ProjectProblemSection
-                                key={key}
-                                title={key}
-                                paragraph={data.content[key].text}
-                                statement={data.content[key].statement}
-                            />
-                        );
-                    } else {
-                        return (
-                            <ProjectSection
-                                key={key}
-                                title={key}
-                                paragraph={data.content[key].text}
-                                projectname={data.projectname}
-                                smallImage={data.content[key].smallImage}
-                                image={data.content[key].image}
-                                largeImage={data.content[key].largeImage}
-                                wideImage={data.content[key].wideImage}
-                                solution={data.content[key].list}
-                                fullWidth={data.content[key].size === "screen"}
-                                botLine={data.content[key].botLine}
-                            />
-                        );
-                    }
+                  return (
+                    <ProjectSection
+                      key={key}
+                      title={key}
+                      paragraph={data.content[key].text}
+                      projectname={data.projectname}
+                      smallImage={data.content[key].smallImage}
+                      image={data.content[key].image}
+                      largeImage={data.content[key].largeImage}
+                      wideImage={data.content[key].wideImage}
+                      solution={data.content[key].list}
+                      fullWidth={data.content[key].size === "screen"}
+                      botLine={data.content[key].botLine}
+                      type="graphics"
+                    />
+                  );
                 })}
             </div>
           ) : (
@@ -98,8 +88,8 @@ export default function Page({
           transition={{ duration: 0.5, ease: "easeInOut" }}
           viewport={{ once: true }}
         >
-          <BottomBorderTextHover href={"/#case"}>
-            SEE MORE CASE STUDIES{" "}
+          <BottomBorderTextHover href={"/#graphics"}>
+            SEE MORE GRAPHICS{" "}
             <span className="font-bold text-2xl">
               <MdArrowOutward />
             </span>

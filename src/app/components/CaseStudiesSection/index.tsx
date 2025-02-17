@@ -5,25 +5,36 @@ import Projects from "@/app/helper/projectList";
 import { useLayoutEffect, useState } from "react";
 
 export default function CaseStudiesSection() {
+  const [cases, setCases] = useState<any>([]);
 
-    const [cases, setCases] = useState<any>([]);
+  const ProjectPull = async () => {
+    const projects = await Projects();
+    setCases(projects);
+  };
 
-    const ProjectPull = async () => {
-        const projects = await Projects();
-        setCases(projects);
-    };
+  useLayoutEffect(() => {
+    ProjectPull();
+  }, []);
 
-    useLayoutEffect(() => {
-        ProjectPull();
-    }, [])
-
-    return <Section title="Case Studies" id="case" className="">
-
-        {cases.length > 0 ? cases.map((project: any, index: number) => (
-            <CaseStudyCard title={project.title} projectname={project.projectname} description={project.description} roledescription={project.roledescription} link={project.link} key={index} number={index} />
-        )) : <div className="h-[100dvh]">
-        </div>
-        }
-        <hr className="h-1 bg-text " />
+  return (
+    <Section title="Case Studies" id="case" className="">
+      {cases.length > 0 ? (
+        cases.map((project: any, index: number) => (
+          <CaseStudyCard
+            title={project.title}
+            projectname={project.projectname}
+            description={project.description}
+            roledescription={project.roledescription}
+            link={project.link}
+            key={index}
+            number={index}
+            type="project"
+          />
+        ))
+      ) : (
+        <div className="h-[100dvh]"></div>
+      )}
+      <hr className="h-1 bg-text " />
     </Section>
+  );
 }

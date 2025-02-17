@@ -1,0 +1,29 @@
+{
+  "title": "Spy x Family Live Action Movie Poster",
+  "mockup": "/mockup.png",
+  "projectname": "spy",
+  "description": "This design reimagines the popular anime Spy × Family as a live-action film with an engaging and cinematic poster. The poster combines dramatic lighting, action elements, and bold typography to capture the thrill and charm of the story.",
+  "link": "/graphics/spy",
+  "role": "Graphic Designer",
+  "roledescription": [
+    "Graphic Design",
+    "Illustration",
+    "Concept Development"
+  ],
+  "tools": "Adobe Photoshop, Adobe Illustrator",
+  "order": 100,
+
+  "content": {
+    "PLAIN TEXT": {
+      "text": [
+        ""
+      ]
+    },
+    "SCREENIMAGE ": {
+      "wideImage": ""
+    },
+    "IMAGETOWIDTH": {
+      "largeImage": ""
+    }
+  }
+}

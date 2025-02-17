@@ -8,7 +8,7 @@ import BackToTop from "./components/BackToTopButton";
 import Carousel from "./components/Carousel";
 import LoadingAnimation from "./components/LoadingAnimation";
 import { useLayoutEffect, useState } from "react";
-
+import GraphicDesignSection from "./components/GraphicDesignSection";
 export default function Home() {
   const [loading, setLoading] = useState<boolean>(false);
   const [home, setHome] = useState<boolean>(false);
@@ -48,7 +48,7 @@ export default function Home() {
         <Carousel />
         <AboutMeSection />
         <CaseStudiesSection />
-        {/* <GraphicDesignSection /> */}
+        <GraphicDesignSection />
         <Footer />
 
       </main >

@@ -24,7 +24,7 @@ export default function Footer({
                 </Link>
             </div>
             <div className="flex gap-1 flex-col">
-                <p className="pt-48">Developed by <Link href="https://philiph.me" target="__blank" className="hover:text-primary transition-all">Philip Ho</Link></p>
+                <p className="pt-48">Developed by <Link href="https://philipho.co" target="__blank" className="hover:text-primary transition-all">Philip Ho</Link></p>
                 <p className="">© William Chu</p>
             </div>
         </Section>

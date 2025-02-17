@@ -45,7 +45,7 @@ export default function Section({
                     <>
                         {header ?
                             <>
-                                <h1 className="text-5xl md:text-6xl lg:text-7xl font-medium">{title}</h1>
+                                <h1 className="text-5xl md:text-6xl font-medium">{title}</h1>
                                 {heading && <h3 className="text-xl sm:text-2xl text-accent font-light align-bottom">({heading})</h3>}
                             </>
                             :

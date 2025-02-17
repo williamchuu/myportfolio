@@ -1,14 +1,41 @@
 import CaseStudyCard from "../CaseStudyCard";
 import Section from "../Section";
 
-import Danbi from "../../../../public/projects/danbi/project.json"
+import  { Graphics } from "@/app/helper/projectList";
+import { useLayoutEffect, useState } from "react";
 
-export default function GraphicDesignSection() {
+export default function CaseStudiesSection() {
+  const [cases, setCases] = useState<any>([]);
 
-    return <Section title="Graphic Design" width="" id="graphic">
-        {/* <CaseStudyCard title={Danbi.title} projectname={Danbi.projectname} description={Danbi.description} tags={Danbi.tags} link={Danbi.link}/> */}
-        <div>
+  const ProjectPull = async () => {
+    const projects = await Graphics();
+    setCases(projects);
+  };
 
-        </div>
+  useLayoutEffect(() => {
+    ProjectPull();
+  }, []);
+
+  return (
+    <Section title="Graphic Design" id="graphics" className="">
+      {cases.length > 0 ? (
+        cases.map((project: any, index: number) => (
+          <CaseStudyCard
+            title={project.title}
+            projectname={project.projectname}
+            projectMockup={project.mockup}
+            description={project.description}
+            roledescription={project.roledescription}
+            link={project.link}
+            key={index}
+            type="graphic"
+            number={index}
+          />
+        ))
+      ) : (
+        <div className="h-[100dvh]"></div>
+      )}
+      <hr className="h-1 bg-text " />
     </Section>
+  );
 }

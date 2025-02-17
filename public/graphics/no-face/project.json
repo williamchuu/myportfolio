@@ -1,0 +1,41 @@
+{
+  "title": "The Boy With No Face Digital Story",
+  "mockup": "/mockup.webp",
+  "projectname": "no-face",
+  "description": "An interactive digital storybook following a young boy who loses his face to an evil witch and embarks on an adventure to reclaim it.",
+  "link": "/graphics/no-face",
+  "role": "Graphic Designer",
+  "roledescription": [
+    "Concept Development",
+    "Character Design",
+    "Illustration"
+  ],
+  "tools": "Adobe InDesign, Adobe Photoshop, Clip Studio Paint",
+  "order": 1,
+
+  "content": {
+    "DESIGN PROCESS": {
+      "text": [
+        "I wanted to create an adventure that not only entertained but also carried a deeper message about self-discovery and confidence."
+      ],
+      "list": [
+        {
+          "feature": "Storyboarding and Plot Development",
+          "solution": "The story follows a young boy whose face is stolen by an evil witch, sending him on a journey to get it back and meeting friends along the way. The narrative gradually reveals that the boy’s adventure isn’t just about reclaiming what was taken but also about rediscovering his sense of self and confidence."
+        },
+        {
+          "feature": "Art Style",
+          "solution": "The illustrations were designed to evoke a whimsical yet emotional tone, using a mix of vibrant colors and detailed textures to bring the characters and world to life. The art style was carefully crafted to resonate with both children and adults, ensuring a broad appeal."
+        }
+      ],
+      "image": "/solution.webp",
+      "botLine": false
+    },
+    "OUTCOME AND REFLECTION": {
+      "text": [
+        "The project allowed me to refine my storytelling and visual design skills, while also giving me an introductory understanding of interactive design. I gained experience balancing visual elements with functionality and creating seamless transitions between scenes. This project was a fulfilling creative journey that combined my passion for storytelling with my love for design."
+      ],
+      "size": "grid"
+    }
+  }
+}

@@ -7,7 +7,7 @@ type Props = {
 export async function generateMetadata(
     { params, }: Props
 ): Promise<Metadata> {
-    const project = await ProjectPull(params.project, true);
+    const project = await ProjectPull(params.project, false);
     let title;
     if (project == false) {
         title = params.project

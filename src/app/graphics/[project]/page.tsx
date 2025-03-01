@@ -72,6 +72,8 @@ export default function Page({
                       solution={data.content[key].list}
                       fullWidth={data.content[key].size === "screen"}
                       botLine={data.content[key].botLine}
+                      link={data.content[key].link}
+                      linkText={data.content[key].linkText}
                       type="graphics"
                     />
                   );

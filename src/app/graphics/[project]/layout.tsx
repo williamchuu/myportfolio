@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
-import { ProjectPull } from '@/app/helper/projectList'
+import { client } from '@/app/lib/sanity'
+import { groq } from 'next-sanity'
+
 type Props = {
     params: { project: string }
 }
@@ -7,14 +9,14 @@ type Props = {
 export async function generateMetadata(
     { params, }: Props
 ): Promise<Metadata> {
-    const project = await ProjectPull(params.project, false);
-    let title;
-    if (project == false) {
-        title = params.project
-    }
-    else {
-        title = project.title
-    }
+    const query = groq`*[_type == "graphics" && lower(projectname) == lower($slug)][0]{
+        title
+    }`
+    
+    const project = await client.fetch(query, { slug: params.project })
+    
+    let title = project?.title || params.project
+    
     return {
         title: title + " - William Chu Portfolio - Graphic and UI/UX Designer",
     }

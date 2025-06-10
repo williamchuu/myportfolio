@@ -1,24 +1,32 @@
-import fs from "fs";
-import path from "path";
 import { NextResponse } from "next/server";
+import { client } from "@/app/lib/sanity";
+import { groq } from "next-sanity";
 
 export async function GET() {
-    const projectsDir = path.join(process.cwd(), "public/graphics");
+    try {
+        const query = groq`*[_type == "graphics"] | order(order asc) {
+            _id,
+            title,
+            projectname,
+            description,
+            link,
+            duration,
+            role,
+            tags,
+            roledescription,
+            tools,
+            order,
+            mockup { asset->{ url } }, // Fetch the asset URL for the mockup image
+        }`;
 
-    const projectFolders = fs.readdirSync(projectsDir, { withFileTypes: true })
-        .filter((dir) => dir.isDirectory()) // Only get directories
-        .map((dir) => dir.name);
+        const graphicsProjects = await client.fetch(query);
 
-    const projects = projectFolders.map((folder) => {
-        const filePath = path.join(projectsDir, folder, "project.json");
-
-        if (fs.existsSync(filePath)) {
-            return JSON.parse(fs.readFileSync(filePath, "utf-8"));
-        }
-        return null; // Skip if project.json doesn't exist
-    }).filter(Boolean) // Remove null values
-      .sort((a, b) => a.order - b.order); // Sort projects by order
-
-    
-    return NextResponse.json(projects);
+        return NextResponse.json(graphicsProjects);
+    } catch (error) {
+        console.error("Error fetching graphics projects from Sanity:", error);
+        return NextResponse.json(
+            { error: "Failed to fetch graphics projects" },
+            { status: 500 }
+        );
+    }
 }

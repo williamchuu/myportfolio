@@ -4,6 +4,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { MdArrowOutward } from "react-icons/md";
 import BottomBorderTextHover from "../BottomBorderTextHover";
 import BlurImage from "../BlurImage";
+import { urlFor } from "@/app/lib/sanity";
+
 export default function CaseStudyCard({
   title,
   roledescription = ["UI/UX Design"],
@@ -13,7 +15,7 @@ export default function CaseStudyCard({
   link = "/",
   number,
   type = "project",
-  projectMockup = "/mockup.webp",
+  projectMockup,
 }: {
   title: string;
   roledescription?: string[];
@@ -23,7 +25,7 @@ export default function CaseStudyCard({
   link: string;
   number?: number;
   type?: string;
-  projectMockup?: string;
+  projectMockup?: any;
 }) {
   return (
     <div className="flex flex-col gap-12 w-full">
@@ -40,19 +42,19 @@ export default function CaseStudyCard({
           viewport={{ once: true }}
         >
           <div className="hidden md:flex justify-between w-full ">
-            <Link href={link} className="hover:text-primary transition-all">
+            <Link href={`/projects/${projectname}`} className="hover:text-primary transition-all">
               <h3 className="font-medium text-3xl">{title}</h3>
             </Link>
-            <BottomBorderTextHover href={link}>
+            <BottomBorderTextHover href={`/projects/${projectname}`}>
               {study ? "VIEW CASE STUDY" : "VIEW DESIGN"}{" "}
               <span className="font-bold text-2xl">
                 <MdArrowOutward />
               </span>
             </BottomBorderTextHover>
           </div>
-          <Link href={link}>
+          <Link href={`/projects/${projectname}`}>
             <BlurImage
-              src={`${type == "project" ? "/projects" : "/graphics"}/${projectname}${projectMockup}`}
+              src={projectMockup ? urlFor(projectMockup).width(1920).url() : ''}
               alt={`Mockup design of the project ${title}`}
               height={1080}
               width={1920}
@@ -61,13 +63,13 @@ export default function CaseStudyCard({
           </Link>
           <div className="grid grid-cols-1 md:grid-cols-[35%_64.5%] gap-2 ">
             <Link
-              href={link}
+              href={`/projects/${projectname}`}
               className="hover:text-primary transition-all md:hidden justify-between inline-flex"
             >
               <h3 className="font-medium text-4xl">{title}</h3>
             </Link>
             <p className="text-accent text-balance font-heebo">
-              {roledescription.map((tag, index) => (
+              {roledescription && roledescription.length > 0 && roledescription.map((tag, index) => (
                 <span key={index}>
                   {tag}
                   {index != roledescription.length - 1 && ","}{" "}

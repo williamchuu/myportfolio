@@ -1,24 +1,32 @@
-import fs from "fs";
-import path from "path";
 import { NextResponse } from "next/server";
+import { client } from "@/app/lib/sanity";
+import { groq } from "next-sanity";
 
 export async function GET() {
-    const projectsDir = path.join(process.cwd(), "public/projects");
-
-    const projectFolders = fs.readdirSync(projectsDir, { withFileTypes: true })
-        .filter((dir) => dir.isDirectory())
-        .map((dir) => dir.name);
-
-    const projects = projectFolders.map((folder) => {
-        const filePath = path.join(projectsDir, folder, "project.json");
-
-        if (fs.existsSync(filePath)) {
-            return JSON.parse(fs.readFileSync(filePath, "utf-8"));
-        }
-        return null;
-    }).filter(Boolean)
-        .sort((a, b) => a.order - b.order);
-
-
-    return NextResponse.json(projects);
+    try {
+        const query = groq`*[_type == "project"] | order(order asc) {
+            _id,
+            title,
+            projectname,
+            description,
+            link,
+            duration,
+            role,
+            tags,
+            roledescription,
+            tools,
+            order,
+            wide_mockup,
+            mockup
+        }`;
+        
+        const projects = await client.fetch(query);
+        
+        console.log(`Found ${projects.length} projects`);
+        
+        return NextResponse.json(projects);
+    } catch (error) {
+        console.error("Error fetching projects from Sanity:", error);
+        return NextResponse.json({ error: "Failed to fetch projects" }, { status: 500 });
+    }
 }

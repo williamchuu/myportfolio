@@ -1,6 +1,5 @@
 "use client"
 import NavBar from "@/app/components/NavBar";
-import {ProjectPull} from "@/app/helper/projectList";
 import { useLayoutEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import ProjectInfoSection from "@/app/components/ProjectInfoSection";
@@ -12,6 +11,8 @@ import { MdArrowOutward } from "react-icons/md";
 import BottomBorderTextHover from "@/app/components/BottomBorderTextHover";
 import BackToTop from "@/app/components/BackToTopButton";
 import BlurImage from "@/app/components/BlurImage";
+import { client, urlFor } from "@/app/lib/sanity";
+import { groq } from "next-sanity";
 
 export default function Page({
     params
@@ -22,17 +23,54 @@ export default function Page({
     const [data, setData] = useState<any>();
     
     useLayoutEffect(() => {
-        const SelectProject = async () => {
-            const project = await ProjectPull(params.project, false);
-            if(project == false) {
-                router.push("/error")
-            }
-            else {
-                setData(project);
+        const fetchGraphicsProject = async () => {
+            const query = groq`*[_type == "graphics" && lower(projectname) == lower($slug)][0]{
+                title,
+                mockup { asset->{ url } },
+                wide_mockup { asset->{ url } },
+                projectname,
+                heading,
+                description,
+                link,
+                duration,
+                role,
+                tags,
+                roledescription,
+                tools,
+                order,
+                content {
+                    sections[]{
+                        title,
+                        text,
+                        statement,
+                        smallImage { asset->{ url } },
+                        image { asset->{ url } },
+                        largeImage { asset->{ url } },
+                        wideImage { asset->{ url } },
+                        list,
+                        size,
+                        botLine,
+                        link,
+                        linkText
+                    }
+                }
+            }`
+            
+            try {
+                const projectData = await client.fetch(query, { slug: params.project });
+                if (projectData) {
+                    setData(projectData);
+                    console.log(projectData);
+                } else {
+                    router.push("/error");
+                }
+            } catch (error) {
+                console.error("Error fetching graphics project data:", error);
+                router.push("/error");
             }
         }
-        SelectProject();
-
+        
+        fetchGraphicsProject();
     }, [params.project, router]);
 
     return (
@@ -48,7 +86,7 @@ export default function Page({
           {data ? (
             <div>
               <BlurImage
-                src={`/graphics/${params.project}${data.mockup}`}
+                src={data.mockup ? urlFor(data.mockup).width(3840).url() : ''}
                 width={3840}
                 height={2160}
                 className="w-screen min-h-[30dvh] md:max-h-[80dvh] object-contain"
@@ -57,26 +95,36 @@ export default function Page({
               />
               <ProjectInfoSection data={data} header />
 
-              {data.content &&
-                Object.keys(data.content).map((key, index) => {
-                  return (
-                    <ProjectSection
-                      key={key}
-                      title={key}
-                      paragraph={data.content[key].text}
-                      projectname={data.projectname}
-                      smallImage={data.content[key].smallImage}
-                      image={data.content[key].image}
-                      largeImage={data.content[key].largeImage}
-                      wideImage={data.content[key].wideImage}
-                      solution={data.content[key].list}
-                      fullWidth={data.content[key].size === "screen"}
-                      botLine={data.content[key].botLine}
-                      link={data.content[key].link}
-                      linkText={data.content[key].linkText}
-                      type="graphics"
-                    />
-                  );
+              {data.content && data.content.sections &&
+                data.content.sections.map((section:any, index:number) => {
+                  if (section.statement) {
+                    return (
+                        <ProjectProblemSection
+                            key={section.title}
+                            title={section.title}
+                            paragraph={section.text}
+                            statement={section.statement}
+                        />
+                    );
+                  } else {
+                    return (
+                      <ProjectSection
+                        key={section.title}
+                        title={section.title}
+                        paragraph={section.text}
+                        projectname={data.projectname}
+                        smallImage={section.smallImage}
+                        image={section.image}
+                        largeImage={section.largeImage}
+                        wideImage={section.wideImage}
+                        solution={section.list}
+                        fullWidth={section.size === "screen"}
+                        botLine={section.botLine}
+                        link={section.link}
+                        linkText={section.linkText}
+                      />
+                    );
+                  }
                 })}
             </div>
           ) : (

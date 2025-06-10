@@ -2,6 +2,8 @@ import Image from "next/image";
 import Section from "../Section";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { urlFor } from "@/app/lib/sanity";
+
 export default function ProjectSection({
   title,
   paragraph,
@@ -13,24 +15,22 @@ export default function ProjectSection({
   solution,
   wideImage,
   botLine = true,
-  type = "projects",
   link,
   linkText
 }: {
   title: string;
   paragraph?: string[];
-  image?: string;
+  image?: string | any;
   projectname?: string;
-  largeImage?: string;
-  smallImage?: string;
+  largeImage?: string | any;
+  smallImage?: string | any;
   fullWidth?: boolean;
   solution?: {
     feature: string;
     solution: string;
   }[];
-  wideImage?: string;
+  wideImage?: string | any;
   botLine?: boolean;
-  type?: string;
   link?: string;
   linkText?: string;
 }) {
@@ -50,7 +50,9 @@ export default function ProjectSection({
           {largeImage && (
             <div className="w-full ">
               <Image
-                src={`/${type}/${projectname}${largeImage}`}
+                src={largeImage && largeImage.asset 
+                  ? urlFor(largeImage).width(1920).url()
+                  : ''}
                 width={1920}
                 height={1080}
                 className="w-full col-span-2"
@@ -61,7 +63,9 @@ export default function ProjectSection({
           {smallImage && (
             <div className="w-full grid place-items-center">
               <Image
-                src={`/${type}/${projectname}${smallImage}`}
+                src={smallImage && smallImage.asset 
+                  ? urlFor(smallImage).width(1920).url()
+                  : ''}
                 width={1920}
                 height={1080}
                 className="w-full md:max-w-4xl px-5 2xl:px-0 col-span-2 items-center"
@@ -80,7 +84,9 @@ export default function ProjectSection({
             {largeImage ? (
               <div className="w-full col-span-2 md:pt-10">
                 <Image
-                  src={`/${type}/${projectname}${largeImage}`}
+                  src={largeImage && largeImage.asset 
+                    ? urlFor(largeImage).width(1920).url()
+                    : ''}
                   width={1920}
                   height={1080}
                   className="w-full"
@@ -133,7 +139,9 @@ export default function ProjectSection({
                 )}
                 {image && (
                   <Image
-                    src={`/${type}/${projectname}${image}`}
+                    src={image && image.asset 
+                      ? urlFor(image).width(1920).url()
+                      : ''}
                     width={1920}
                     height={1080}
                     alt={`Image of ${projectname}`}
@@ -151,7 +159,9 @@ export default function ProjectSection({
               viewport={{ once: true }}
             >
               <Image
-                src={`/${type}/${projectname}${wideImage}`}
+                src={wideImage && wideImage.asset 
+                  ? urlFor(wideImage).width(1920).url()
+                  : ''}
                 width={1920}
                 height={1080}
                 className="w-full "

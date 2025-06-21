@@ -27,7 +27,7 @@ export default async function Home() {
       <main className={`flex min-h-screen flex-col gap-12 items-center `}>
         <HeroSection />
         <CaseStudiesSection projectData={projects} />
-        <Carousel />
+        {/* <Carousel /> */}
         <Footer />
       </main >
     </HomeClientWrapper>

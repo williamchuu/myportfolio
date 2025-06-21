@@ -7,7 +7,6 @@ export default {
       name: 'title',
       title: 'Title',
       type: 'string',
-      validation: (Rule: any) => Rule.required()
     },
     {
       name: 'heading',
@@ -34,7 +33,6 @@ export default {
       name: 'projectname',
       title: 'Project Name',
       type: 'string',
-      validation: (Rule: any) => Rule.required()
     },
     {
       name: 'description',
@@ -177,6 +175,16 @@ export default {
                   title: 'Bottom Line',
                   type: 'boolean',
                   initialValue: true
+                },
+                {
+                  name: 'link',
+                  title: 'Link',
+                  type: 'string'
+                },
+                {
+                  name: 'linkText',
+                  title: 'Link Text',
+                  type: 'string'
                 }
               ]
             }

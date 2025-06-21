@@ -85,14 +85,27 @@ export default function Page({
         >
           {data ? (
             <div>
-              <BlurImage
-                src={data.mockup ? urlFor(data.mockup).width(3840).url() : ''}
-                width={3840}
-                height={2160}
-                className="w-screen min-h-[30dvh] md:max-h-[80dvh] object-contain"
-                alt="Mockup"
-                priority
-              />
+              {data.wide_mockup ? (
+                <BlurImage
+                  src={urlFor(data.wide_mockup).width(3840).url()}
+                  width={3840}
+                  height={2160}
+                  className="w-screen min-h-[30dvh] md:max-h-[80dvh] object-cover"
+                  alt="Mockup"
+                  priority
+                />
+              ) : (
+                data.mockup && (
+                  <BlurImage
+                    src={urlFor(data.mockup).width(3840).url()}
+                    width={3840}
+                    height={2160}
+                    className="w-screen min-h-[30dvh] md:max-h-[80dvh] object-contain"
+                    alt="Mockup"
+                    priority
+                  />
+                )
+              )}
               <ProjectInfoSection data={data} header />
 
               {data.content && data.content.sections &&

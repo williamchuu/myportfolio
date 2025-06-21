@@ -10,13 +10,11 @@ export async function GET() {
             projectname,
             description,
             link,
-            duration,
             role,
             tags,
             roledescription,
             tools,
             order,
-            wide_mockup,
             mockup
         }`;
         

@@ -1,9 +1,14 @@
+require('dotenv').config({ path: '.env.local' });
 const fs = require('fs');
 const path = require('path');
 const { createClient } = require('@sanity/client');
 
 const client = createClient({
-//   HELLO!
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
+  token: process.env.SANITY_API_WRITE_TOKEN,
+  apiVersion: '2023-05-03',
+  useCdn: false,
 });
 
 // Path to projects directory

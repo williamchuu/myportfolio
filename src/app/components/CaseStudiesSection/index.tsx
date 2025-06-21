@@ -1,31 +1,10 @@
 import CaseStudyCard from "../CaseStudyCard";
 import Section from "../Section";
-import { useLayoutEffect, useState } from "react";
 
-export default function CaseStudiesSection() {
-  const [projectData, setProjectData] = useState<any>([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-  const fetchProjects = async () => {
-    try {
-      setIsLoading(true);
-      const response = await fetch("/api/projects");
-      const data = await response.json();
-      setProjectData(data);
-    } catch (error) {
-      console.error("Error fetching projects:", error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  useLayoutEffect(() => {
-    fetchProjects();
-  }, []);
-
+export default function CaseStudiesSection({ projectData }: { projectData: any[] }) {
   return (
-    <Section title="Case Studies" id="case" className="">
-      {!isLoading && projectData.length > 0 ? (
+    <Section title="Projects" id="projects" className="">
+      {projectData.length > 0 ? (
         projectData.map((project: any, index: number) => (
           <CaseStudyCard
             title={project.title}

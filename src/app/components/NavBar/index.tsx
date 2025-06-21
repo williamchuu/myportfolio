@@ -6,6 +6,13 @@ import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "framer-
 import Image from "next/image";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
+
+const navLinks = [
+    { to: 'about', text: 'About' },
+    { to: 'projects', text: 'Projects' },
+    { to: 'contact', text: 'Contact' }
+];
+
 export default function NavBar({
     home = false,
 }: {
@@ -67,93 +74,31 @@ export default function NavBar({
                 )}
               </div>
               <div className="hidden md:flex justify-center items-center md:gap-3 sm:gap-2 gap-1">
-                {home ? (
-                  <Scroll
-                    smooth={true}
-                    duration={1000}
-                    to="about"
-                    className="py-2 px-4 md:py-4 lg:px-6 transition-all cursor-pointer group"
-                  >
-                    <h3 className="group-hover:before:scale-x-100 group-hover:before:origin-left group-hover:text-primary relative before:w-full before:h-[3px] rounded before:origin-left before:transition-transform  before:duration-300 before:scale-x-0 before:bg-primary before:absolute before:left-0 before:-bottom-1 font-normal transition-all">
-                      About
-                    </h3>
-                  </Scroll>
-                ) : (
-                  <Link
-                    href="/#about"
-                    className="py-2 md:py-4 px-4 lg:px-6 transition-all cursor-pointer group"
-                  >
-                    <h3 className="group-hover:before:scale-x-100 group-hover:before:origin-left group-hover:text-primary relative before:w-full before:h-[3px] rounded before:origin-left before:transition-transform  before:duration-300 before:scale-x-0 before:bg-primary before:absolute before:left-0 before:-bottom-1 font-normal transition-all">
-                      About
-                    </h3>
-                  </Link>
-                )}
-
-                {home ? (
-                  <Scroll
-                    smooth={true}
-                    duration={1000}
-                    to="case"
-                    className="py-2 px-4 md:py-4 lg:px-6 transition-all cursor-pointer group"
-                  >
-                    <h3 className="group-hover:before:scale-x-100 group-hover:before:origin-left group-hover:text-primary relative before:w-full before:h-[3px] rounded before:origin-left before:transition-transform  before:duration-300 before:scale-x-0 before:bg-primary before:absolute before:left-0 before:-bottom-1 font-normal transition-all">
-                      UI/UX
-                    </h3>
-                  </Scroll>
-                ) : (
-                  <Link
-                    href="/#case"
-                    className="py-2 md:py-4 px-4 lg:px-6 transition-all cursor-pointer group"
-                  >
-                    <h3 className="group-hover:before:scale-x-100 group-hover:before:origin-left group-hover:text-primary relative before:w-full before:h-[3px] rounded before:origin-left before:transition-transform  before:duration-300 before:scale-x-0 before:bg-primary before:absolute before:left-0 before:-bottom-1 font-normal transition-all">
-                      UI/UX
-                    </h3>
-                  </Link>
-                )}
-
-                {home ? (
-                  <Scroll
-                    smooth={true}
-                    duration={1000}
-                    to="graphics"
-                    className="py-2 px-4 md:py-4 lg:px-6 transition-all cursor-pointer group"
-                  >
-                    <h3 className="group-hover:before:scale-x-100 group-hover:before:origin-left group-hover:text-primary relative before:w-full before:h-[3px] rounded before:origin-left before:transition-transform  before:duration-300 before:scale-x-0 before:bg-primary before:absolute before:left-0 before:-bottom-1 font-normal transition-all">
-                      Graphic Design
-                    </h3>
-                  </Scroll>
-                ) : (
-                  <Link
-                    href="/#graphics"
-                    className="py-2 md:py-4 px-4 lg:px-6 transition-all cursor-pointer group"
-                  >
-                    <h3 className="group-hover:before:scale-x-100 group-hover:before:origin-left group-hover:text-primary relative before:w-full before:h-[3px] rounded before:origin-left before:transition-transform  before:duration-300 before:scale-x-0 before:bg-primary before:absolute before:left-0 before:-bottom-1 font-normal transition-all">
-                      Graphic Design
-                    </h3>
-                  </Link>
-                )}
-
-                {home ? (
-                  <Scroll
-                    smooth={true}
-                    duration={1000}
-                    to="contact"
-                    className="py-2 px-4 md:py-4 lg:px-6 transition-all cursor-pointer group"
-                  >
-                    <h3 className="group-hover:before:scale-x-100 group-hover:before:origin-left group-hover:text-primary relative before:w-full before:h-[3px] rounded before:origin-left before:transition-transform  before:duration-300 before:scale-x-0 before:bg-primary before:absolute before:left-0 before:-bottom-1 font-normal transition-all">
-                      Contact
-                    </h3>
-                  </Scroll>
-                ) : (
-                  <Link
-                    href="/#contact"
-                    className="py-2 md:py-4 px-4 lg:px-6 transition-all cursor-pointer group"
-                  >
-                    <h3 className="group-hover:before:scale-x-100 group-hover:before:origin-left group-hover:text-primary relative before:w-full before:h-[3px] rounded before:origin-left before:transition-transform  before:duration-300 before:scale-x-0 before:bg-primary before:absolute before:left-0 before:-bottom-1 font-normal transition-all">
-                      Contact
-                    </h3>
-                  </Link>
-                )}
+                {navLinks.map(({ to, text }) => (
+                  home ? (
+                    <Scroll
+                      key={to}
+                      smooth={true}
+                      duration={1000}
+                      to={to}
+                      className="py-2 px-4 md:py-4 lg:px-6 transition-all cursor-pointer group"
+                    >
+                      <h3 className="group-hover:before:scale-x-100 group-hover:before:origin-left group-hover:text-primary relative before:w-full before:h-[3px] rounded before:origin-left before:transition-transform  before:duration-300 before:scale-x-0 before:bg-primary before:absolute before:left-0 before:-bottom-1 font-normal transition-all">
+                        {text}
+                      </h3>
+                    </Scroll>
+                  ) : (
+                    <Link
+                      key={to}
+                      href={`/#${to}`}
+                      className="py-2 md:py-4 px-4 lg:px-6 transition-all cursor-pointer group"
+                    >
+                      <h3 className="group-hover:before:scale-x-100 group-hover:before:origin-left group-hover:text-primary relative before:w-full before:h-[3px] rounded before:origin-left before:transition-transform  before:duration-300 before:scale-x-0 before:bg-primary before:absolute before:left-0 before:-bottom-1 font-normal transition-all">
+                        {text}
+                      </h3>
+                    </Link>
+                  )
+                ))}
               </div>
               <div className="flex md:hidden flex-col">
                 {ham && (
@@ -186,90 +131,29 @@ export default function NavBar({
               transition={{ ease: "easeInOut" }}
             >
               <li className="flex flex-col gap-5 w-full">
-                <ul className="border-b py-2 w-full transition-all cursor-pointer hover:text-primary hover:border-primary">
-                  {home ? (
-                    <Scroll
-                      smooth={true}
-                      offset={-50}
-                      duration={1000}
-                      to="about"
-                      className=""
-                      onClick={() => showHam(false)}
-                    >
-                      <h2>About</h2>
-                    </Scroll>
-                  ) : (
-                    <Link
-                      href="/#about"
-                      className="border-b py-2 w-full transition-all cursor-pointer hover:text-primary hover:border-primary"
-                    >
-                      <h2>About</h2>
-                    </Link>
-                  )}
-                </ul>
-                <ul className="border-b py-2 w-full transition-all cursor-pointer hover:text-primary hover:border-primary">
-                  {home ? (
-                    <Scroll
-                      smooth={true}
-                      offset={-50}
-                      duration={1000}
-                      to="case"
-                      className=""
-                      onClick={() => showHam(false)}
-                    >
-                      <h2>UI/UX</h2>
-                    </Scroll>
-                  ) : (
-                    <Link
-                      href="/#case"
-                      className="border-b py-2 w-full transition-all cursor-pointer hover:text-primary hover:border-primary"
-                    >
-                      <h2>UI/UX</h2>
-                    </Link>
-                  )}
-                </ul>
-                <ul className="border-b py-2 w-full transition-all cursor-pointer hover:text-primary hover:border-primary">
-                  {home ? (
-                    <Scroll
-                      smooth={true}
-                      offset={-50}
-                      duration={1000}
-                      to="graphics"
-                      className=""
-                      onClick={() => showHam(false)}
-                    >
-                      <h2>Graphic Design</h2>
-                    </Scroll>
-                  ) : (
-                    <Link
-                      href="/#graphics"
-                      className="border-b py-2 w-full transition-all cursor-pointer hover:text-primary hover:border-primary"
-                    >
-                      <h2>Graphic Design</h2>
-                    </Link>
-                  )}
-                </ul>
-                <ul className="border-b py-2 w-full transition-all cursor-pointer hover:text-primary hover:border-primary">
-                  {home ? (
-                    <Scroll
-                      smooth={true}
-                      duration={1000}
-                      to="contact"
-                      className=""
-                      onClick={() => showHam(false)}
-                    >
-                      <h2>Contact </h2>
-                    </Scroll>
-                  ) : (
-                    <Link
-                      href="/#contact"
-                      className="border-b py-2 w-full transition-all cursor-pointer hover:text-primary hover:border-primary"
-                    >
-                      <h2>Contact</h2>
-                    </Link>
-                  )}
-                </ul>
-
+                {navLinks.map(({ to, text }) => (
+                  <ul key={to} className="border-b py-2 w-full transition-all cursor-pointer hover:text-primary hover:border-primary">
+                    {home ? (
+                      <Scroll
+                        smooth={true}
+                        offset={-50}
+                        duration={1000}
+                        to={to}
+                        className=""
+                        onClick={() => showHam(false)}
+                      >
+                        <h2>{text}</h2>
+                      </Scroll>
+                    ) : (
+                      <Link
+                        href={`/#${to}`}
+                        className="border-b py-2 w-full transition-all cursor-pointer hover:text-primary hover:border-primary"
+                      >
+                        <h2>{text}</h2>
+                      </Link>
+                    )}
+                  </ul>
+                ))}
                 <p className="pt-40 text-accent text-md">© William Chu</p>
               </li>
             </motion.nav>

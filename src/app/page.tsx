@@ -7,44 +7,35 @@ import Footer from "./components/Footer";
 import BackToTop from "./components/BackToTopButton";
 import Carousel from "./components/Carousel";
 import LoadingAnimation from "./components/LoadingAnimation";
-import { useLayoutEffect, useState } from "react";
 import GraphicDesignSection from "./components/GraphicDesignSection";
-export default function Home() {
-  const [loading, setLoading] = useState<boolean>(false);
-  const [home, setHome] = useState<boolean>(false);
-  
-  useLayoutEffect(() => {
-    if (window.location.hash.length > 0) {
-      setHome(true)
-    }
-    else {
-      setLoading(true);
-    }
-  }, [])
+import HomeClientWrapper from "./components/HomeClientWrapper";
+import { client } from "./lib/sanity";
+import { groq } from "next-sanity";
 
-  if (loading) {
-    return <LoadingAnimation onComplete={() => { 
-      setLoading(false); 
-      setHome(true); 
-        }} onClick={() => { 
-      setLoading(false); 
-      setHome(true); 
-    }} />
-  }
+async function getProjects() {
+  const query = groq`*[_type == "project"] | order(order asc) {
+    _id,
+    title,
+    projectname,
+    description,
+    link,
+    roledescription,
+    mockup
+  }`;
+  return client.fetch(query);
+}
+
+export default async function Home() {
+  const projects = await getProjects();
+
   return (
-    <>
+    <HomeClientWrapper>
       <main className={`flex min-h-screen flex-col gap-12 items-center `}>
-
         <HeroSection />
-        {home && <NavBar home />}
-        {home && <BackToTop />}
+        <CaseStudiesSection projectData={projects} />
         <Carousel />
-        <AboutMeSection />
-        <CaseStudiesSection />
-        <GraphicDesignSection />
         <Footer />
-
       </main >
-    </>
+    </HomeClientWrapper>
   );
 }

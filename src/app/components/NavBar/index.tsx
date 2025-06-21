@@ -8,7 +8,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
 
 const navLinks = [
-    { to: 'about', text: 'About' },
+    { to: 'hero', text: 'About' },
     { to: 'projects', text: 'Projects' },
     { to: 'gallery', text: 'Gallery', isPage: true },
     { to: 'contact', text: 'Contact' }

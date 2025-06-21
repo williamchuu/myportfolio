@@ -3,6 +3,8 @@ import BlurImage from "../components/BlurImage";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 
+export const revalidate = 60;
+
 const images = [
     "/landing/carousel/boy.webp",
     "/landing/carousel/car.webp",

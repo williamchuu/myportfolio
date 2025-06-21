@@ -5,6 +5,8 @@ import { groq } from "next-sanity";
 import { notFound } from "next/navigation";
 import ProjectPageContent from "@/app/components/ProjectPageContent";
 
+export const revalidate = 60;
+
 export async function generateStaticParams() {
   const query = groq`*[_type == "project" && defined(projectname)].projectname`;
   const projectnames = await client.fetch(query);

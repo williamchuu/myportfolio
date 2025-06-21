@@ -6,6 +6,8 @@ import HomeClientWrapper from "./components/HomeClientWrapper";
 import { client } from "./lib/sanity";
 import { groq } from "next-sanity";
 
+export const revalidate = 60;
+
 async function getProjects() {
   const query = groq`*[_type == "project"] | order(order asc) {
     _id,

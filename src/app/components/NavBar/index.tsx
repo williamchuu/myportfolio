@@ -10,6 +10,7 @@ import { IoClose } from "react-icons/io5";
 const navLinks = [
     { to: 'about', text: 'About' },
     { to: 'projects', text: 'Projects' },
+    { to: 'gallery', text: 'Gallery', isPage: true },
     { to: 'contact', text: 'Contact' }
 ];
 
@@ -74,31 +75,28 @@ export default function NavBar({
                 )}
               </div>
               <div className="hidden md:flex justify-center items-center md:gap-3 sm:gap-2 gap-1">
-                {navLinks.map(({ to, text }) => (
-                  home ? (
-                    <Scroll
-                      key={to}
-                      smooth={true}
-                      duration={1000}
-                      to={to}
-                      className="py-2 px-4 md:py-4 lg:px-6 transition-all cursor-pointer group"
-                    >
-                      <h3 className="group-hover:before:scale-x-100 group-hover:before:origin-left group-hover:text-primary relative before:w-full before:h-[3px] rounded before:origin-left before:transition-transform  before:duration-300 before:scale-x-0 before:bg-primary before:absolute before:left-0 before:-bottom-1 font-normal transition-all">
-                        {text}
-                      </h3>
+                {navLinks.map(({ to, text, isPage }) => {
+                  const linkContent = (
+                    <h3 className="group-hover:before:scale-x-100 group-hover:before:origin-left group-hover:text-primary relative before:w-full before:h-[3px] rounded before:origin-left before:transition-transform  before:duration-300 before:scale-x-0 before:bg-primary before:absolute before:left-0 before:-bottom-1 font-normal transition-all">
+                      {text}
+                    </h3>
+                  );
+                  const className = "py-2 px-4 md:py-4 lg:px-6 transition-all cursor-pointer group";
+
+                  if (isPage) {
+                    return <Link key={to} href={`/${to}`} className={className}>{linkContent}</Link>
+                  }
+
+                  return home ? (
+                    <Scroll key={to} smooth={true} duration={1000} to={to} className={className}>
+                      {linkContent}
                     </Scroll>
                   ) : (
-                    <Link
-                      key={to}
-                      href={`/#${to}`}
-                      className="py-2 md:py-4 px-4 lg:px-6 transition-all cursor-pointer group"
-                    >
-                      <h3 className="group-hover:before:scale-x-100 group-hover:before:origin-left group-hover:text-primary relative before:w-full before:h-[3px] rounded before:origin-left before:transition-transform  before:duration-300 before:scale-x-0 before:bg-primary before:absolute before:left-0 before:-bottom-1 font-normal transition-all">
-                        {text}
-                      </h3>
+                    <Link key={to} href={`/#${to}`} className={className}>
+                      {linkContent}
                     </Link>
                   )
-                ))}
+                })}
               </div>
               <div className="flex md:hidden flex-col">
                 {ham && (
@@ -131,9 +129,13 @@ export default function NavBar({
               transition={{ ease: "easeInOut" }}
             >
               <li className="flex flex-col gap-5 w-full">
-                {navLinks.map(({ to, text }) => (
+                {navLinks.map(({ to, text, isPage }) => (
                   <ul key={to} className="border-b py-2 w-full transition-all cursor-pointer hover:text-primary hover:border-primary">
-                    {home ? (
+                    {isPage ? (
+                      <Link href={`/${to}`} onClick={() => showHam(false)}>
+                        <h2>{text}</h2>
+                      </Link>
+                    ) : home ? (
                       <Scroll
                         smooth={true}
                         offset={-50}
@@ -145,10 +147,7 @@ export default function NavBar({
                         <h2>{text}</h2>
                       </Scroll>
                     ) : (
-                      <Link
-                        href={`/#${to}`}
-                        className="border-b py-2 w-full transition-all cursor-pointer hover:text-primary hover:border-primary"
-                      >
+                      <Link href={`/#${to}`} onClick={() => showHam(false)}>
                         <h2>{text}</h2>
                       </Link>
                     )}

@@ -10,7 +10,8 @@ export default function BlurImage({
     className,
     fill,
     priority,
-    cover = true
+    cover = true,
+    uninteractive = false,
 }: {
     src: string,
     width?: number,
@@ -19,7 +20,8 @@ export default function BlurImage({
     className?: string,
     fill?:boolean,
     priority?: boolean,
-    cover?: boolean
+    cover?: boolean,
+    uninteractive?: boolean,
 }) {
     const [isloading, setIsLoading] = useState<boolean>(true);
     return <Image
@@ -27,7 +29,7 @@ export default function BlurImage({
         alt={alt}
         width={width}
         height={height}
-        className={` ${className} ${isloading ? "blur-xl " : "blur-0 "} ${cover ? "" : "object-cover"}  transition-all duration-150`}
+        className={` ${className} ${isloading ? "blur-xl " : "blur-0 "} ${cover ? "" : "object-cover"}  transition-all duration-150 ${uninteractive ? 'pointer-events-none' : ''}`}
         onLoad={() => { setIsLoading(false) }}
         fill={fill}
         priority={priority}

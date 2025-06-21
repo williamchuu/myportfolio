@@ -50,7 +50,7 @@ export default function HeroSection() {
           viewport={{ once: true }}
           className="mt-4 w-max"
         >
-          <Scroll smooth={true} duration={1000} to="case" className="">
+          <Scroll smooth={true} duration={1000} to="projects" className="">
             <Button text="See My Projects" />
           </Scroll>
         </motion.div>

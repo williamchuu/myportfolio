@@ -1,33 +1,41 @@
 "use client"
-import { useLayoutEffect, useState } from "react";
+import { useLayoutEffect, useState, useEffect } from "react";
 import LoadingAnimation from "../LoadingAnimation";
 import NavBar from "../NavBar";
 import BackToTop from "../BackToTopButton";
 
 export default function HomeClientWrapper({ children }: { children: React.ReactNode }) {
-    const [loading, setLoading] = useState<boolean>(false);
-    const [home, setHome] = useState<boolean>(false);
+    const [isLoading, setIsLoading] = useState(true);
 
     useLayoutEffect(() => {
         if (window.location.hash.length > 0) {
-            setHome(true)
+            setIsLoading(false);
         }
-        else {
-            setLoading(true);
+    }, []);
+
+    useEffect(() => {
+        if (isLoading) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
         }
-    }, [])
+        return () => {
+            document.body.style.overflow = 'auto';
+        };
+    }, [isLoading]);
+    
+    const handleLoadingComplete = () => {
+        setIsLoading(false);
+    };
+
+    if (isLoading) {
+        return <LoadingAnimation onComplete={handleLoadingComplete} onClick={handleLoadingComplete} />;
+    }
 
     return (
         <>
-            {loading && <LoadingAnimation onComplete={() => {
-                setLoading(false);
-                setHome(true);
-            }} onClick={() => {
-                setLoading(false);
-                setHome(true);
-            }} />}
-            {home && <NavBar home />}
-            {home && <BackToTop />}
+            <NavBar home />
+            <BackToTop />
             {children}
         </>
     );

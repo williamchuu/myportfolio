@@ -1,5 +1,5 @@
 "use client"
-import { useLayoutEffect, useState, useEffect } from "react";
+import React, { useLayoutEffect, useState, useEffect, ReactNode, isValidElement, cloneElement } from "react";
 import LoadingAnimation from "../LoadingAnimation";
 import NavBar from "../NavBar";
 import BackToTop from "../BackToTopButton";
@@ -28,15 +28,36 @@ export default function HomeClientWrapper({ children }: { children: React.ReactN
         setIsLoading(false);
     };
 
-    if (isLoading) {
-        return <LoadingAnimation onComplete={handleLoadingComplete} onClick={handleLoadingComplete} />;
-    }
+    const childrenWithLoading = React.Children.map(children, (child, idx) =>
+        isValidElement(child)
+            ? cloneElement(child as React.ReactElement<any>, {
+                loadingComplete: !isLoading,
+                key: (!isLoading ? 'loaded' : 'loading') + '-' + idx
+            })
+            : child
+    );
 
     return (
         <>
             <NavBar home />
             <BackToTop />
-            {children}
+            {childrenWithLoading}
+            {isLoading && (
+                <div style={{
+                    position: 'fixed',
+                    top: 0,
+                    left: 0,
+                    width: '100dvw',
+                    height: '100dvh',
+                    zIndex: 9999,
+                    background: 'rgba(16,16,16,0.98)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                }}>
+                    <LoadingAnimation onComplete={handleLoadingComplete} onClick={handleLoadingComplete} />
+                </div>
+            )}
         </>
     );
 } 

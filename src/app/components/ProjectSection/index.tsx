@@ -47,12 +47,10 @@ export default function ProjectSection({
               <h3 className="font-bold text-2xl">{title}</h3>
             </div>
           </div>
-          {largeImage && (
+          {largeImage && largeImage.asset && (
             <div className="w-full ">
               <Image
-                src={largeImage && largeImage.asset 
-                  ? urlFor(largeImage).width(1920).url()
-                  : ''}
+                src={urlFor(largeImage).width(1920).url()}
                 width={1920}
                 height={1080}
                 className="w-full col-span-2"
@@ -60,12 +58,10 @@ export default function ProjectSection({
               />
             </div>
           )}
-          {smallImage && (
+          {smallImage && smallImage.asset && (
             <div className="w-full grid place-items-center">
               <Image
-                src={smallImage && smallImage.asset 
-                  ? urlFor(smallImage).width(1920).url()
-                  : ''}
+                src={urlFor(smallImage).width(1920).url()}
                 width={1920}
                 height={1080}
                 className="w-full md:max-w-4xl px-5 2xl:px-0 col-span-2 items-center"
@@ -81,12 +77,10 @@ export default function ProjectSection({
         <>
           <Section grid gridClass botLine={botLine}>
             <h3 className="font-bold text-2xl">{title}</h3>
-            {largeImage ? (
+            {largeImage && largeImage.asset ? (
               <div className="w-full col-span-2 md:pt-10">
                 <Image
-                  src={largeImage && largeImage.asset 
-                    ? urlFor(largeImage).width(1920).url()
-                    : ''}
+                  src={urlFor(largeImage).width(1920).url()}
                   width={1920}
                   height={1080}
                   className="w-full"
@@ -137,11 +131,9 @@ export default function ProjectSection({
                     )}
                   </>
                 )}
-                {image && (
+                {image && image.asset && (
                   <Image
-                    src={image && image.asset 
-                      ? urlFor(image).width(1920).url()
-                      : ''}
+                    src={urlFor(image).width(1920).url()}
                     width={1920}
                     height={1080}
                     alt={`Image of ${projectname}`}
@@ -151,7 +143,7 @@ export default function ProjectSection({
             )}
           </Section>
 
-          {wideImage && (
+          {wideImage && wideImage.asset && (
             <motion.div
               initial={{ x: -25, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
@@ -159,9 +151,7 @@ export default function ProjectSection({
               viewport={{ once: true }}
             >
               <Image
-                src={wideImage && wideImage.asset 
-                  ? urlFor(wideImage).width(1920).url()
-                  : ''}
+                src={urlFor(wideImage).width(1920).url()}
                 width={1920}
                 height={1080}
                 className="w-full "

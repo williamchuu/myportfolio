@@ -82,7 +82,7 @@ export default function CaseStudyCard({
               </p>
             </div>
             <div className="md:hidden mt-6">
-              <BottomBorderTextHover href={link}>
+              <BottomBorderTextHover href={`/projects/${projectname}`}>
                 {study ? "VIEW CASE STUDY" : "VIEW DESIGN"}{" "}
                 <span className="font-bold text-2xl">
                   <MdArrowOutward />

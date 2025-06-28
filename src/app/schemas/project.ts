@@ -23,7 +23,7 @@ export default {
       },
     {
       name: 'wide_mockup',
-      title: 'Wide Mockup',
+      title: 'Wide Banner Mockup',
       type: 'image',
       options: {
         hotspot: true
@@ -118,7 +118,7 @@ export default {
                 },
                 {
                   name: 'smallImage',
-                  title: 'Small Image',
+                  title: 'Grid Image Small w/ Text (Spans to Text)',
                   type: 'image',
                   options: {
                     hotspot: true
@@ -126,7 +126,7 @@ export default {
                 },
                 {
                   name: 'image',
-                  title: 'Image',
+                  title: 'Grid Image w/ Text (Spans to Grid)',
                   type: 'image',
                   options: {
                     hotspot: true
@@ -134,7 +134,7 @@ export default {
                 },
                 {
                   name: 'largeImage',
-                  title: 'Large Image',
+                  title: 'Grid Image No Text (Spans to Grid)',
                   type: 'image',
                   options: {
                     hotspot: true
@@ -142,7 +142,7 @@ export default {
                 },
                 {
                   name: 'wideImage',
-                  title: 'Wide Image',
+                  title: 'Screen Image No Text (Spans to Screen)',
                   type: 'image',
                   options: {
                     hotspot: true

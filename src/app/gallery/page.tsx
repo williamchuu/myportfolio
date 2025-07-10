@@ -6,6 +6,9 @@ import Footer from "../components/Footer";
 export const revalidate = 60;
 
 const images = [
+    "/landing/carousel/champion.webp",
+    "/landing/carousel/lyrics.webp",
+    "/landing/carousel/allskin.webp",
     "/landing/carousel/boy.webp",
     "/landing/carousel/car.webp",
     "/landing/carousel/danbi.webp",
@@ -19,7 +22,8 @@ const images = [
     "/landing/carousel/sharefood.webp",
     "/landing/carousel/spy.webp",
     "/landing/carousel/berries.webp",
-    "/landing/carousel/penguin.webp",
+    "/landing/carousel/penguins.webp",
+    "/landing/carousel/watches.webp",
 ];
 
 export default function GalleryPage() {

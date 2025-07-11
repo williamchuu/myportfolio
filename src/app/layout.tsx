@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   keywords: ["UI/UX Design", "Graphic Design", "Portfolio", "Design", "Layouts", "Minimalism", "Simplicity"],
   openGraph: {
-    images: "/landing/me_wave0.svg",
+    images: "/favicon_dark.png",
     locale: "en_US",
     type: "website"
   },

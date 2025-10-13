@@ -6,24 +6,16 @@ import Footer from "../components/Footer";
 export const revalidate = 60;
 
 const images = [
-    "/landing/carousel/champion.webp",
-    "/landing/carousel/lyrics.webp",
-    "/landing/carousel/allskin.webp",
-    "/landing/carousel/boy.webp",
-    "/landing/carousel/car.webp",
-    "/landing/carousel/danbi.webp",
-    "/landing/carousel/dashboard.webp",
-    "/landing/carousel/drink.webp",
-    "/landing/carousel/equip.webp",
-    "/landing/carousel/foodie.webp",
-    "/landing/carousel/igaq.webp",
-    "/landing/carousel/igaq2.webp",
-    "/landing/carousel/payflow.webp",
-    "/landing/carousel/sharefood.webp",
-    "/landing/carousel/spy.webp",
-    "/landing/carousel/berries.webp",
-    "/landing/carousel/penguins.webp",
+    "/landing/carousel/kay_zeus.webp",
+    "/landing/carousel/comfyland.webp",
+    "/landing/carousel/timelapse.webp",
+    "/landing/carousel/spyfamily.webp",
+    "/landing/carousel/skincare.webp",
     "/landing/carousel/watches.webp",
+    "/landing/carousel/wbi.webp",
+    "/landing/carousel/penguin_stickers.webp",
+    "/landing/carousel/igaq.webp",
+    "/landing/carousel/igaq_mockups.webp",
 ];
 
 export default function GalleryPage() {
@@ -33,7 +25,7 @@ export default function GalleryPage() {
             <Section title="Gallery" grid className="pt-20" subheading="A collection of additional design work.">
                 <div className="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-5 w-full">
                     {images.map((src, index) => (
-                        <div key={index} className={`relative w-full h-full aspect-square ${index % 3 === 2 ? 'md:col-span-2' : ''}`}>
+                        <div key={index} className={`relative w-full h-full aspect-square ${index % 3 === 2 && index < images.length - 4 ? 'md:col-span-2' : ''}`}>
                             <BlurImage
                                 src={src}
                                 alt={`Gallery image ${index + 1}`}

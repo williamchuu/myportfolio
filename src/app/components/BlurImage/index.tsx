@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image";
-import { useState } from "react";
+// import { useState } from "react";
 
 export default function BlurImage({
     src,
@@ -23,14 +23,15 @@ export default function BlurImage({
     cover?: boolean,
     uninteractive?: boolean,
 }) {
-    const [isloading, setIsLoading] = useState<boolean>(true);
+    // const [isloading, setIsLoading] = useState<boolean>(true);
     return <Image
         src={src}
         alt={alt}
         width={width}
         height={height}
-        className={` ${className} ${isloading ? "blur-xl " : "blur-0 "} ${cover ? "" : "object-cover"}  transition-all duration-150 ${uninteractive ? 'pointer-events-none' : ''}`}
-        onLoad={() => { setIsLoading(false) }}
+        className={` ${className} blur-0 ${cover ? "" : "object-cover"}  transition-all duration-150 ${uninteractive ? 'pointer-events-none' : ''}`}
+        // className={` ${className} ${isloading ? "blur-xl " : "blur-0 "} ${cover ? "" : "object-cover"}  transition-all duration-150 ${uninteractive ? 'pointer-events-none' : ''}`}
+        // onLoad={() => { setIsLoading(false) }}
         fill={fill}
         priority={priority}
     />

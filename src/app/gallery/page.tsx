@@ -24,17 +24,23 @@ export default function GalleryPage() {
             <NavBar />
             <Section title="Gallery" grid className="pt-20" subheading="A collection of additional design work.">
                 <div className="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-5 w-full">
-                    {images.map((src, index) => (
-                        <div key={index} className={`relative w-full h-full aspect-square ${index % 3 === 2 && index < images.length - 4 ? 'md:col-span-2' : ''}`}>
-                            <BlurImage
-                                src={src}
-                                alt={`Gallery image ${index + 1}`}
-                                fill
-                                className="object-cover"
-                                uninteractive
-                            />
-                        </div>
-                    ))}
+                    {images.map((src, index) => {
+                        const isWide = index % 3 === 2 && index < images.length - 4;
+                        return (
+                            <div
+                                key={index}
+                                className={`relative w-full ${isWide ? 'aspect-[16/9] md:col-span-2' : 'aspect-square'}`}
+                            >
+                                <BlurImage
+                                    src={src}
+                                    alt={`Gallery image ${index + 1}`}
+                                    fill
+                                    className="object-cover"
+                                    uninteractive
+                                />
+                            </div>
+                        );
+                    })}
                 </div>
             </Section>
             <Footer />
